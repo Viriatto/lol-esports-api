@@ -1,0 +1,36 @@
+{
+  "name": "template",
+  "version": "0.1.0",
+  "description": "A template for npm packages.",
+  "main": "./dist/index.js",
+  "types": "./typings/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prebuild": "rimraf dist typings",
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "prepack": "npm run build",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Viriatto/npm-package-template.git"
+  },
+  "keywords": [],
+  "author": "João Teixeira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Viriatto/npm-package-template/issues"
+  },
+  "homepage": "https://github.com/Viriatto/npm-package-template#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.4.1",
+    "@typescript-eslint/parser": "^6.4.1",
+    "eslint": "^8.47.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^14.0.1",
+    "prettier": "^2.8.8",
+    "rimraf": "^5.0.1",
+    "typescript": "^5.2.2"
+  }
+}
