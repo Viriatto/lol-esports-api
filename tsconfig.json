@@ -1,8 +1,23 @@
 {
+  "extends": "@tsconfig/node-lts/tsconfig.json",
+  "include": ["src/**/*"],
   "compilerOptions": {
+    "module": "NodeNext",
     "declaration": true,
     "outDir": "./dist",
     "declarationDir": "./typings",
-    "sourceMap": true
+    "sourceMap": true,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "noFallthroughCasesInSwitch": true,
+    "strict": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "resolveJsonModule": true,
+    "declarationMap": true
   }
 }
