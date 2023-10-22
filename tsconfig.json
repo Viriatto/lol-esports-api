@@ -1,11 +1,11 @@
 {
   "extends": "@tsconfig/node-lts/tsconfig.json",
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "tests"],
   "compilerOptions": {
     "module": "NodeNext",
     "declaration": true,
     "outDir": "./dist",
-    "declarationDir": "./typings",
+    "declarationDir": "./types",
     "sourceMap": true,
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
