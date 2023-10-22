@@ -1,5 +1,7 @@
 .eslintrc.json
 .prettierrc
+.lintstagedrc.json
+.prettierignore
 .vscode
 .github
 .husky
@@ -7,3 +9,8 @@ tsconfig.eslint.json
 tsconfig.json
 *.js.map
 src
+openapi_spec.json
+types/**/*.d.ts.map
+jest.config.ts
+coverage
+tests
