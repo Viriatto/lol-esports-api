@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "description": "Implementation of League of Legends' Unofficial Esports API.",
   "main": "./dist/index.js",
-  "types": "./typings/index.d.ts",
+  "types": "./types/index.d.ts",
   "scripts": {
     "test": "jest --watch-all",
     "prebuild": "rimraf dist types",
@@ -16,15 +16,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Viriatto/npm-package-template.git"
+    "url": "git+https://github.com/Viriatto/lol-esports-api.git"
   },
   "keywords": [],
   "author": "João Teixeira",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Viriatto/npm-package-template/issues"
+    "url": "https://github.com/Viriatto/lol-esports-api/issues"
   },
-  "homepage": "https://github.com/Viriatto/npm-package-template#readme",
+  "homepage": "https://github.com/Viriatto/lol-esports-api#readme",
   "devDependencies": {
     "@tsconfig/node-lts": "^18.12.5",
     "@types/jest": "^29.5.6",
