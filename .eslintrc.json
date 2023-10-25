@@ -1,6 +1,9 @@
 {
   "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
   "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint"],
-  "root": true
+  "plugins": ["@typescript-eslint", "eslint-plugin-tsdoc"],
+  "root": true,
+  "rules": {
+    "tsdoc/syntax": "error"
+  }
 }
