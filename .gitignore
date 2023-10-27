@@ -2,4 +2,5 @@ dist
 node_modules
 types
 coverage
-etc
+tsdoc-metadata.json
+*.api.json

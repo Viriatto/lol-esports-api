@@ -4,9 +4,24 @@
 
 ## Client.matches property
 
+API for match related data fetching, such as getting a match event.
+
 **Signature:**
 
 ```typescript
 /** @sealed */
 get matches(): APIMatches;
+```
+
+## Example
+
+Logs the event details of Worlds 2022 MAD vs ISG match.
+
+```ts
+import eSportsAPI from "@viriato/lol-esports-api";
+
+const matchEventDetails = await eSportsAPI.matches.getEventDetails(
+  "108998961199240268"
+);
+console.log(matchEventDetails);
 ```

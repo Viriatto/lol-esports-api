@@ -9,8 +9,10 @@
     "test": "jest --watch-all",
     "prebuild": "rimraf dist types",
     "build": "tsc",
+    "postbuild": "npm run build-docs",
+    "build-docs": "api-extractor run --local && api-documenter markdown -i ./docs -o ./docs",
     "watch": "tsc --watch",
-    "prepack": "npm run build",
+    "prepack": "tsc",
     "prepare": "husky install",
     "start": "node ./dist/index.js"
   },

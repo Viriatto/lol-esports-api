@@ -4,9 +4,24 @@
 
 ## Client.tournaments property
 
+API for tournament related data fetching, such as standings and completed events.
+
 **Signature:**
 
 ```typescript
 /** @sealed */
 get tournaments(): APITournaments;
+```
+
+## Example
+
+Logs data of all Worlds tournaments.
+
+```ts
+import eSportsAPI from "@viriato/lol-esports-api";
+
+const tournaments = await eSportsAPI.leagues.getTournaments(
+  "98767975604431411"
+);
+console.log(tournaments);
 ```

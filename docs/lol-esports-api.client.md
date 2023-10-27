@@ -24,9 +24,9 @@ const schedule = await eSportsAPI.leagues.getSchedule();
 
 ## Properties
 
-| Property                                               | Modifiers             | Type           | Description |
-| ------------------------------------------------------ | --------------------- | -------------- | ----------- |
-| [events](./lol-esports-api.client.events.md)           | <code>readonly</code> | APIEvents      |             |
-| [leagues](./lol-esports-api.client.leagues.md)         | <code>readonly</code> | APILeagues     |             |
-| [matches](./lol-esports-api.client.matches.md)         | <code>readonly</code> | APIMatches     |             |
-| [tournaments](./lol-esports-api.client.tournaments.md) | <code>readonly</code> | APITournaments |             |
+| Property                                               | Modifiers             | Type           | Description                                                                       |
+| ------------------------------------------------------ | --------------------- | -------------- | --------------------------------------------------------------------------------- |
+| [events](./lol-esports-api.client.events.md)           | <code>readonly</code> | APIEvents      | API for live event data fetching.                                                 |
+| [leagues](./lol-esports-api.client.leagues.md)         | <code>readonly</code> | APILeagues     | API for league related data fetching, such as their schedules and tournaments.    |
+| [matches](./lol-esports-api.client.matches.md)         | <code>readonly</code> | APIMatches     | API for match related data fetching, such as getting a match event.               |
+| [tournaments](./lol-esports-api.client.tournaments.md) | <code>readonly</code> | APITournaments | API for tournament related data fetching, such as standings and completed events. |

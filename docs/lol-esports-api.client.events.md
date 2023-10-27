@@ -4,9 +4,22 @@
 
 ## Client.events property
 
+API for live event data fetching.
+
 **Signature:**
 
 ```typescript
 /** @sealed */
 get events(): APIEvents;
+```
+
+## Example
+
+Logs currently live events.
+
+```ts
+import eSportsAPI from "@viriato/lol-esports-api";
+
+const liveEvents = await eSportsAPI.events.getLive();
+console.log(liveEvents);
 ```

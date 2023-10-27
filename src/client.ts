@@ -81,7 +81,16 @@ export default class Client {
   private readonly _matches = new APIMatches();
 
   /**
-   * {@inheritDoc Client._leagues}
+   * API for league related data fetching, such as their schedules and tournaments.
+   *
+   * @example Logs data of all Worlds tournaments.
+   * ```ts
+   * import eSportsAPI from '@viriato/lol-esports-api';
+   *
+   * const tournaments = await eSportsAPI.leagues.getTournaments("98767975604431411");
+   * console.log(tournaments);
+   *
+   * ```
    *
    * @public @readonly @sealed
    */
@@ -90,7 +99,16 @@ export default class Client {
   }
 
   /**
-   * {@inheritDoc Client._events}
+   * API for live event data fetching.
+   *
+   * @example Logs currently live events.
+   * ```ts
+   * import eSportsAPI from '@viriato/lol-esports-api';
+   *
+   * const liveEvents = await eSportsAPI.events.getLive();
+   * console.log(liveEvents);
+   *
+   * ```
    *
    * @public @readonly @sealed
    */
@@ -99,7 +117,16 @@ export default class Client {
   }
 
   /**
-   * {@inheritDoc Client._tournaments}
+   * API for tournament related data fetching, such as standings and completed events.
+   *
+   * @example Logs data of all Worlds tournaments.
+   * ```ts
+   * import eSportsAPI from '@viriato/lol-esports-api';
+   *
+   * const tournaments = await eSportsAPI.leagues.getTournaments("98767975604431411");
+   * console.log(tournaments);
+   *
+   * ```
    *
    * @public @readonly @sealed
    */
@@ -108,7 +135,16 @@ export default class Client {
   }
 
   /**
-   * {@inheritDoc Client._matches}
+   * API for match related data fetching, such as getting a match event.
+   *
+   * @example Logs the event details of Worlds 2022 MAD vs ISG match.
+   * ```ts
+   * import eSportsAPI from '@viriato/lol-esports-api';
+   *
+   * const matchEventDetails = await eSportsAPI.matches.getEventDetails("108998961199240268");
+   * console.log(matchEventDetails);
+   *
+   * ```
    *
    * @public @readonly @sealed
    */

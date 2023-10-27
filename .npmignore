@@ -16,5 +16,4 @@ jest.config.ts
 coverage
 tests
 api-extractor.json
-etc
-temp
+docs
