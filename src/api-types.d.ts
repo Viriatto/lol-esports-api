@@ -1056,7 +1056,7 @@ export interface components {
         /** @description The player ID */
         playerId: number;
         /** @description The champion ID */
-        championId: number;
+        championId: string;
         /** @description The champion's name */
         championKey: string;
         /** @description The champion's name */
@@ -1127,20 +1127,20 @@ export interface components {
   parameters: {
     hl: components["schemas"]["locale"];
     /** @description The id(s) of the league(s) you want details of */
-    leagueIds?: number[];
+    leagueIds?: string[];
     /** @description The id of the league you want details of */
-    leagueId?: number;
+    leagueId?: string;
     /** @description The id of the league you want details of */
-    highlanderLeagueId: number;
+    highlanderLeagueId: string;
     /**
      * @description Base 64 encoded string used to determine the
      * next "page" of data to pull
      */
     pageToken?: string;
     /** @description The id(s) of the tournament(s) you want details ofs */
-    tournamentIds?: number[];
+    tournamentIds?: string[];
     /** @description The id of the match that you want */
-    id: number;
+    id: string;
     /**
      * @description The team slug(s).
      *
@@ -1152,9 +1152,9 @@ export interface components {
      *
      * You can input more than one game Id(s).
      */
-    gameIds?: number[];
+    gameIds?: string[];
     /** @description The game id of the match */
-    pathGameId: number;
+    pathGameId: string;
     /** @description The date-time (RFC3339) */
     startingTime?: string;
     /** @description The id of the league you want details of */
@@ -1592,7 +1592,7 @@ export interface operations {
         query: OneOf<
           [
             {
-              id: number;
+              id: string;
             },
             {
               slug: string;
