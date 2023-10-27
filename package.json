@@ -1,7 +1,7 @@
 {
   "name": "@viriato/lol-esports-api",
   "type": "module",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Implementation of League of Legends' Unofficial Esports API.",
   "main": "./dist/index.js",
   "types": "./types/index.d.ts",
