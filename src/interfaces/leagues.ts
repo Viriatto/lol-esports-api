@@ -19,7 +19,9 @@ export default class Leagues extends Interface {
    */
   public async get(locale: APILocale = "en-US") {
     return this._get(this._baseURLs.main, "/getLeagues", {
-      hl: locale,
+      query: {
+        hl: locale,
+      },
     });
   }
 
@@ -34,10 +36,12 @@ export default class Leagues extends Interface {
    *
    * @public @sealed
    */
-  public async getTournaments(leagueId?: number, locale: APILocale = "en-US") {
+  public async getTournaments(leagueId?: string, locale: APILocale = "en-US") {
     return this._get(this._baseURLs.main, "/getTournamentsForLeague", {
-      leagueId,
-      hl: locale,
+      query: {
+        leagueId,
+        hl: locale,
+      },
     });
   }
 
@@ -54,16 +58,18 @@ export default class Leagues extends Interface {
    * @public @sealed
    */
   public async getSchedule(
-    leagueIdOrIds?: number[] | number,
+    leagueIdOrIds?: [string, ...string[]] | string,
     pageToken?: string,
     locale: APILocale = "en-US"
   ) {
     return this._get(this._baseURLs.main, "/getSchedule", {
-      leagueId: leagueIdOrIds
-        ? parseValueOrValuesAsArray(leagueIdOrIds)
-        : undefined,
-      pageToken,
-      hl: locale,
+      query: {
+        leagueId: leagueIdOrIds
+          ? parseValueOrValuesAsArray(leagueIdOrIds)
+          : undefined,
+        pageToken,
+        hl: locale,
+      },
     });
   }
 }

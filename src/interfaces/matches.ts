@@ -17,10 +17,12 @@ export default class Matches extends Interface {
    *
    * @public @sealed
    */
-  public async getEvent(matchId: number, locale: APILocale = "en-US") {
+  public async getEvent(matchId: string, locale: APILocale = "en-US") {
     return this._get(this._baseURLs.main, "/getEventDetails", {
-      id: matchId,
-      hl: locale,
+      query: {
+        id: matchId,
+        hl: locale,
+      },
     });
   }
 }

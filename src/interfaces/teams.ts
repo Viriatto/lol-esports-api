@@ -26,8 +26,10 @@ export default class Teams extends Interface {
     locale: APILocale = "en-US"
   ) {
     return this._get(this._baseURLs.main, "/getTeams", {
-      id: teamIdOrIds ? parseValueOrValuesAsArray(teamIdOrIds) : undefined,
-      hl: locale,
+      query: {
+        id: teamIdOrIds ? parseValueOrValuesAsArray(teamIdOrIds) : undefined,
+        hl: locale,
+      },
     });
   }
 }

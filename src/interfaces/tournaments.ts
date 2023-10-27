@@ -22,14 +22,16 @@ export default class Tournaments extends Interface {
    * @public @sealed
    */
   public async getCompletedEvents(
-    tournamentIdOrIds?: number | [number, ...number[]],
+    tournamentIdOrIds?: string | [string, ...string[]],
     locale: APILocale = "en-US"
   ) {
     return this._get(this._baseURLs.main, "/getCompletedEvents", {
-      tournamentId: tournamentIdOrIds
-        ? parseValueOrValuesAsArray(tournamentIdOrIds)
-        : undefined,
-      hl: locale,
+      query: {
+        tournamentId: tournamentIdOrIds
+          ? parseValueOrValuesAsArray(tournamentIdOrIds)
+          : undefined,
+        hl: locale,
+      },
     });
   }
 
@@ -45,12 +47,14 @@ export default class Tournaments extends Interface {
    * @public @sealed
    */
   public async getStandings(
-    tournamentIdOrIds: number | [number, ...number[]],
+    tournamentIdOrIds: string | [string, ...string[]],
     locale: APILocale = "en-US"
   ) {
     return this._get(this._baseURLs.main, "/getStandings", {
-      tournamentId: parseValueOrValuesAsArray(tournamentIdOrIds),
-      hl: locale,
+      query: {
+        tournamentId: parseValueOrValuesAsArray(tournamentIdOrIds),
+        hl: locale,
+      },
     });
   }
 }
