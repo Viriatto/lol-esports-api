@@ -1,2 +1,4 @@
 dist
 types
+etc
+api-types.d.ts
