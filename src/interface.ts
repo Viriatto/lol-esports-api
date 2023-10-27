@@ -1,5 +1,6 @@
 import axios, { AxiosResponse } from "axios";
-import { operations } from "./api-types.js";
+import { paths } from "./api-types.js";
+import { parseParameterizedEndpointPath } from "./utils.js";
 
 /**
  * Options for the configuration of requests to the eSports API.
@@ -33,9 +34,9 @@ interface LolEsportsAPIRequestConfig<T extends keyof APIEndpoints> {
   /**
    * Maps the query parameters relative to the endpoint specified by the generic parameter `T`.
    *
-   * @see {@link APIEndpointQueryParameters}
+   * @see {@link APIEndpointParameters}
    */
-  params: APIEndpointQueryParameters<T>;
+  params: APIEndpointParameters<T>;
 }
 
 /**
@@ -44,13 +45,18 @@ interface LolEsportsAPIRequestConfig<T extends keyof APIEndpoints> {
  * @remarks
  * The eSports API specification used here is a fork of {@link https://vickz84259.github.io/lolesports-api-docs/ | vickz84259's work}.
  */
-type APIResponse<T extends keyof operations> =
-  operations[T]["responses"][200]["content"]["application/json"];
+type APIResponse<T extends keyof APIEndpoints> =
+  APIOperations<T>["responses"][200]["content"]["application/json"];
 
 /**
  * The API endpoints as per {@link https://vickz84259.github.io/lolesports-api-docs/ | vickz84259's specification}.
  */
-type APIEndpoints = operations;
+type APIEndpoints = paths;
+
+/**
+ * The API endpoint operations as per {@link https://vickz84259.github.io/lolesports-api-docs/ | vickz84259's specification}.
+ */
+type APIOperations<T extends keyof APIEndpoints> = APIEndpoints[T]["get"];
 
 /**
  * Mapped query parameters for API endpoint `T`.
@@ -58,13 +64,14 @@ type APIEndpoints = operations;
  * @remarks
  * Searches for an existing type within the eSports API types, if it does not exist, defaults to `never`.
  */
-type APIEndpointQueryParameters<T extends keyof APIEndpoints> =
-  APIEndpoints[T] extends {
+type APIEndpointParameters<T extends keyof APIEndpoints> =
+  APIOperations<T> extends {
     parameters: {
       query?: Record<string, unknown>;
+      path?: Record<string, unknown>;
     };
   }
-    ? APIEndpoints[T]["parameters"]["query"]
+    ? APIOperations<T>["parameters"]
     : never;
 
 /**
@@ -131,12 +138,20 @@ export default abstract class Interface {
    */
   protected async _get<T extends keyof APIEndpoints>(
     baseURLs: readonly string[],
-    endpoint: `/${T}`,
-    params?: APIEndpointQueryParameters<T> | URLSearchParams
+    endpoint: T,
+    params: APIEndpointParameters<T>
   ) {
     if (!this._baseURLs) {
       throw new Error("No API base URLs specified.");
     }
+
+    let resolvedEndpointPath: string = endpoint;
+
+    if (params?.path)
+      resolvedEndpointPath = parseParameterizedEndpointPath(
+        endpoint,
+        params.path
+      );
 
     for await (const baseURL of baseURLs) {
       try {
@@ -144,7 +159,7 @@ export default abstract class Interface {
           APIResponse<T>,
           AxiosResponse<APIResponse<T>, LolEsportsAPIRequestConfig<T>>,
           LolEsportsAPIRequestConfig<T>
-        >(`${baseURL}${endpoint}`, {
+        >(`${baseURL}${resolvedEndpointPath}`, {
           headers: {
             // API key is supposed to be public here.
             "x-api-key": "0TvQnueqKa5mxJntVWt0w4LpLfEkrV1Ta8rQBb9Z",
@@ -154,14 +169,9 @@ export default abstract class Interface {
 
         if (response.status === 200) {
           return response.data;
-        } else {
-          // It shouldn't throw here because we want it to test the other built endpoints.
-          console.error(
-            new Error(`${response.status} - ${response.statusText}`)
-          );
         }
-      } catch (reason: unknown) {
-        console.error(reason);
+      } catch (_) {
+        /* empty */
       }
     }
 

@@ -15,3 +15,6 @@ types/**/*.d.ts.map
 jest.config.ts
 coverage
 tests
+api-extractor.json
+etc
+temp
