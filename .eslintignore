@@ -2,3 +2,5 @@ dist
 types
 etc
 api-types.d.ts
+docs
+api-extractor.json
