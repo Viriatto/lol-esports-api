@@ -48,20 +48,9 @@ const schedule = await eSportsAPI.leagues.getSchedule();
 
 API for live event data fetching.
 
-**`Example`**
-
-Logs currently live events.
-
-```ts
-import eSportsAPI from "@viriato/lol-esports-api";
-
-const liveEvents = await eSportsAPI.events.getLive();
-console.log(liveEvents);
-```
-
 #### Defined in
 
-[src/client.ts:49](https://github.com/Viriatto/lol-esports-api/blob/f81735a/src/client.ts#L49)
+[src/client.ts:31](https://github.com/Viriatto/lol-esports-api/blob/263a411/src/client.ts#L31)
 
 ---
 
@@ -71,22 +60,9 @@ console.log(liveEvents);
 
 API for league related data fetching, such as their schedules and tournaments.
 
-**`Example`**
-
-Logs data of all Worlds tournaments.
-
-```ts
-import eSportsAPI from "@viriato/lol-esports-api";
-
-const tournaments = await eSportsAPI.leagues.getTournaments(
-  "98767975604431411"
-);
-console.log(tournaments);
-```
-
 #### Defined in
 
-[src/client.ts:33](https://github.com/Viriatto/lol-esports-api/blob/f81735a/src/client.ts#L33)
+[src/client.ts:24](https://github.com/Viriatto/lol-esports-api/blob/263a411/src/client.ts#L24)
 
 ---
 
@@ -96,22 +72,9 @@ console.log(tournaments);
 
 API for match related data fetching, such as getting a match event.
 
-**`Example`**
-
-Logs the event details of Worlds 2022 MAD vs ISG match.
-
-```ts
-import eSportsAPI from "@viriato/lol-esports-api";
-
-const matchEventDetails = await eSportsAPI.matches.getEventDetails(
-  "108998961199240268"
-);
-console.log(matchEventDetails);
-```
-
 #### Defined in
 
-[src/client.ts:81](https://github.com/Viriatto/lol-esports-api/blob/f81735a/src/client.ts#L81)
+[src/client.ts:45](https://github.com/Viriatto/lol-esports-api/blob/263a411/src/client.ts#L45)
 
 ---
 
@@ -121,22 +84,9 @@ console.log(matchEventDetails);
 
 API for tournament related data fetching, such as standings and completed events.
 
-**`Example`**
-
-Logs data of all Worlds tournaments.
-
-```ts
-import eSportsAPI from "@viriato/lol-esports-api";
-
-const tournaments = await eSportsAPI.leagues.getTournaments(
-  "98767975604431411"
-);
-console.log(tournaments);
-```
-
 #### Defined in
 
-[src/client.ts:65](https://github.com/Viriatto/lol-esports-api/blob/f81735a/src/client.ts#L65)
+[src/client.ts:38](https://github.com/Viriatto/lol-esports-api/blob/263a411/src/client.ts#L38)
 
 ## Accessors
 
@@ -163,7 +113,7 @@ console.log(liveEvents);
 
 #### Defined in
 
-[src/client.ts:115](https://github.com/Viriatto/lol-esports-api/blob/f81735a/src/client.ts#L115)
+[src/client.ts:78](https://github.com/Viriatto/lol-esports-api/blob/263a411/src/client.ts#L78)
 
 ---
 
@@ -192,7 +142,7 @@ console.log(tournaments);
 
 #### Defined in
 
-[src/client.ts:97](https://github.com/Viriatto/lol-esports-api/blob/f81735a/src/client.ts#L97)
+[src/client.ts:60](https://github.com/Viriatto/lol-esports-api/blob/263a411/src/client.ts#L60)
 
 ---
 
@@ -221,7 +171,7 @@ console.log(matchEventDetails);
 
 #### Defined in
 
-[src/client.ts:151](https://github.com/Viriatto/lol-esports-api/blob/f81735a/src/client.ts#L151)
+[src/client.ts:114](https://github.com/Viriatto/lol-esports-api/blob/263a411/src/client.ts#L114)
 
 ---
 
@@ -250,4 +200,4 @@ console.log(tournaments);
 
 #### Defined in
 
-[src/client.ts:133](https://github.com/Viriatto/lol-esports-api/blob/f81735a/src/client.ts#L133)
+[src/client.ts:96](https://github.com/Viriatto/lol-esports-api/blob/263a411/src/client.ts#L96)

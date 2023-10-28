@@ -48,7 +48,7 @@ Searches for an existing type within the eSports API types, if it does not exist
 
 #### Defined in
 
-[src/interface.ts:75](https://github.com/Viriatto/lol-esports-api/blob/f81735a/src/interface.ts#L75)
+[src/interface.ts:75](https://github.com/Viriatto/lol-esports-api/blob/263a411/src/interface.ts#L75)
 
 ---
 
@@ -60,7 +60,7 @@ The API endpoints as per [vickz84259's specification](https://vickz84259.github.
 
 #### Defined in
 
-[src/interface.ts:58](https://github.com/Viriatto/lol-esports-api/blob/f81735a/src/interface.ts#L58)
+[src/interface.ts:58](https://github.com/Viriatto/lol-esports-api/blob/263a411/src/interface.ts#L58)
 
 ---
 
@@ -72,7 +72,7 @@ The API endpoints as per [vickz84259's specification](https://vickz84259.github.
 
 #### Defined in
 
-[src/interface.ts:90](https://github.com/Viriatto/lol-esports-api/blob/f81735a/src/interface.ts#L90)
+[src/interface.ts:90](https://github.com/Viriatto/lol-esports-api/blob/263a411/src/interface.ts#L90)
 
 ---
 
@@ -90,7 +90,7 @@ The API endpoint operations as per [vickz84259's specification](https://vickz842
 
 #### Defined in
 
-[src/interface.ts:65](https://github.com/Viriatto/lol-esports-api/blob/f81735a/src/interface.ts#L65)
+[src/interface.ts:65](https://github.com/Viriatto/lol-esports-api/blob/263a411/src/interface.ts#L65)
 
 ---
 
@@ -112,7 +112,7 @@ The eSports API specification used here is a fork of [vickz84259's work](https:/
 
 #### Defined in
 
-[src/interface.ts:50](https://github.com/Viriatto/lol-esports-api/blob/f81735a/src/interface.ts#L50)
+[src/interface.ts:50](https://github.com/Viriatto/lol-esports-api/blob/263a411/src/interface.ts#L50)
 
 ---
 
@@ -169,4 +169,4 @@ OneOf type helpers
 
 #### Defined in
 
-[src/api-types.d.ts:7](https://github.com/Viriatto/lol-esports-api/blob/f81735a/src/api-types.d.ts#L7)
+[src/api-types.d.ts:7](https://github.com/Viriatto/lol-esports-api/blob/263a411/src/api-types.d.ts#L7)

@@ -19,30 +19,12 @@ export class Client {
   /**
    * API for league related data fetching, such as their schedules and tournaments.
    *
-   * @example Logs data of all Worlds tournaments.
-   * ```ts
-   * import eSportsAPI from '@viriato/lol-esports-api';
-   *
-   * const tournaments = await eSportsAPI.leagues.getTournaments("98767975604431411");
-   * console.log(tournaments);
-   *
-   * ```
-   *
    * @sealed @readonly @internal
    */
   private readonly _leagues = new APILeagues();
 
   /**
    * API for live event data fetching.
-   *
-   * @example Logs currently live events.
-   * ```ts
-   * import eSportsAPI from '@viriato/lol-esports-api';
-   *
-   * const liveEvents = await eSportsAPI.events.getLive();
-   * console.log(liveEvents);
-   *
-   * ```
    *
    * @sealed @readonly @internal
    */
@@ -51,15 +33,6 @@ export class Client {
   /**
    * API for tournament related data fetching, such as standings and completed events.
    *
-   * @example Logs data of all Worlds tournaments.
-   * ```ts
-   * import eSportsAPI from '@viriato/lol-esports-api';
-   *
-   * const tournaments = await eSportsAPI.leagues.getTournaments("98767975604431411");
-   * console.log(tournaments);
-   *
-   * ```
-   *
    * @sealed @readonly @internal
    */
   private readonly _tournaments = new APITournaments();
@@ -67,21 +40,12 @@ export class Client {
   /**
    * API for match related data fetching, such as getting a match event.
    *
-   * @example Logs the event details of Worlds 2022 MAD vs ISG match.
-   * ```ts
-   * import eSportsAPI from '@viriato/lol-esports-api';
-   *
-   * const matchEventDetails = await eSportsAPI.matches.getEventDetails("108998961199240268");
-   * console.log(matchEventDetails);
-   *
-   * ```
-   *
    * @sealed @readonly @internal
    */
   private readonly _matches = new APIMatches();
 
   /**
-   * API for league related data fetching, such as their schedules and tournaments.
+   * {@inheritDoc Client._leagues}
    *
    * @example Logs data of all Worlds tournaments.
    * ```ts
@@ -89,7 +53,6 @@ export class Client {
    *
    * const tournaments = await eSportsAPI.leagues.getTournaments("98767975604431411");
    * console.log(tournaments);
-   *
    * ```
    *
    * @public @readonly @sealed
@@ -99,7 +62,7 @@ export class Client {
   }
 
   /**
-   * API for live event data fetching.
+   * {@inheritDoc Client._events}
    *
    * @example Logs currently live events.
    * ```ts
@@ -117,7 +80,7 @@ export class Client {
   }
 
   /**
-   * API for tournament related data fetching, such as standings and completed events.
+   * {@inheritDoc Client._tournaments}
    *
    * @example Logs data of all Worlds tournaments.
    * ```ts
@@ -135,7 +98,7 @@ export class Client {
   }
 
   /**
-   * API for match related data fetching, such as getting a match event.
+   * {@inheritDoc Client._matches}
    *
    * @example Logs the event details of Worlds 2022 MAD vs ISG match.
    * ```ts
