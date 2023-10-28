@@ -1,7 +1,7 @@
-import APIEvents from "./interfaces/events.js";
-import APILeagues from "./interfaces/leagues.js";
-import APIMatches from "./interfaces/matches.js";
-import APITournaments from "./interfaces/tournaments.js";
+import { Events as APIEvents } from "./interfaces/events.js";
+import { Leagues as APILeagues } from "./interfaces/leagues.js";
+import { Matches as APIMatches } from "./interfaces/matches.js";
+import { Tournaments as APITournaments } from "./interfaces/tournaments.js";
 
 /**
  * Main entity of the module.
@@ -15,7 +15,7 @@ import APITournaments from "./interfaces/tournaments.js";
  *
  * @public
  */
-export default class Client {
+export class Client {
   /**
    * API for league related data fetching, such as their schedules and tournaments.
    *

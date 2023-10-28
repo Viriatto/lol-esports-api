@@ -44,17 +44,23 @@ interface LolEsportsAPIRequestConfig<T extends keyof APIEndpoints> {
  *
  * @remarks
  * The eSports API specification used here is a fork of {@link https://vickz84259.github.io/lolesports-api-docs/ | vickz84259's work}.
+ *
+ * @internal
  */
 type APIResponse<T extends keyof APIEndpoints> =
   APIOperations<T>["responses"][200]["content"]["application/json"];
 
 /**
  * The API endpoints as per {@link https://vickz84259.github.io/lolesports-api-docs/ | vickz84259's specification}.
+ *
+ * @internal
  */
 type APIEndpoints = paths;
 
 /**
  * The API endpoint operations as per {@link https://vickz84259.github.io/lolesports-api-docs/ | vickz84259's specification}.
+ *
+ * @internal
  */
 type APIOperations<T extends keyof APIEndpoints> = APIEndpoints[T]["get"];
 
@@ -63,6 +69,8 @@ type APIOperations<T extends keyof APIEndpoints> = APIEndpoints[T]["get"];
  *
  * @remarks
  * Searches for an existing type within the eSports API types, if it does not exist, defaults to `never`.
+ *
+ * @internal
  */
 type APIEndpointParameters<T extends keyof APIEndpoints> =
   APIOperations<T> extends {
@@ -76,6 +84,8 @@ type APIEndpointParameters<T extends keyof APIEndpoints> =
 
 /**
  * {@link https://en.wikipedia.org/wiki/ISO_639-1 | ISO 639-1}/{@link https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2 | ISO 3166-1 alpha-2} locale code.
+ *
+ * @internal
  */
 export type APILocale =
   | "en-US"
@@ -102,7 +112,7 @@ export type APILocale =
  *
  * @internal
  */
-export default abstract class Interface {
+export abstract class Interface {
   /**
    * The eSports API's base URLs.
    *

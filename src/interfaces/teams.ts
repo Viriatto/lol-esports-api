@@ -1,4 +1,4 @@
-import Interface, { APILocale } from "../interface.js";
+import { APILocale, Interface } from "../interface.js";
 import { parseValueOrValuesAsArray } from "../utils.js";
 
 /**
@@ -6,7 +6,7 @@ import { parseValueOrValuesAsArray } from "../utils.js";
  *
  * @internal @sealed
  */
-export default class Teams extends Interface {
+export class Teams extends Interface {
   /**
    * Fetches data for all teams or a particular team.
    *

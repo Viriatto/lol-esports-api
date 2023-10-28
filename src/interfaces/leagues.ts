@@ -1,4 +1,4 @@
-import Interface, { APILocale } from "../interface.js";
+import { APILocale, Interface } from "../interface.js";
 import { parseValueOrValuesAsArray } from "../utils.js";
 
 /**
@@ -6,7 +6,7 @@ import { parseValueOrValuesAsArray } from "../utils.js";
  *
  * @internal @sealed
  */
-export default class Leagues extends Interface {
+export class Leagues extends Interface {
   /**
    * Fetches data on all leagues.
    *

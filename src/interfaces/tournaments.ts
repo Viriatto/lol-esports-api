@@ -1,4 +1,4 @@
-import Interface, { APILocale } from "../interface.js";
+import { APILocale, Interface } from "../interface.js";
 import { parseValueOrValuesAsArray } from "../utils.js";
 
 /**
@@ -6,7 +6,7 @@ import { parseValueOrValuesAsArray } from "../utils.js";
  *
  * @internal @sealed
  */
-export default class Tournaments extends Interface {
+export class Tournaments extends Interface {
   /**
    * Fetches data for completed events of all tournaments, a particular tournament, or a set of tournaments.
    *
