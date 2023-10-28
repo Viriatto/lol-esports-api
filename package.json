@@ -8,11 +8,12 @@
   "scripts": {
     "test": "jest --watch-all",
     "prebuild": "rimraf dist types",
-    "build": "tsc",
+    "build": "npm run compile",
     "postbuild": "npm run build-docs",
-    "build-docs": "api-extractor run --local && api-documenter markdown -i ./docs -o ./docs",
+    "compile": "tsc",
+    "build-docs": "typedoc",
     "watch": "tsc --watch",
-    "prepack": "tsc",
+    "prepack": "npm run compile",
     "prepare": "husky install",
     "start": "node ./dist/index.js"
   },
@@ -43,6 +44,9 @@
     "rimraf": "^5.0.1",
     "ts-jest": "^29.1.1",
     "ts-node": "^10.9.1",
+    "typedoc": "^0.25.2",
+    "typedoc-plugin-markdown": "^3.16.0",
+    "typedoc-plugin-missing-exports": "^2.1.0",
     "typescript": "^5.2.2"
   },
   "dependencies": {

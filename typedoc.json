@@ -1,0 +1,9 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "name": "LoL Esports API Wrapper",
+  "includeVersion": true,
+  "entryPoints": ["./src/index.ts"],
+  "out": "./docs",
+  "plugin": ["typedoc-plugin-markdown", "typedoc-plugin-missing-exports"],
+  "logLevel": "Verbose"
+}
