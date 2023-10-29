@@ -20,7 +20,7 @@ describe("transforming a single value or an array of values into an array", () =
 });
 
 describe("parsing an endpoint with path parameters", () => {
-  it.skip("should throw when missing a path parameter's value", () => {
+  it("should throw when missing a path parameter's value", () => {
     expect(() =>
       parseParameterizedEndpointPath("/{gameId}/{participantId}", {
         gameId: 1,

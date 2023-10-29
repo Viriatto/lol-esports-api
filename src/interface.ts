@@ -174,13 +174,17 @@ export abstract class Interface {
             // API key is supposed to be public here.
             "x-api-key": "0TvQnueqKa5mxJntVWt0w4LpLfEkrV1Ta8rQBb9Z",
           },
-          params,
+          params: params.query,
+          paramsSerializer: {
+            indexes: null,
+          },
         });
 
         if (response.status === 200) {
           return response.data;
         }
       } catch (_) {
+        console.log(_);
         /* empty */
       }
     }

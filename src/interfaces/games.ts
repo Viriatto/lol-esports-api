@@ -10,7 +10,7 @@ export class Games extends Interface {
   /**
    * Fetches data for a game or games.
    *
-   * @param gameIdOrIds - The id or ids of the games to which fetch.
+   * @param gameId - The id of the game to fetch.
    * @param locale - The locale of the response.
    * @returns Data about the games.
    *
@@ -18,14 +18,11 @@ export class Games extends Interface {
    *
    * @public @sealed
    */
-  public async get(
-    gameIdOrIds: string | string[],
-    locale: APILocale = "en-US"
-  ) {
+  public async get(gameId: string, locale: APILocale = "en-US") {
     return this._get(this._baseURLs.main, "/getGames", {
       query: {
         hl: locale,
-        id: parseValueOrValuesAsArray(gameIdOrIds),
+        id: [gameId],
       },
     });
   }
@@ -84,13 +81,14 @@ export class Games extends Interface {
    */
   public async getDetails(
     gameId: string,
-    participantIdsOrIds: number | number[],
-    startingAt: string | Date
+    startingAt: string | Date,
+    participantIdsOrIds?: number | [number, ...number[]]
   ) {
     return this._get(this._baseURLs.feed, "/details/{gameId}", {
       query: {
-        participantIds:
-          parseValueOrValuesAsArray(participantIdsOrIds).join("_"),
+        participantIds: participantIdsOrIds
+          ? parseValueOrValuesAsArray(participantIdsOrIds).join("_")
+          : undefined,
         startingTime:
           typeof startingAt === "string"
             ? startingAt

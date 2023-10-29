@@ -48,7 +48,7 @@ export class Leagues extends Interface {
   /**
    * Fetches the schedule for a particular league.
    *
-   * @param leagueIdOrIds - The id of the league from which to fetch the schedule.
+   * @param leagueId - The id of the league from which to fetch the schedule.
    * @param locale - The locale of the response.
    * @param pageToken - Base 64 encoded string used to determine the next "page" of data to pull.
    * @returns Data on all tournaments from a specific league.
@@ -58,15 +58,13 @@ export class Leagues extends Interface {
    * @public @sealed
    */
   public async getSchedule(
-    leagueIdOrIds?: [string, ...string[]] | string,
+    leagueId?: string,
     pageToken?: string,
     locale: APILocale = "en-US"
   ) {
     return this._get(this._baseURLs.main, "/getSchedule", {
       query: {
-        leagueId: leagueIdOrIds
-          ? parseValueOrValuesAsArray(leagueIdOrIds)
-          : undefined,
+        leagueId: leagueId ? parseValueOrValuesAsArray(leagueId) : undefined,
         pageToken,
         hl: locale,
       },

@@ -58,7 +58,8 @@ export function parseParameterizedEndpointPath(
   pathParams: Record<string, unknown>
 ) {
   for (const pathParameterKey in pathParams) {
-    endpoint.replaceAll(
+    `${pathParams[pathParameterKey]}`;
+    endpoint = endpoint.replaceAll(
       `{${pathParameterKey}}`,
       // Must be stringified because we don't know the type of the value of the path parameter to replace with (could be a number).
       `${pathParams[pathParameterKey]}`

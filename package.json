@@ -6,7 +6,7 @@
   "main": "./dist/index.js",
   "types": "./types/index.d.ts",
   "scripts": {
-    "test": "jest --watch-all",
+    "test": "jest",
     "prebuild": "rimraf dist types",
     "build": "npm run compile",
     "postbuild": "npm run build-docs",

@@ -38,7 +38,7 @@ export class Tournaments extends Interface {
   /**
    * Fetches data for the standings of a particular tournament or tournaments.
    *
-   * @param tournamentIdOrIds - The id(s) of the tournament(s) from which to pull completed event data.
+   * @param tournamentId - The id of the tournament from which to pull standings data.
    * @param locale - The locale of the response.
    * @returns Data on the completed events of a particular tournament.
    *
@@ -46,13 +46,10 @@ export class Tournaments extends Interface {
    *
    * @public @sealed
    */
-  public async getStandings(
-    tournamentIdOrIds: string | [string, ...string[]],
-    locale: APILocale = "en-US"
-  ) {
+  public async getStandings(tournamentId: string, locale: APILocale = "en-US") {
     return this._get(this._baseURLs.main, "/getStandings", {
       query: {
-        tournamentId: parseValueOrValuesAsArray(tournamentIdOrIds),
+        tournamentId: parseValueOrValuesAsArray(tournamentId),
         hl: locale,
       },
     });
