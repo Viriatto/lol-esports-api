@@ -1,7 +1,9 @@
-import { Events as APIEvents } from "./interfaces/events.js";
-import { Leagues as APILeagues } from "./interfaces/leagues.js";
-import { Matches as APIMatches } from "./interfaces/matches.js";
-import { Tournaments as APITournaments } from "./interfaces/tournaments.js";
+import APIEvents from "./interfaces/events.js";
+import APILeagues from "./interfaces/leagues.js";
+import APIMatches from "./interfaces/matches.js";
+import APITournaments from "./interfaces/tournaments.js";
+import APIGames from "./interfaces/games.js";
+import APITeams from "./interfaces/teams.js";
 
 /**
  * Main entity of the module.
@@ -15,7 +17,7 @@ import { Tournaments as APITournaments } from "./interfaces/tournaments.js";
  *
  * @public
  */
-export class Client {
+export default class Client {
   /**
    * API for league related data fetching, such as their schedules and tournaments.
    *
@@ -43,6 +45,20 @@ export class Client {
    * @sealed @readonly @internal
    */
   private readonly _matches = new APIMatches();
+
+  /**
+   * API for game related data fetching, such as fetching a game segment's data.
+   *
+   * @sealed @readonly @internal
+   */
+  private readonly _games = new APIGames();
+
+  /**
+   * API for team related data fetching.
+   *
+   * @sealed @readonly @internal
+   */
+  private readonly _teams = new APITeams();
 
   /**
    * {@inheritDoc Client._leagues}
@@ -113,5 +129,41 @@ export class Client {
    */
   public get matches() {
     return this._matches;
+  }
+
+  /**
+   * {@inheritDoc Client._games}
+   *
+   * @example Logs a game's response data.
+   * ```ts
+   * import eSportsAPI from '@viriato/lol-esports-api';
+   *
+   * const game = await eSportsAPI.games.get("110853167109116577");
+   * console.log(game);
+   *
+   * ```
+   *
+   * @public @readonly @sealed
+   */
+  public get games() {
+    return this._games;
+  }
+
+  /**
+   * {@inheritDoc Client._teams}
+   *
+   * @example Logs a team's response data.
+   * ```ts
+   * import eSportsAPI from '@viriato/lol-esports-api';
+   *
+   * const game = await eSportsAPI.teams.get("fnatic");
+   * console.log(game);
+   *
+   * ```
+   *
+   * @public @readonly @sealed
+   */
+  public get teams() {
+    return this._teams;
   }
 }

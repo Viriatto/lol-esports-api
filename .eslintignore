@@ -3,3 +3,4 @@ types
 api-types.d.ts
 docs
 api-extractor.json
+**/*.md

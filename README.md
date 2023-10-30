@@ -1,5 +1,3 @@
-LoL Esports API Wrapper / [Exports](modules.md)
-
 # Unofficial League Esports API Wrapper
 
 This is a simple wrapper of League of Legends' eSports API.

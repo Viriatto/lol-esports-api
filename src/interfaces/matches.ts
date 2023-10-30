@@ -1,11 +1,11 @@
-import { APILocale, Interface } from "../interface.js";
+import Interface, { APILocale } from "../interface.js";
 
 /**
  * Interfaces with all of match related endpoints.
  *
  * @internal @sealed
  */
-export class Matches extends Interface {
+export default class Matches extends Interface {
   /**
    * Fetches event details for a particular match.
    *

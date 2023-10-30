@@ -6,7 +6,7 @@
 
 ### Modules
 
-- [&lt;internal\&gt;](modules/internal_.md)
+- [internal](modules/internal.md)
 
 ### Classes
 

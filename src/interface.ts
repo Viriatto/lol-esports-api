@@ -112,7 +112,7 @@ export type APILocale =
  *
  * @internal
  */
-export abstract class Interface {
+export default abstract class Interface {
   /**
    * The eSports API's base URLs.
    *

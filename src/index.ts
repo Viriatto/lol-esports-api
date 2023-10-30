@@ -6,6 +6,6 @@
  *
  */
 
-import { Client } from "./client.js";
+import Client from "./client.js";
 
-export { Client };
+export default Client;

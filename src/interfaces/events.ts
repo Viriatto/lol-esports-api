@@ -1,11 +1,11 @@
-import { APILocale, Interface } from "../interface.js";
+import Interface, { APILocale } from "../interface.js";
 
 /**
  * Interfaces with all event related endpoints.
  *
  * @internal @sealed
  */
-export class Events extends Interface {
+export default class Events extends Interface {
   /**
    * Fetch data on currently live events.
    *

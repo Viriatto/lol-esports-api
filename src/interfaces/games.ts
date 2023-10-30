@@ -1,4 +1,4 @@
-import { APILocale, Interface } from "../interface.js";
+import Interface, { APILocale } from "../interface.js";
 import { parseValueOrValuesAsArray } from "../utils.js";
 
 /**
@@ -6,7 +6,7 @@ import { parseValueOrValuesAsArray } from "../utils.js";
  *
  * @internal @sealed
  */
-export class Games extends Interface {
+export default class Games extends Interface {
   /**
    * Fetches data for a game or games.
    *
