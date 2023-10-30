@@ -4,7 +4,7 @@ This is a simple wrapper of League of Legends' eSports API.
 
 A huge contribution to this project has been [vickz84259's documentation](https://vickz84259.github.io/lolesports-api-docs/), from which the API responses' types have been generated.
 
-**[Full API Reference](https://github.com/Viriatto/lol-esports-api/blob/master/docs/README.md)**
+**[Full API Reference](https://github.com/Viriatto/lol-esports-api/blob/master/docs/modules.md)**
 
 ---
 
