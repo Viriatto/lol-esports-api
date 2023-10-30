@@ -19,7 +19,7 @@ A huge contribution to this project has been [vickz84259's documentation](https:
 
 #### Events
 
-##### Fetching currently live events
+##### Fetching currently live events:
 
 ```ts
 import APIClient from "lol-esports-api";
