@@ -21,7 +21,11 @@
     "type": "git",
     "url": "git+https://github.com/Viriatto/lol-esports-api.git"
   },
-  "keywords": [],
+  "keywords": [
+    "lol-esports-api",
+    "league of legends",
+    "esports"
+  ],
   "author": "João Teixeira",
   "license": "ISC",
   "bugs": {
