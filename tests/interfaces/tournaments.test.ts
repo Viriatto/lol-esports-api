@@ -1,4 +1,4 @@
-import { Tournaments as APITournaments } from "../../src/interfaces/tournaments";
+import APITournaments from "../../src/interfaces/tournaments";
 
 describe("tournaments' data fetching", () => {
   const tournamentsAPI = new APITournaments();

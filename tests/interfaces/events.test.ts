@@ -1,4 +1,4 @@
-import { Events as APIEvents } from "../../src/interfaces/events";
+import APIEvents from "../../src/interfaces/events";
 
 describe("live events' data fetching", () => {
   const eventsAPI = new APIEvents();

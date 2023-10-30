@@ -1,4 +1,4 @@
-import { Teams as APITeams } from "../../src/interfaces/teams";
+import APITeams from "../../src/interfaces/teams";
 
 describe("teams' data fetching", () => {
   const matchesAPI = new APITeams();

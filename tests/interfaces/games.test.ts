@@ -1,4 +1,4 @@
-import { Games as APIGames } from "../../src/interfaces/games";
+import APIGames from "../../src/interfaces/games";
 
 describe("games' data fetching", () => {
   const gamesAPI = new APIGames();

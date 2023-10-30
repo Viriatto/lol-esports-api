@@ -1,4 +1,4 @@
-import { Leagues as APILeagues } from "../../src/interfaces/leagues";
+import APILeagues from "../../src/interfaces/leagues";
 
 describe("leagues' data fetching", () => {
   const leagues = new APILeagues();

@@ -1,4 +1,4 @@
-import { Matches as APIMatches } from "../../src/interfaces/matches";
+import APIMatches from "../../src/interfaces/matches";
 
 describe("matches' data fetching", () => {
   const matchesAPI = new APIMatches();

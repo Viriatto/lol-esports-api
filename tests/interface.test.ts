@@ -1,5 +1,5 @@
 import axios from "axios";
-import { Interface } from "../src/interface.js";
+import Interface from "../src/interface.js";
 
 jest.mock("axios");
 
