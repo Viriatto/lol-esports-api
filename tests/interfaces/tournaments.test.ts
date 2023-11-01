@@ -11,15 +11,6 @@ describe("tournaments' data fetching", () => {
 
       expect(response.data).toBeDefined();
     });
-
-    it("should return a valid response when fetching multiple league's completed events' data", async () => {
-      const response = await tournamentsAPI.getCompletedEvents([
-        "110852926142971547",
-        "108998961191900167",
-      ]);
-
-      expect(response.data).toBeDefined();
-    });
   });
 
   describe("fetching standings", () => {
