@@ -1,4 +1,4 @@
-[LoL Esports API Wrapper - v0.2.2](../README.md) / [Exports](../modules.md) / [internal](../modules/internal.md) / Games
+[LoL Esports API Wrapper - v0.2.3](../README.md) / [Exports](../modules.md) / [internal](../modules/internal.md) / Games
 
 # Class: Games
 
@@ -60,7 +60,7 @@ The eSports API's base URLs.
 
 #### Defined in
 
-[src/interface.ts:122](https://github.com/Viriatto/lol-esports-api/blob/eef32c6/src/interface.ts#L122)
+[src/interface.ts:122](https://github.com/Viriatto/lol-esports-api/blob/2b06612/src/interface.ts#L122)
 
 ## Methods
 
@@ -110,13 +110,13 @@ When it can't get a successfuly response from any of the endpoints built from [I
 
 #### Defined in
 
-[src/interface.ts:150](https://github.com/Viriatto/lol-esports-api/blob/eef32c6/src/interface.ts#L150)
+[src/interface.ts:150](https://github.com/Viriatto/lol-esports-api/blob/2b06612/src/interface.ts#L150)
 
 ---
 
 ### get
 
-▸ **get**(`gameId`, `locale?`): `Promise`<{ `data`: { `games`: { `id`: `string` ; `number`: `2` \| `1` \| `3` \| `5` \| `4` ; `state`: `"completed"` \| `"unstarted"` \| `"inProgress"` ; `vods`: { `parameter`: `string` } & { `locale`: `"en-US"` \| `"en-GB"` \| `"en-AU"` \| `"cs-CZ"` \| `"de-DE"` \| `"el-GR"` \| `"es-ES"` \| `"es-MX"` \| `"fr-FR"` \| `"hu-HU"` \| `"it-IT"` \| `"pl-PL"` \| `"pt-BR"` \| `"ro-RO"` \| `"ru-RU"` \| `"tr-TR"` \| `"ja-JP"` \| `"ko-KR"` ; `offset`: `number` ; `provider`: `"youtube"` \| `"twitch"` }[] }[] } }\>
+▸ **get**(`gameId`, `locale?`): `Promise`<{ `data`: { `games`: { `id`: `string` ; `number`: `1` \| `3` \| `5` \| `2` \| `4` ; `state`: `"completed"` \| `"unstarted"` \| `"inProgress"` ; `vods`: { `parameter`: `string` } & { `locale`: `"en-US"` \| `"en-GB"` \| `"en-AU"` \| `"cs-CZ"` \| `"de-DE"` \| `"el-GR"` \| `"es-ES"` \| `"es-MX"` \| `"fr-FR"` \| `"hu-HU"` \| `"it-IT"` \| `"pl-PL"` \| `"pt-BR"` \| `"ro-RO"` \| `"ru-RU"` \| `"tr-TR"` \| `"ja-JP"` \| `"ko-KR"` ; `offset`: `number` ; `provider`: `"youtube"` \| `"twitch"` }[] }[] } }\>
 
 Fetches data for a game or games.
 
@@ -129,7 +129,7 @@ Fetches data for a game or games.
 
 #### Returns
 
-`Promise`<{ `data`: { `games`: { `id`: `string` ; `number`: `2` \| `1` \| `3` \| `5` \| `4` ; `state`: `"completed"` \| `"unstarted"` \| `"inProgress"` ; `vods`: { `parameter`: `string` } & { `locale`: `"en-US"` \| `"en-GB"` \| `"en-AU"` \| `"cs-CZ"` \| `"de-DE"` \| `"el-GR"` \| `"es-ES"` \| `"es-MX"` \| `"fr-FR"` \| `"hu-HU"` \| `"it-IT"` \| `"pl-PL"` \| `"pt-BR"` \| `"ro-RO"` \| `"ru-RU"` \| `"tr-TR"` \| `"ja-JP"` \| `"ko-KR"` ; `offset`: `number` ; `provider`: `"youtube"` \| `"twitch"` }[] }[] } }\>
+`Promise`<{ `data`: { `games`: { `id`: `string` ; `number`: `1` \| `3` \| `5` \| `2` \| `4` ; `state`: `"completed"` \| `"unstarted"` \| `"inProgress"` ; `vods`: { `parameter`: `string` } & { `locale`: `"en-US"` \| `"en-GB"` \| `"en-AU"` \| `"cs-CZ"` \| `"de-DE"` \| `"el-GR"` \| `"es-ES"` \| `"es-MX"` \| `"fr-FR"` \| `"hu-HU"` \| `"it-IT"` \| `"pl-PL"` \| `"pt-BR"` \| `"ro-RO"` \| `"ru-RU"` \| `"tr-TR"` \| `"ja-JP"` \| `"ko-KR"` ; `offset`: `number` ; `provider`: `"youtube"` \| `"twitch"` }[] }[] } }\>
 
 Data about the games.
 
@@ -139,13 +139,13 @@ Data about the games.
 
 #### Defined in
 
-[src/interfaces/games.ts:21](https://github.com/Viriatto/lol-esports-api/blob/eef32c6/src/interfaces/games.ts#L21)
+[src/interfaces/games.ts:21](https://github.com/Viriatto/lol-esports-api/blob/2b06612/src/interfaces/games.ts#L21)
 
 ---
 
 ### getDetails
 
-▸ **getDetails**(`gameId`, `startingAt`, `participantIdsOrIds?`): `Promise`<{ `frames`: { `rfc460Timestamp`: `string` } & { `participants`: { `assists`: `number` ; `creepScore`: `number` ; `deaths`: `number` ; `kills`: `number` ; `level`: `number` ; `participantId`: `2` \| `1` \| `3` \| `5` \| `4` \| `6` \| `7` \| `8` \| `9` \| `10` } & { `currentHealth`: `number` ; `maxHealth`: `number` ; `totalGold`: `number` } & { `abilities`: `"Q"` \| `"W"` \| `"E"` \| `"R"` ; `abilityPower`: `number` ; `armor`: `number` ; `attackDamage`: `number` ; `attackSpeed`: `number` ; `championDamageShare`: `number` ; `criticalChance`: `number` ; `items`: `number`[] ; `killParticipation`: `number` ; `lifeSteal`: `number` ; `magicResistance`: `number` ; `perkMetadata`: { `perks`: `number`[] ; `styleId`: `8000` \| `8100` \| `8200` \| `8300` \| `8400` ; `subStyleId`: `8000` \| `8100` \| `8200` \| `8300` \| `8400` } ; `tenacity`: `number` ; `totalGoldEarned`: `number` ; `wardsDestroyed`: `number` ; `wardsPlaced`: `number` }[] }[] }\>
+▸ **getDetails**(`gameId`, `startingAt`, `participantIdsOrIds?`): `Promise`<{ `frames`: { `rfc460Timestamp`: `string` } & { `participants`: { `assists`: `number` ; `creepScore`: `number` ; `deaths`: `number` ; `kills`: `number` ; `level`: `number` ; `participantId`: `1` \| `3` \| `5` \| `2` \| `4` \| `6` \| `7` \| `8` \| `9` \| `10` } & { `currentHealth`: `number` ; `maxHealth`: `number` ; `totalGold`: `number` } & { `abilities`: `"Q"` \| `"W"` \| `"E"` \| `"R"` ; `abilityPower`: `number` ; `armor`: `number` ; `attackDamage`: `number` ; `attackSpeed`: `number` ; `championDamageShare`: `number` ; `criticalChance`: `number` ; `items`: `number`[] ; `killParticipation`: `number` ; `lifeSteal`: `number` ; `magicResistance`: `number` ; `perkMetadata`: { `perks`: `number`[] ; `styleId`: `8000` \| `8100` \| `8200` \| `8300` \| `8400` ; `subStyleId`: `8000` \| `8100` \| `8200` \| `8300` \| `8400` } ; `tenacity`: `number` ; `totalGoldEarned`: `number` ; `wardsDestroyed`: `number` ; `wardsPlaced`: `number` }[] }[] }\>
 
 Fetches detailed information for a particular section of a game, such as participants' champion stats and ability level up sequence.
 
@@ -159,7 +159,7 @@ Fetches detailed information for a particular section of a game, such as partici
 
 #### Returns
 
-`Promise`<{ `frames`: { `rfc460Timestamp`: `string` } & { `participants`: { `assists`: `number` ; `creepScore`: `number` ; `deaths`: `number` ; `kills`: `number` ; `level`: `number` ; `participantId`: `2` \| `1` \| `3` \| `5` \| `4` \| `6` \| `7` \| `8` \| `9` \| `10` } & { `currentHealth`: `number` ; `maxHealth`: `number` ; `totalGold`: `number` } & { `abilities`: `"Q"` \| `"W"` \| `"E"` \| `"R"` ; `abilityPower`: `number` ; `armor`: `number` ; `attackDamage`: `number` ; `attackSpeed`: `number` ; `championDamageShare`: `number` ; `criticalChance`: `number` ; `items`: `number`[] ; `killParticipation`: `number` ; `lifeSteal`: `number` ; `magicResistance`: `number` ; `perkMetadata`: { `perks`: `number`[] ; `styleId`: `8000` \| `8100` \| `8200` \| `8300` \| `8400` ; `subStyleId`: `8000` \| `8100` \| `8200` \| `8300` \| `8400` } ; `tenacity`: `number` ; `totalGoldEarned`: `number` ; `wardsDestroyed`: `number` ; `wardsPlaced`: `number` }[] }[] }\>
+`Promise`<{ `frames`: { `rfc460Timestamp`: `string` } & { `participants`: { `assists`: `number` ; `creepScore`: `number` ; `deaths`: `number` ; `kills`: `number` ; `level`: `number` ; `participantId`: `1` \| `3` \| `5` \| `2` \| `4` \| `6` \| `7` \| `8` \| `9` \| `10` } & { `currentHealth`: `number` ; `maxHealth`: `number` ; `totalGold`: `number` } & { `abilities`: `"Q"` \| `"W"` \| `"E"` \| `"R"` ; `abilityPower`: `number` ; `armor`: `number` ; `attackDamage`: `number` ; `attackSpeed`: `number` ; `championDamageShare`: `number` ; `criticalChance`: `number` ; `items`: `number`[] ; `killParticipation`: `number` ; `lifeSteal`: `number` ; `magicResistance`: `number` ; `perkMetadata`: { `perks`: `number`[] ; `styleId`: `8000` \| `8100` \| `8200` \| `8300` \| `8400` ; `subStyleId`: `8000` \| `8100` \| `8200` \| `8300` \| `8400` } ; `tenacity`: `number` ; `totalGoldEarned`: `number` ; `wardsDestroyed`: `number` ; `wardsPlaced`: `number` }[] }[] }\>
 
 **`Remarks`**
 
@@ -184,13 +184,13 @@ console.log(liveEvents);
 
 #### Defined in
 
-[src/interfaces/games.ts:82](https://github.com/Viriatto/lol-esports-api/blob/eef32c6/src/interfaces/games.ts#L82)
+[src/interfaces/games.ts:82](https://github.com/Viriatto/lol-esports-api/blob/2b06612/src/interfaces/games.ts#L82)
 
 ---
 
 ### getWindow
 
-▸ **getWindow**(`gameId`, `startingAt`): `Promise`<{ `esportsGameId`: `string` ; `esportsMatchId`: `string` ; `frames`: { `rfc460Timestamp`: `string` } & { `blueTeam`: { `barons`: `number` ; `dragons`: (`"ocean"` \| `"mountain"` \| `"infernal"` \| `"cloud"` \| `"elder"`)[] ; `inhibitors`: `number` ; `participants`: { `assists`: `number` ; `creepScore`: `number` ; `deaths`: `number` ; `kills`: `number` ; `level`: `number` ; `participantId`: `2` \| `1` \| `3` \| `5` \| `4` \| `6` \| `7` \| `8` \| `9` \| `10` } & { `currentHealth`: `number` ; `maxHealth`: `number` ; `totalGold`: `number` }[] ; `totalGold`: `number` ; `totalKills`: `number` ; `towers`: `number` } ; `gameState`: `"in_game"` \| `"finished"` ; `redTeam`: { `barons`: `number` ; `dragons`: (`"ocean"` \| `"mountain"` \| `"infernal"` \| `"cloud"` \| `"elder"`)[] ; `inhibitors`: `number` ; `participants`: { `assists`: `number` ; `creepScore`: `number` ; `deaths`: `number` ; `kills`: `number` ; `level`: `number` ; `participantId`: `2` \| `1` \| `3` \| `5` \| `4` \| `6` \| `7` \| `8` \| `9` \| `10` } & { `currentHealth`: `number` ; `maxHealth`: `number` ; `totalGold`: `number` }[] ; `totalGold`: `number` ; `totalKills`: `number` ; `towers`: `number` } ; `rfc460Timestamp`: `string` }[] ; `gameMetadata`: { `blueTeamMetadata`: { `esportsTeamId`: `string` ; `participantMetadata`: ({ `championId`: `string` ; `participantId`: `2` \| `1` \| `3` \| `5` \| `4` \| `6` \| `7` \| `8` \| `9` \| `10` ; `role`: `"top"` \| `"jungle"` \| `"mid"` \| `"bottom"` \| `"support"` ; `summonerName`: `string` } \| { `championId`: `string` ; `participantId`: `2` \| `1` \| `3` \| `5` \| `4` \| `6` \| `7` \| `8` \| `9` \| `10` ; `role`: `"top"` \| `"jungle"` \| `"mid"` \| `"bottom"` \| `"support"` ; `summonerName`: `string` } & { `esportsPlayerId`: `string` })[] } ; `patchVersion`: `string` ; `redTeamMetadata`: { `esportsTeamId`: `string` ; `participantMetadata`: ({ `championId`: `string` ; `participantId`: `2` \| `1` \| `3` \| `5` \| `4` \| `6` \| `7` \| `8` \| `9` \| `10` ; `role`: `"top"` \| `"jungle"` \| `"mid"` \| `"bottom"` \| `"support"` ; `summonerName`: `string` } \| { `championId`: `string` ; `participantId`: `2` \| `1` \| `3` \| `5` \| `4` \| `6` \| `7` \| `8` \| `9` \| `10` ; `role`: `"top"` \| `"jungle"` \| `"mid"` \| `"bottom"` \| `"support"` ; `summonerName`: `string` } & { `esportsPlayerId`: `string` })[] } } }\>
+▸ **getWindow**(`gameId`, `startingAt`): `Promise`<{ `esportsGameId`: `string` ; `esportsMatchId`: `string` ; `frames`: { `rfc460Timestamp`: `string` } & { `blueTeam`: { `barons`: `number` ; `dragons`: (`"ocean"` \| `"mountain"` \| `"infernal"` \| `"cloud"` \| `"elder"`)[] ; `inhibitors`: `number` ; `participants`: { `assists`: `number` ; `creepScore`: `number` ; `deaths`: `number` ; `kills`: `number` ; `level`: `number` ; `participantId`: `1` \| `3` \| `5` \| `2` \| `4` \| `6` \| `7` \| `8` \| `9` \| `10` } & { `currentHealth`: `number` ; `maxHealth`: `number` ; `totalGold`: `number` }[] ; `totalGold`: `number` ; `totalKills`: `number` ; `towers`: `number` } ; `gameState`: `"in_game"` \| `"finished"` ; `redTeam`: { `barons`: `number` ; `dragons`: (`"ocean"` \| `"mountain"` \| `"infernal"` \| `"cloud"` \| `"elder"`)[] ; `inhibitors`: `number` ; `participants`: { `assists`: `number` ; `creepScore`: `number` ; `deaths`: `number` ; `kills`: `number` ; `level`: `number` ; `participantId`: `1` \| `3` \| `5` \| `2` \| `4` \| `6` \| `7` \| `8` \| `9` \| `10` } & { `currentHealth`: `number` ; `maxHealth`: `number` ; `totalGold`: `number` }[] ; `totalGold`: `number` ; `totalKills`: `number` ; `towers`: `number` } ; `rfc460Timestamp`: `string` }[] ; `gameMetadata`: { `blueTeamMetadata`: { `esportsTeamId`: `string` ; `participantMetadata`: ({ `championId`: `string` ; `participantId`: `1` \| `3` \| `5` \| `2` \| `4` \| `6` \| `7` \| `8` \| `9` \| `10` ; `role`: `"top"` \| `"jungle"` \| `"mid"` \| `"bottom"` \| `"support"` ; `summonerName`: `string` } \| { `championId`: `string` ; `participantId`: `1` \| `3` \| `5` \| `2` \| `4` \| `6` \| `7` \| `8` \| `9` \| `10` ; `role`: `"top"` \| `"jungle"` \| `"mid"` \| `"bottom"` \| `"support"` ; `summonerName`: `string` } & { `esportsPlayerId`: `string` })[] } ; `patchVersion`: `string` ; `redTeamMetadata`: { `esportsTeamId`: `string` ; `participantMetadata`: ({ `championId`: `string` ; `participantId`: `1` \| `3` \| `5` \| `2` \| `4` \| `6` \| `7` \| `8` \| `9` \| `10` ; `role`: `"top"` \| `"jungle"` \| `"mid"` \| `"bottom"` \| `"support"` ; `summonerName`: `string` } \| { `championId`: `string` ; `participantId`: `1` \| `3` \| `5` \| `2` \| `4` \| `6` \| `7` \| `8` \| `9` \| `10` ; `role`: `"top"` \| `"jungle"` \| `"mid"` \| `"bottom"` \| `"support"` ; `summonerName`: `string` } & { `esportsPlayerId`: `string` })[] } } }\>
 
 Fetches overall information for a particular section of a game, such as game state, objectives taken and participants scoreboard information.
 
@@ -203,7 +203,7 @@ Fetches overall information for a particular section of a game, such as game sta
 
 #### Returns
 
-`Promise`<{ `esportsGameId`: `string` ; `esportsMatchId`: `string` ; `frames`: { `rfc460Timestamp`: `string` } & { `blueTeam`: { `barons`: `number` ; `dragons`: (`"ocean"` \| `"mountain"` \| `"infernal"` \| `"cloud"` \| `"elder"`)[] ; `inhibitors`: `number` ; `participants`: { `assists`: `number` ; `creepScore`: `number` ; `deaths`: `number` ; `kills`: `number` ; `level`: `number` ; `participantId`: `2` \| `1` \| `3` \| `5` \| `4` \| `6` \| `7` \| `8` \| `9` \| `10` } & { `currentHealth`: `number` ; `maxHealth`: `number` ; `totalGold`: `number` }[] ; `totalGold`: `number` ; `totalKills`: `number` ; `towers`: `number` } ; `gameState`: `"in_game"` \| `"finished"` ; `redTeam`: { `barons`: `number` ; `dragons`: (`"ocean"` \| `"mountain"` \| `"infernal"` \| `"cloud"` \| `"elder"`)[] ; `inhibitors`: `number` ; `participants`: { `assists`: `number` ; `creepScore`: `number` ; `deaths`: `number` ; `kills`: `number` ; `level`: `number` ; `participantId`: `2` \| `1` \| `3` \| `5` \| `4` \| `6` \| `7` \| `8` \| `9` \| `10` } & { `currentHealth`: `number` ; `maxHealth`: `number` ; `totalGold`: `number` }[] ; `totalGold`: `number` ; `totalKills`: `number` ; `towers`: `number` } ; `rfc460Timestamp`: `string` }[] ; `gameMetadata`: { `blueTeamMetadata`: { `esportsTeamId`: `string` ; `participantMetadata`: ({ `championId`: `string` ; `participantId`: `2` \| `1` \| `3` \| `5` \| `4` \| `6` \| `7` \| `8` \| `9` \| `10` ; `role`: `"top"` \| `"jungle"` \| `"mid"` \| `"bottom"` \| `"support"` ; `summonerName`: `string` } \| { `championId`: `string` ; `participantId`: `2` \| `1` \| `3` \| `5` \| `4` \| `6` \| `7` \| `8` \| `9` \| `10` ; `role`: `"top"` \| `"jungle"` \| `"mid"` \| `"bottom"` \| `"support"` ; `summonerName`: `string` } & { `esportsPlayerId`: `string` })[] } ; `patchVersion`: `string` ; `redTeamMetadata`: { `esportsTeamId`: `string` ; `participantMetadata`: ({ `championId`: `string` ; `participantId`: `2` \| `1` \| `3` \| `5` \| `4` \| `6` \| `7` \| `8` \| `9` \| `10` ; `role`: `"top"` \| `"jungle"` \| `"mid"` \| `"bottom"` \| `"support"` ; `summonerName`: `string` } \| { `championId`: `string` ; `participantId`: `2` \| `1` \| `3` \| `5` \| `4` \| `6` \| `7` \| `8` \| `9` \| `10` ; `role`: `"top"` \| `"jungle"` \| `"mid"` \| `"bottom"` \| `"support"` ; `summonerName`: `string` } & { `esportsPlayerId`: `string` })[] } } }\>
+`Promise`<{ `esportsGameId`: `string` ; `esportsMatchId`: `string` ; `frames`: { `rfc460Timestamp`: `string` } & { `blueTeam`: { `barons`: `number` ; `dragons`: (`"ocean"` \| `"mountain"` \| `"infernal"` \| `"cloud"` \| `"elder"`)[] ; `inhibitors`: `number` ; `participants`: { `assists`: `number` ; `creepScore`: `number` ; `deaths`: `number` ; `kills`: `number` ; `level`: `number` ; `participantId`: `1` \| `3` \| `5` \| `2` \| `4` \| `6` \| `7` \| `8` \| `9` \| `10` } & { `currentHealth`: `number` ; `maxHealth`: `number` ; `totalGold`: `number` }[] ; `totalGold`: `number` ; `totalKills`: `number` ; `towers`: `number` } ; `gameState`: `"in_game"` \| `"finished"` ; `redTeam`: { `barons`: `number` ; `dragons`: (`"ocean"` \| `"mountain"` \| `"infernal"` \| `"cloud"` \| `"elder"`)[] ; `inhibitors`: `number` ; `participants`: { `assists`: `number` ; `creepScore`: `number` ; `deaths`: `number` ; `kills`: `number` ; `level`: `number` ; `participantId`: `1` \| `3` \| `5` \| `2` \| `4` \| `6` \| `7` \| `8` \| `9` \| `10` } & { `currentHealth`: `number` ; `maxHealth`: `number` ; `totalGold`: `number` }[] ; `totalGold`: `number` ; `totalKills`: `number` ; `towers`: `number` } ; `rfc460Timestamp`: `string` }[] ; `gameMetadata`: { `blueTeamMetadata`: { `esportsTeamId`: `string` ; `participantMetadata`: ({ `championId`: `string` ; `participantId`: `1` \| `3` \| `5` \| `2` \| `4` \| `6` \| `7` \| `8` \| `9` \| `10` ; `role`: `"top"` \| `"jungle"` \| `"mid"` \| `"bottom"` \| `"support"` ; `summonerName`: `string` } \| { `championId`: `string` ; `participantId`: `1` \| `3` \| `5` \| `2` \| `4` \| `6` \| `7` \| `8` \| `9` \| `10` ; `role`: `"top"` \| `"jungle"` \| `"mid"` \| `"bottom"` \| `"support"` ; `summonerName`: `string` } & { `esportsPlayerId`: `string` })[] } ; `patchVersion`: `string` ; `redTeamMetadata`: { `esportsTeamId`: `string` ; `participantMetadata`: ({ `championId`: `string` ; `participantId`: `1` \| `3` \| `5` \| `2` \| `4` \| `6` \| `7` \| `8` \| `9` \| `10` ; `role`: `"top"` \| `"jungle"` \| `"mid"` \| `"bottom"` \| `"support"` ; `summonerName`: `string` } \| { `championId`: `string` ; `participantId`: `1` \| `3` \| `5` \| `2` \| `4` \| `6` \| `7` \| `8` \| `9` \| `10` ; `role`: `"top"` \| `"jungle"` \| `"mid"` \| `"bottom"` \| `"support"` ; `summonerName`: `string` } & { `esportsPlayerId`: `string` })[] } } }\>
 
 Data on a segment of the game.
 
@@ -217,4 +217,4 @@ The response's data contains a `frames` array property which includes "snapshots
 
 #### Defined in
 
-[src/interfaces/games.ts:43](https://github.com/Viriatto/lol-esports-api/blob/eef32c6/src/interfaces/games.ts#L43)
+[src/interfaces/games.ts:43](https://github.com/Viriatto/lol-esports-api/blob/2b06612/src/interfaces/games.ts#L43)

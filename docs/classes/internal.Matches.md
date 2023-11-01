@@ -1,4 +1,4 @@
-[LoL Esports API Wrapper - v0.2.2](../README.md) / [Exports](../modules.md) / [internal](../modules/internal.md) / Matches
+[LoL Esports API Wrapper - v0.2.3](../README.md) / [Exports](../modules.md) / [internal](../modules/internal.md) / Matches
 
 # Class: Matches
 
@@ -58,7 +58,7 @@ The eSports API's base URLs.
 
 #### Defined in
 
-[src/interface.ts:122](https://github.com/Viriatto/lol-esports-api/blob/eef32c6/src/interface.ts#L122)
+[src/interface.ts:122](https://github.com/Viriatto/lol-esports-api/blob/2b06612/src/interface.ts#L122)
 
 ## Methods
 
@@ -108,13 +108,13 @@ When it can't get a successfuly response from any of the endpoints built from [I
 
 #### Defined in
 
-[src/interface.ts:150](https://github.com/Viriatto/lol-esports-api/blob/eef32c6/src/interface.ts#L150)
+[src/interface.ts:150](https://github.com/Viriatto/lol-esports-api/blob/2b06612/src/interface.ts#L150)
 
 ---
 
 ### getEvent
 
-▸ **getEvent**(`matchId`, `locale?`): `Promise`<{ `data`: { `event`: { `match?`: { `teams`: { `code`: `string` ; `image`: `string` ; `name`: `string` }[] } } & { `id`: `string` ; `league`: { `name`: `string` ; `slug`: `string` } & { `id`: `string` ; `image`: `string` } ; `match`: { `games`: { `id`: `string` ; `number`: `2` \| `1` \| `3` \| `5` \| `4` ; `state`: `"completed"` \| `"unstarted"` \| `"inProgress"` ; `vods`: { `parameter`: `string` } & { `locale`: `"en-US"` \| `"en-GB"` \| `"en-AU"` \| `"cs-CZ"` \| `"de-DE"` \| `"el-GR"` \| `"es-ES"` \| `"es-MX"` \| `"fr-FR"` \| `"hu-HU"` \| `"it-IT"` \| `"pl-PL"` \| `"pt-BR"` \| `"ro-RO"` \| `"ru-RU"` \| `"tr-TR"` \| `"ja-JP"` \| `"ko-KR"` ; `offset`: `number` ; `provider`: `"youtube"` \| `"twitch"` }[] } & { `teams`: { `id`: `string` ; `side`: `"blue"` \| `"red"` }[] }[] ; `strategy`: { `count`: `1` \| `3` \| `5` } ; `teams`: { `id`: `string` ; `result`: { `gameWins`: `number` } }[] } ; `streams`: `null` \| { `parameter`: `string` } & { `locale`: `"en-US"` \| `"en-GB"` \| `"en-AU"` \| `"cs-CZ"` \| `"de-DE"` \| `"el-GR"` \| `"es-ES"` \| `"es-MX"` \| `"fr-FR"` \| `"hu-HU"` \| `"it-IT"` \| `"pl-PL"` \| `"pt-BR"` \| `"ro-RO"` \| `"ru-RU"` \| `"tr-TR"` \| `"ja-JP"` \| `"ko-KR"` ; `offset`: `number` ; `provider`: `"youtube"` \| `"twitch"` }[] ; `type`: `"match"` \| `"show"` } } }\>
+▸ **getEvent**(`matchId`, `locale?`): `Promise`<{ `data`: { `event`: { `match?`: { `teams`: { `code`: `string` ; `image`: `string` ; `name`: `string` }[] } } & { `id`: `string` ; `league`: { `name`: `string` ; `slug`: `string` } & { `id`: `string` ; `image`: `string` } ; `match`: { `games`: { `id`: `string` ; `number`: `1` \| `3` \| `5` \| `2` \| `4` ; `state`: `"completed"` \| `"unstarted"` \| `"inProgress"` ; `vods`: { `parameter`: `string` } & { `locale`: `"en-US"` \| `"en-GB"` \| `"en-AU"` \| `"cs-CZ"` \| `"de-DE"` \| `"el-GR"` \| `"es-ES"` \| `"es-MX"` \| `"fr-FR"` \| `"hu-HU"` \| `"it-IT"` \| `"pl-PL"` \| `"pt-BR"` \| `"ro-RO"` \| `"ru-RU"` \| `"tr-TR"` \| `"ja-JP"` \| `"ko-KR"` ; `offset`: `number` ; `provider`: `"youtube"` \| `"twitch"` }[] } & { `teams`: { `id`: `string` ; `side`: `"blue"` \| `"red"` }[] }[] ; `strategy`: { `count`: `1` \| `3` \| `5` } ; `teams`: { `id`: `string` ; `result`: { `gameWins`: `number` } }[] } ; `streams`: `null` \| { `parameter`: `string` } & { `locale`: `"en-US"` \| `"en-GB"` \| `"en-AU"` \| `"cs-CZ"` \| `"de-DE"` \| `"el-GR"` \| `"es-ES"` \| `"es-MX"` \| `"fr-FR"` \| `"hu-HU"` \| `"it-IT"` \| `"pl-PL"` \| `"pt-BR"` \| `"ro-RO"` \| `"ru-RU"` \| `"tr-TR"` \| `"ja-JP"` \| `"ko-KR"` ; `offset`: `number` ; `provider`: `"youtube"` \| `"twitch"` }[] ; `type`: `"match"` \| `"show"` } } }\>
 
 Fetches event details for a particular match.
 
@@ -127,7 +127,7 @@ Fetches event details for a particular match.
 
 #### Returns
 
-`Promise`<{ `data`: { `event`: { `match?`: { `teams`: { `code`: `string` ; `image`: `string` ; `name`: `string` }[] } } & { `id`: `string` ; `league`: { `name`: `string` ; `slug`: `string` } & { `id`: `string` ; `image`: `string` } ; `match`: { `games`: { `id`: `string` ; `number`: `2` \| `1` \| `3` \| `5` \| `4` ; `state`: `"completed"` \| `"unstarted"` \| `"inProgress"` ; `vods`: { `parameter`: `string` } & { `locale`: `"en-US"` \| `"en-GB"` \| `"en-AU"` \| `"cs-CZ"` \| `"de-DE"` \| `"el-GR"` \| `"es-ES"` \| `"es-MX"` \| `"fr-FR"` \| `"hu-HU"` \| `"it-IT"` \| `"pl-PL"` \| `"pt-BR"` \| `"ro-RO"` \| `"ru-RU"` \| `"tr-TR"` \| `"ja-JP"` \| `"ko-KR"` ; `offset`: `number` ; `provider`: `"youtube"` \| `"twitch"` }[] } & { `teams`: { `id`: `string` ; `side`: `"blue"` \| `"red"` }[] }[] ; `strategy`: { `count`: `1` \| `3` \| `5` } ; `teams`: { `id`: `string` ; `result`: { `gameWins`: `number` } }[] } ; `streams`: `null` \| { `parameter`: `string` } & { `locale`: `"en-US"` \| `"en-GB"` \| `"en-AU"` \| `"cs-CZ"` \| `"de-DE"` \| `"el-GR"` \| `"es-ES"` \| `"es-MX"` \| `"fr-FR"` \| `"hu-HU"` \| `"it-IT"` \| `"pl-PL"` \| `"pt-BR"` \| `"ro-RO"` \| `"ru-RU"` \| `"tr-TR"` \| `"ja-JP"` \| `"ko-KR"` ; `offset`: `number` ; `provider`: `"youtube"` \| `"twitch"` }[] ; `type`: `"match"` \| `"show"` } } }\>
+`Promise`<{ `data`: { `event`: { `match?`: { `teams`: { `code`: `string` ; `image`: `string` ; `name`: `string` }[] } } & { `id`: `string` ; `league`: { `name`: `string` ; `slug`: `string` } & { `id`: `string` ; `image`: `string` } ; `match`: { `games`: { `id`: `string` ; `number`: `1` \| `3` \| `5` \| `2` \| `4` ; `state`: `"completed"` \| `"unstarted"` \| `"inProgress"` ; `vods`: { `parameter`: `string` } & { `locale`: `"en-US"` \| `"en-GB"` \| `"en-AU"` \| `"cs-CZ"` \| `"de-DE"` \| `"el-GR"` \| `"es-ES"` \| `"es-MX"` \| `"fr-FR"` \| `"hu-HU"` \| `"it-IT"` \| `"pl-PL"` \| `"pt-BR"` \| `"ro-RO"` \| `"ru-RU"` \| `"tr-TR"` \| `"ja-JP"` \| `"ko-KR"` ; `offset`: `number` ; `provider`: `"youtube"` \| `"twitch"` }[] } & { `teams`: { `id`: `string` ; `side`: `"blue"` \| `"red"` }[] }[] ; `strategy`: { `count`: `1` \| `3` \| `5` } ; `teams`: { `id`: `string` ; `result`: { `gameWins`: `number` } }[] } ; `streams`: `null` \| { `parameter`: `string` } & { `locale`: `"en-US"` \| `"en-GB"` \| `"en-AU"` \| `"cs-CZ"` \| `"de-DE"` \| `"el-GR"` \| `"es-ES"` \| `"es-MX"` \| `"fr-FR"` \| `"hu-HU"` \| `"it-IT"` \| `"pl-PL"` \| `"pt-BR"` \| `"ro-RO"` \| `"ru-RU"` \| `"tr-TR"` \| `"ja-JP"` \| `"ko-KR"` ; `offset`: `number` ; `provider`: `"youtube"` \| `"twitch"` }[] ; `type`: `"match"` \| `"show"` } } }\>
 
 Data on the event details of a particular match.
 
@@ -137,4 +137,4 @@ Data on the event details of a particular match.
 
 #### Defined in
 
-[src/interfaces/matches.ts:20](https://github.com/Viriatto/lol-esports-api/blob/eef32c6/src/interfaces/matches.ts#L20)
+[src/interfaces/matches.ts:20](https://github.com/Viriatto/lol-esports-api/blob/2b06612/src/interfaces/matches.ts#L20)
