@@ -1,4 +1,4 @@
-[LoL Esports API Wrapper - v0.2.0](../README.md) / [Exports](../modules.md) / [internal](../modules/internal.md) / Events
+[LoL Esports API Wrapper - v0.2.1](../README.md) / [Exports](../modules.md) / [internal](../modules/internal.md) / Events
 
 # Class: Events
 
@@ -58,7 +58,7 @@ The eSports API's base URLs.
 
 #### Defined in
 
-[src/interface.ts:121](https://github.com/Viriatto/lol-esports-api/blob/0be295c/src/interface.ts#L121)
+[src/interface.ts:122](https://github.com/Viriatto/lol-esports-api/blob/6ae96e1/src/interface.ts#L122)
 
 ## Methods
 
@@ -108,7 +108,7 @@ When it can't get a successfuly response from any of the endpoints built from [I
 
 #### Defined in
 
-[src/interface.ts:149](https://github.com/Viriatto/lol-esports-api/blob/0be295c/src/interface.ts#L149)
+[src/interface.ts:150](https://github.com/Viriatto/lol-esports-api/blob/6ae96e1/src/interface.ts#L150)
 
 ---
 
@@ -149,4 +149,4 @@ console.log(liveEvents);
 
 #### Defined in
 
-[src/interfaces/events.ts:29](https://github.com/Viriatto/lol-esports-api/blob/0be295c/src/interfaces/events.ts#L29)
+[src/interfaces/events.ts:29](https://github.com/Viriatto/lol-esports-api/blob/6ae96e1/src/interfaces/events.ts#L29)

@@ -1,4 +1,4 @@
-[LoL Esports API Wrapper - v0.2.0](../README.md) / [Exports](../modules.md) / Client
+[LoL Esports API Wrapper - v0.2.1](../README.md) / [Exports](../modules.md) / Client
 
 # Class: Client
 
@@ -54,7 +54,7 @@ API for live event data fetching.
 
 #### Defined in
 
-[src/client.ts:33](https://github.com/Viriatto/lol-esports-api/blob/0be295c/src/client.ts#L33)
+[src/client.ts:33](https://github.com/Viriatto/lol-esports-api/blob/6ae96e1/src/client.ts#L33)
 
 ---
 
@@ -66,7 +66,7 @@ API for game related data fetching, such as fetching a game segment's data.
 
 #### Defined in
 
-[src/client.ts:54](https://github.com/Viriatto/lol-esports-api/blob/0be295c/src/client.ts#L54)
+[src/client.ts:54](https://github.com/Viriatto/lol-esports-api/blob/6ae96e1/src/client.ts#L54)
 
 ---
 
@@ -78,7 +78,7 @@ API for league related data fetching, such as their schedules and tournaments.
 
 #### Defined in
 
-[src/client.ts:26](https://github.com/Viriatto/lol-esports-api/blob/0be295c/src/client.ts#L26)
+[src/client.ts:26](https://github.com/Viriatto/lol-esports-api/blob/6ae96e1/src/client.ts#L26)
 
 ---
 
@@ -90,7 +90,7 @@ API for match related data fetching, such as getting a match event.
 
 #### Defined in
 
-[src/client.ts:47](https://github.com/Viriatto/lol-esports-api/blob/0be295c/src/client.ts#L47)
+[src/client.ts:47](https://github.com/Viriatto/lol-esports-api/blob/6ae96e1/src/client.ts#L47)
 
 ---
 
@@ -102,7 +102,7 @@ API for team related data fetching.
 
 #### Defined in
 
-[src/client.ts:61](https://github.com/Viriatto/lol-esports-api/blob/0be295c/src/client.ts#L61)
+[src/client.ts:61](https://github.com/Viriatto/lol-esports-api/blob/6ae96e1/src/client.ts#L61)
 
 ---
 
@@ -114,7 +114,7 @@ API for tournament related data fetching, such as standings and completed events
 
 #### Defined in
 
-[src/client.ts:40](https://github.com/Viriatto/lol-esports-api/blob/0be295c/src/client.ts#L40)
+[src/client.ts:40](https://github.com/Viriatto/lol-esports-api/blob/6ae96e1/src/client.ts#L40)
 
 ## Accessors
 
@@ -141,7 +141,7 @@ console.log(liveEvents);
 
 #### Defined in
 
-[src/client.ts:94](https://github.com/Viriatto/lol-esports-api/blob/0be295c/src/client.ts#L94)
+[src/client.ts:94](https://github.com/Viriatto/lol-esports-api/blob/6ae96e1/src/client.ts#L94)
 
 ---
 
@@ -168,7 +168,7 @@ console.log(game);
 
 #### Defined in
 
-[src/client.ts:148](https://github.com/Viriatto/lol-esports-api/blob/0be295c/src/client.ts#L148)
+[src/client.ts:148](https://github.com/Viriatto/lol-esports-api/blob/6ae96e1/src/client.ts#L148)
 
 ---
 
@@ -197,7 +197,7 @@ console.log(tournaments);
 
 #### Defined in
 
-[src/client.ts:76](https://github.com/Viriatto/lol-esports-api/blob/0be295c/src/client.ts#L76)
+[src/client.ts:76](https://github.com/Viriatto/lol-esports-api/blob/6ae96e1/src/client.ts#L76)
 
 ---
 
@@ -226,7 +226,7 @@ console.log(matchEventDetails);
 
 #### Defined in
 
-[src/client.ts:130](https://github.com/Viriatto/lol-esports-api/blob/0be295c/src/client.ts#L130)
+[src/client.ts:130](https://github.com/Viriatto/lol-esports-api/blob/6ae96e1/src/client.ts#L130)
 
 ---
 
@@ -253,7 +253,7 @@ console.log(game);
 
 #### Defined in
 
-[src/client.ts:166](https://github.com/Viriatto/lol-esports-api/blob/0be295c/src/client.ts#L166)
+[src/client.ts:166](https://github.com/Viriatto/lol-esports-api/blob/6ae96e1/src/client.ts#L166)
 
 ---
 
@@ -282,4 +282,4 @@ console.log(tournaments);
 
 #### Defined in
 
-[src/client.ts:112](https://github.com/Viriatto/lol-esports-api/blob/0be295c/src/client.ts#L112)
+[src/client.ts:112](https://github.com/Viriatto/lol-esports-api/blob/6ae96e1/src/client.ts#L112)
