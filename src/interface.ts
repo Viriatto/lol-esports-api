@@ -12,7 +12,7 @@ import { parseParameterizedEndpointPath } from "./utils.js";
  *
  * @internal
  */
-interface LolEsportsAPIRequestConfig<T extends keyof APIEndpoints> {
+export interface LolEsportsAPIRequestConfig<T extends keyof APIEndpoints> {
   /**
    * The headers present in every request.
    */
@@ -47,7 +47,7 @@ interface LolEsportsAPIRequestConfig<T extends keyof APIEndpoints> {
  *
  * @internal
  */
-type APIResponse<T extends keyof APIEndpoints> =
+export type APIResponse<T extends keyof APIEndpoints> =
   APIOperations<T>["responses"][200]["content"]["application/json"];
 
 /**
@@ -55,14 +55,15 @@ type APIResponse<T extends keyof APIEndpoints> =
  *
  * @internal
  */
-type APIEndpoints = paths;
+export type APIEndpoints = paths;
 
 /**
  * The API endpoint operations as per {@link https://vickz84259.github.io/lolesports-api-docs/ | vickz84259's specification}.
  *
  * @internal
  */
-type APIOperations<T extends keyof APIEndpoints> = APIEndpoints[T]["get"];
+export type APIOperations<T extends keyof APIEndpoints> =
+  APIEndpoints[T]["get"];
 
 /**
  * Mapped query parameters for API endpoint `T`.
@@ -72,7 +73,7 @@ type APIOperations<T extends keyof APIEndpoints> = APIEndpoints[T]["get"];
  *
  * @internal
  */
-type APIEndpointParameters<T extends keyof APIEndpoints> =
+export type APIEndpointParameters<T extends keyof APIEndpoints> =
   APIOperations<T> extends {
     parameters: {
       query?: Record<string, unknown>;
@@ -184,7 +185,6 @@ export default abstract class Interface {
           return response.data;
         }
       } catch (_) {
-        console.log(_);
         /* empty */
       }
     }
