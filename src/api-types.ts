@@ -53,7 +53,7 @@ export interface paths {
   };
   "/videos": {
     /**
-     * @description This endpoint returns details about esports vods on YouTube.
+     *  This endpoint returns details about esports vods on YouTube.
      *
      * The data returned by this endpoint is fairly large (more than 5MB) since
      * it includes vods from 2015 up to (at the time of writing this) June 2019
@@ -67,7 +67,7 @@ export interface paths {
     get: operations["videos"];
   };
   "/highlanderTournaments": {
-    /** @description If a league does not have highlanderTournament objects, the API will return 404 */
+    /**  If a league does not have highlanderTournament objects, the API will return 404 */
     get: operations["highlanderTournaments"];
   };
   "/leagues": {
@@ -78,14 +78,14 @@ export interface paths {
   };
   "/teams": {
     /**
-     * @description If the `teamStatsSummaries`, `teamRosterStats` and `teamStatsHistories` keys are not present,
+     *  If the `teamStatsSummaries`, `teamRosterStats` and `teamStatsHistories` keys are not present,
      * then the team did not take part in that particular tournament.
      */
     get: operations["teams"];
   };
   "/players": {
     /**
-     * @description If the `playerStatsSummaries` and `playerStatsHistories` keys are not present,
+     *  If the `playerStatsSummaries` and `playerStatsHistories` keys are not present,
      * then the player did not take part in that particular tournament.
      */
     get: operations["players"];
@@ -98,46 +98,46 @@ export interface components {
   schemas: {
     /**
      * Format: byte
-     * @description Base 64 encoded string used to determine the
+     *  Base 64 encoded string used to determine the
      * next "page" of data to pull
      */
     pageToken: string | null;
     baseLeague: {
-      /** @description The name of the league */
+      /**  The name of the league */
       name: string;
-      /** @description URL friendly version of the league's name */
+      /**  URL friendly version of the league's name */
       slug: string;
     };
     simpleLeague: components["schemas"]["baseLeague"] & {
-      /** @description The league's ID */
+      /**  The league's ID */
       id: string;
-      /** @description URL to an image of the League's logo */
+      /**  URL to an image of the League's logo */
       image: string;
     };
     extendedLeague: components["schemas"]["simpleLeague"] & {
-      /** @description Unknown */
+      /**  Unknown */
       priority: number;
     };
     highlanderLeague: components["schemas"]["baseLeague"] & {
-      /** @description The league's ID */
+      /**  The league's ID */
       id: number;
-      /** @description The [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier) for the league. */
+      /**  The [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier) for the league. */
       guid: string;
       region: string;
       drupalId: number | null;
       logoUrl: string;
       /**
        * Format: date-time
-       * @description The date and time when this entry was created.
+       *  The date and time when this entry was created.
        */
       createdAt: string;
       /**
        * Format: date-time
-       * @description The date and time when this entry was last updated.
+       *  The date and time when this entry was last updated.
        */
       updatedAt: string;
       /**
-       * @description Contains a description of the league translated in various languages.
+       *  Contains a description of the league translated in various languages.
        *
        * The keys are presented in the format ([ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1)
        * and [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2))
@@ -151,7 +151,7 @@ export interface components {
         [key: string]: string;
       };
       /**
-       * @description Contains the names of the league translated in various languages.
+       *  Contains the names of the league translated in various languages.
        *
        * The keys are presented in the format ([ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1)
        * and [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2))
@@ -165,13 +165,13 @@ export interface components {
         [key: string]: string;
       };
       /**
-       * @description An array containing the [UUIDs](https://en.wikipedia.org/wiki/Universally_unique_identifier)
+       *  An array containing the [UUIDs](https://en.wikipedia.org/wiki/Universally_unique_identifier)
        * for the tournaments in this league.
        */
       tournaments?: string[];
     };
     /**
-     * @description Describes the amount of wins and losses the team has incurred
+     *  Describes the amount of wins and losses the team has incurred
      * in a particular stage of the tournament specifically group stage
      *
      * For knockout phase, each series is treated individually.
@@ -185,17 +185,16 @@ export interface components {
     } | null;
     result: {
       /**
-       * @description The number of games the team has won in that
+       *  The number of games the team has won in that
        * in the series
        */
       gameWins: number;
     };
     /**
-     * @description Indicate whether the team won or lost the series
+     *  Indicate whether the team won or lost the series
      *
      * This will be null if the match is ongoing
      *
-     * @enum {string|null}
      */
     outcome: "loss" | "win" | null;
     team: {
@@ -205,7 +204,6 @@ export interface components {
     };
     customTeam: {
       id: components["schemas"]["teamId"];
-      /** @enum {string} */
       side: "blue" | "red";
     };
     extendedTeam: components["schemas"]["team"] & {
@@ -216,21 +214,19 @@ export interface components {
       players: components["schemas"]["player"][];
     };
     homeLeague: {
-      /** @description The name of the league */
+      /**  The name of the league */
       name: string;
-      /** @description The region where the league is located */
+      /**  The region where the league is located */
       region: string;
     };
-    /** @description The URL friendly version of the team name */
+    /**  The URL friendly version of the team name */
     teamSlug: string;
-    /** @description The team id */
+    /**  The team id */
     teamId: string;
     baseStrategy: {
-      /** @enum {integer} */
       count: 1 | 3 | 5;
     };
     strategy: components["schemas"]["baseStrategy"] & {
-      /** @enum {string} */
       type: "bestOf";
     };
     teams: components["schemas"]["team"][];
@@ -238,12 +234,10 @@ export interface components {
       teams: components["schemas"]["teams"];
     };
     simpleMatch: components["schemas"]["baseMatch"] & {
-      /** @description The match id */
+      /**  The match id */
       id: string;
     };
-    /** @enum {string} */
     state: "completed" | "unstarted" | "inProgress";
-    /** @enum {string} */
     eventType: "match" | "show";
     baseEvent: {
       match?: components["schemas"]["baseMatch"];
@@ -251,7 +245,7 @@ export interface components {
     simpleEvent: {
       /**
        * Format: date-time
-       * @description The time the match started
+       *  The time the match started
        */
       startTime: string;
       blockName: string | null;
@@ -269,34 +263,33 @@ export interface components {
     tournament: {
       /**
        * Format: full-date
-       * @description The date the tournament ends/ended.
+       *  The date the tournament ends/ended.
        */
       endDate: string;
-      /** @description This is the tournament id */
+      /**  This is the tournament id */
       id: string;
       slug: string;
       /**
        * Format: full-date
-       * @description The date the tournament starts/started.
+       *  The date the tournament starts/started.
        */
       startDate: string;
     };
     /**
-     * @description Represents a stage in a tournament.
+     *  Represents a stage in a tournament.
      *
      * Whether it is the group or knockout stage.
      */
     stage: {
-      /** @description The name of that stage of the tournament */
+      /**  The name of that stage of the tournament */
       name: string;
       /**
-       * @description The type of the stage.
-       * @enum {string}
+       *  The type of the stage.
        */
       type: "groups" | "bracket";
       slug: string;
       /**
-       * @description Each object in the array represents a particular round in that
+       *  Each object in the array represents a particular round in that
        * specific stage in the tournament.
        *
        * For the knockout stages, we could have the quarter finals,
@@ -307,12 +300,12 @@ export interface components {
       sections: components["schemas"]["section"][];
     };
     section: {
-      /** @description The name of the section */
+      /**  The name of the section */
       name: string;
       matches: (components["schemas"]["simpleMatch"] & {
         state: components["schemas"]["state"];
         /**
-         * @description This stores the previous match ids for the teams in the current
+         *  This stores the previous match ids for the teams in the current
          * match were involved in.
          *
          * For group stages this is usually null. For bracket stage it is
@@ -321,7 +314,7 @@ export interface components {
          */
         previousMatchIds: string[] | null;
         /**
-         * @description The purpose of this key is unknown. So far the only value it
+         *  The purpose of this key is unknown. So far the only value it
          * has seems to be null.
          */
         flags: string | null;
@@ -334,7 +327,7 @@ export interface components {
         }[];
       })[];
       /**
-       * @description Contains details about the actual standings for that particular
+       *  Contains details about the actual standings for that particular
        * section
        *
        * This is mostly used for the group stage. For the knockout stages, it
@@ -343,10 +336,10 @@ export interface components {
       rankings: components["schemas"]["ranking"][];
     };
     ranking: {
-      /** @description The league position */
+      /**  The league position */
       ordinal: number;
       /**
-       * @description The teams that are at that league position.
+       *  The teams that are at that league position.
        *
        * In most cases there will only be one team object in this array. In
        * cases where several teams are tied with the same score, this array will
@@ -362,12 +355,11 @@ export interface components {
       vods: components["schemas"]["vod"][];
     };
     simpleGame: {
-      /** @description The game ID */
+      /**  The game ID */
       id: string;
       state: components["schemas"]["state"];
       /**
-       * @description The number of the game
-       * @enum {integer}
+       *  The number of the game
        */
       number: 1 | 2 | 3 | 4 | 5;
       vods: components["schemas"]["extendedVod"][];
@@ -381,19 +373,17 @@ export interface components {
     extendedVod: components["schemas"]["vod"] & {
       locale: components["schemas"]["locale"];
       /**
-       * @description The platform that is hosting the vod
+       *  The platform that is hosting the vod
        *
-       * @enum {string}
        */
       provider: "youtube" | "twitch";
-      /** @description Purpose Unknown */
+      /**  Purpose Unknown */
       offset: number;
     };
     /**
-     * @description This is the locale or language code using [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1)
+     *  This is the locale or language code using [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1)
      * and [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)
      *
-     * @enum {string}
      */
     locale:
       | "en-US"
@@ -423,21 +413,21 @@ export interface components {
       role: string;
     };
     window: {
-      /** @description The game Id of the match */
+      /**  The game Id of the match */
       esportsGameId: string;
-      /** @description The match Id of the match */
+      /**  The match Id of the match */
       esportsMatchId: string;
       gameMetadata: components["schemas"]["gameMetadata"];
       frames: components["schemas"]["windowFrame"][];
     };
     gameMetadata: {
-      /** @description The patch the match was played on */
+      /**  The patch the match was played on */
       patchVersion: string;
       blueTeamMetadata: components["schemas"]["teamMetadata"];
       redTeamMetadata: components["schemas"]["teamMetadata"];
     };
     teamMetadata: {
-      /** @description The team Id */
+      /**  The team Id */
       esportsTeamId: string;
       participantMetadata: (
         | components["schemas"]["participantMetadata"]
@@ -448,13 +438,11 @@ export interface components {
       participantId: components["schemas"]["participantId"];
       summonerName: string;
       championId: string;
-      /** @enum {string} */
       role: "top" | "jungle" | "mid" | "bottom" | "support";
     };
     participantMetadataExtended: components["schemas"]["participantMetadata"] & {
       esportsPlayerId: string;
     };
-    /** @enum {integer} */
     participantId: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10;
     baseFrame: {
       /** Format: date-time */
@@ -463,7 +451,6 @@ export interface components {
     windowFrame: components["schemas"]["baseFrame"] & {
       /** Format: date-time */
       rfc460Timestamp: string;
-      /** @enum {string} */
       gameState: "in_game" | "finished";
       blueTeam: components["schemas"]["teamStats"];
       redTeam: components["schemas"]["teamStats"];
@@ -511,26 +498,24 @@ export interface components {
       magicResistance: number;
       /** Format: float */
       tenacity: number;
-      /** @description Contains the item Ids of the items in the inventory */
+      /**  Contains the item Ids of the items in the inventory */
       items: number[];
       perkMetadata: components["schemas"]["perkMetadata"];
       abilities: components["schemas"]["abilities"];
     };
     perkMetadata: {
       /**
-       * @description The id of the primary rune path
+       *  The id of the primary rune path
        *
-       * @enum {integer}
        */
       styleId: 8000 | 8100 | 8200 | 8300 | 8400;
       /**
-       * @description The id of the secondary rune path
+       *  The id of the secondary rune path
        *
-       * @enum {integer}
        */
       subStyleId: 8000 | 8100 | 8200 | 8300 | 8400;
       /**
-       * @description The runes selected.
+       *  The runes selected.
        *
        * Index 0 - 3 are the ids of the primary runes
        * Index 4 - 5 are the ids of the secondary runes
@@ -539,9 +524,8 @@ export interface components {
       perks: number[];
     };
     /**
-     * @description Contains the abilities the summoner levelled up at each level
+     *  Contains the abilities the summoner levelled up at each level
      *
-     * @enum {array}
      */
     abilities: "Q" | "W" | "E" | "R";
     navItem: {
@@ -556,12 +540,12 @@ export interface components {
         (Record<string, unknown> | null);
       /**
        * Format: date-time
-       * @description The date and time when this entry was created.
+       *  The date and time when this entry was created.
        */
       createdAt: string;
       /**
        * Format: date-time
-       * @description The date and time when this entry was last updated.
+       *  The date and time when this entry was last updated.
        */
       updatedAt: string;
     };
@@ -570,28 +554,28 @@ export interface components {
       slug: string | null;
       label: string | null;
       /**
-       * @description The video's locale. The value is a [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1)
+       *  The video's locale. The value is a [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1)
        * language code.
        */
       locale: string;
-      /** @description Contains the tournament Id and the game Id of that match. */
+      /**  Contains the tournament Id and the game Id of that match. */
       reference: string;
-      /** @description URL to the YouTube video of the match */
+      /**  URL to the YouTube video of the match */
       source: string;
       /**
        * Format: date-time
-       * @description The date and time when this entry was created.
+       *  The date and time when this entry was created.
        */
       createdAt: string;
       /**
        * Format: date-time
-       * @description The date and time when this entry was last updated.
+       *  The date and time when this entry was last updated.
        */
       updatedAt: string;
       game: components["schemas"]["gameId"];
     };
     /**
-     * @description The game Id of the match.
+     *  The game Id of the match.
      *
      * It is a [UUID version 4](https://en.wikipedia.org/wiki/Universally_unique_identifier)
      */
@@ -599,16 +583,16 @@ export interface components {
     highlanderTournaments: components["schemas"]["highlanderTournament"][];
     highlanderTournament: {
       /**
-       * @description The tournament Id
+       *  The tournament Id
        *
        * It is a [UUID version 4](https://en.wikipedia.org/wiki/Universally_unique_identifier)
        */
       id: string;
-      /** @description URL friendly version of the tournament name */
+      /**  URL friendly version of the tournament name */
       title: string;
-      /** @description The tournament's name */
+      /**  The tournament's name */
       description: string;
-      /** @description The integer in the string represents the league ID. */
+      /**  The integer in the string represents the league ID. */
       leagueReference: string;
       roles: components["schemas"]["roles"];
       bracketType?: components["schemas"]["bracketType"];
@@ -617,7 +601,7 @@ export interface components {
       seedingStrategy?: components["schemas"]["rosteringStrategy"];
       queues: Record<string, never>;
       /**
-       * @description The keys to this object are [UUID version 4](https://en.wikipedia.org/wiki/Universally_unique_identifier)
+       *  The keys to this object are [UUID version 4](https://en.wikipedia.org/wiki/Universally_unique_identifier)
        * representing the roster ID.
        *
        * Their values are objects but they don't contain anything useful about the roster.
@@ -625,33 +609,31 @@ export interface components {
       rosters: {
         [key: string]: {
           /**
-           * @description The roster ID.
+           *  The roster ID.
            *
            * It is a [UUID version 4](https://en.wikipedia.org/wiki/Universally_unique_identifier)
            */
           id: string;
-          /** @enum {string} */
           state?: "eliminated";
-          /** @description The abbreviated version of the team's name. */
+          /**  The abbreviated version of the team's name. */
           name: string;
           roles: Record<string, never>;
           teamReference: string;
           substitutions: Record<string, never>;
-          /** @description The Team ID */
+          /**  The Team ID */
           team: string;
         };
       };
       /**
-       * @description If the value is true then the league/tournament has concluded, otherwise it is ongoing.
+       *  If the value is true then the league/tournament has concluded, otherwise it is ongoing.
        *
-       * @enum {boolean}
        */
       published: true | false;
       breakpoints?: components["schemas"]["breakpoints"];
       brackets: components["schemas"]["brackets"];
       standings?: components["schemas"]["standings"];
       /**
-       * @description The array contains [UUID version 4](https://en.wikipedia.org/wiki/Universally_unique_identifier) Match IDs
+       *  The array contains [UUID version 4](https://en.wikipedia.org/wiki/Universally_unique_identifier) Match IDs
        *
        * Despite the name of this property it is unreliable as for some tournaments this array will
        * contain match IDs yet the matches are over.
@@ -659,16 +641,16 @@ export interface components {
       liveMatches: string[];
       /**
        * Format: date
-       * @description The day the tournament starts/started.
+       *  The day the tournament starts/started.
        */
       startDate: string;
       /**
        * Format: date
-       * @description The day the tournament ends/ended.
+       *  The day the tournament ends/ended.
        */
       endDate: string;
       /**
-       * @description Contains all the platform IDs in for this tournaments.
+       *  Contains all the platform IDs in for this tournaments.
        *
        * A platform ID is combination of the gameRealm and the gameId.
        * The regex below describes the format.
@@ -677,18 +659,17 @@ export interface components {
        */
       platformIds: string[];
       /**
-       * @description 'Contains all the gameIds in this tournament.
+       *  'Contains all the gameIds in this tournament.
        *
        * **Note:** The gameIds are in the format [UUID version 4](https://en.wikipedia.org/wiki/Universally_unique_identifier)'
        */
       gameIds: string[];
-      /** @description The league ID */
+      /**  The league ID */
       leagueId: string;
-      /** @description The league ID */
+      /**  The league ID */
       league: string;
     };
     rosteringStrategy: {
-      /** @enum {string} */
       identifier: "passthru" | "random";
     };
     roles: {
@@ -696,35 +677,29 @@ export interface components {
       owner: components["schemas"]["role"][];
     };
     role: {
-      /** @enum {string} */
       origin: "BEARER_TOKEN";
-      /** @enum {string} */
       region: "global";
-      /** @enum {string} */
       summonerName: "test-user";
-      /** @enum {integer} */
       summonerLevel: 0;
-      /** @enum {integer} */
       profileIconId: 0;
-      /** @enum {boolean} */
       admin: true;
     };
     simpleRoster: {
-      /** @description The roster ID */
+      /**  The roster ID */
       roster?: string;
     };
     /**
-     * @description The keys to this object are [UUID version 4](https://en.wikipedia.org/wiki/Universally_unique_identifier)
+     *  The keys to this object are [UUID version 4](https://en.wikipedia.org/wiki/Universally_unique_identifier)
      * representing the roster ID.
      */
     breakpoints: {
       [key: string]: {
-        /** @description The breakpoint's ID */
+        /**  The breakpoint's ID */
         id: string;
         name: string;
         position: number;
         input: (components["schemas"]["simpleRoster"] & {
-          /** @description The bracket ID */
+          /**  The bracket ID */
           bracket?: string;
           standing?: number;
         })[];
@@ -732,7 +707,6 @@ export interface components {
         scores: components["schemas"]["scores"];
         roles: components["schemas"]["roles"];
         generator: {
-          /** @enum {string} */
           identifier?: "noop";
         };
       };
@@ -741,57 +715,54 @@ export interface components {
       result: components["schemas"]["highlanderResult"];
       /**
        * Format: int64
-       * @description Unix timestamp in milliseconds of when the match started.
+       *  Unix timestamp in milliseconds of when the match started.
        */
       timestamp: number;
       /**
-       * @description How the record was created/updated.
-       * @enum {string}
+       *  How the record was created/updated.
        */
       source?: "manual" | "bestOf";
       note?: string;
       history?: components["schemas"]["standings"][];
       /**
-       * @description If the value is true then the league/tournament has concluded, otherwise it is ongoing.
+       *  If the value is true then the league/tournament has concluded, otherwise it is ongoing.
        *
-       * @enum {boolean}
        */
       closed: true | false;
     };
     highlanderResult: components["schemas"]["simpleRoster"][][];
     /**
-     * @description The keys to this object are [UUID version 4](https://en.wikipedia.org/wiki/Universally_unique_identifier)
+     *  The keys to this object are [UUID version 4](https://en.wikipedia.org/wiki/Universally_unique_identifier)
      * representing the bracket ID.
      */
     brackets: {
       [key: string]: {
-        /** @description The bracket ID. */
+        /**  The bracket ID. */
         id: string;
-        /** @description The name of the bracket */
+        /**  The name of the bracket */
         name: string;
         position: number;
         groupPosition: number;
         groupName?: string;
         canManufacture: boolean;
         /**
-         * @description Whether it is ongoing or completed.
+         *  Whether it is ongoing or completed.
          *
          * This is unreliable since some tournaments have the state unresolved yet they concluded
          * a long time ago.
          *
-         * @enum {string}
          */
         state: "resolved" | "unresolved" | "unlinked";
         bracketType?: components["schemas"]["bracketType"];
         matchType?: components["schemas"]["matchType"];
         gameMode?: components["schemas"]["gameMode"];
         input?: (components["schemas"]["simpleRoster"] & {
-          /** @description The breakpoint ID */
+          /**  The breakpoint ID */
           breakpoint?: string;
           standing?: number;
         })[];
         /**
-         * @description The keys to this object are [UUID version 4](https://en.wikipedia.org/wiki/Universally_unique_identifier)
+         *  The keys to this object are [UUID version 4](https://en.wikipedia.org/wiki/Universally_unique_identifier)
          * representing the match ID.
          */
         matches: {
@@ -807,36 +778,30 @@ export interface components {
       };
     };
     bracketType: {
-      /** @enum {string} */
       identifier: "round_robin" | "single_elim" | "gauntlet" | "bestOf";
       options?: {
         rounds: string;
       };
     };
     matchType: {
-      /** @enum {string} */
       identifier: "bestOf" | "single_elim";
       options?: {
         best_of: string;
       };
     };
     gameMode: {
-      /** @enum {string} */
       identifier: "lol:duel" | "lol:classic";
-      /** @enum {integer} */
       requiredPlayers: 1 | 5;
-      /** @enum {string} */
       mapName: "summoner_rift" | "howling_abyss";
     };
     highlanderMatch: {
-      /** @description The match ID */
+      /**  The match ID */
       id: string;
       name: string;
       position: number;
       /**
-       * @description Whether it is ongoing or completed.
+       *  Whether it is ongoing or completed.
        *
-       * @enum {string}
        */
       state: "resolved" | "unresolved" | "unlinked";
       groupPosition: number;
@@ -846,11 +811,11 @@ export interface components {
         OneOf<
           [
             {
-              /** @description The match ID */
+              /**  The match ID */
               match?: string;
             },
             {
-              /** @description The breakpoint ID */
+              /**  The breakpoint ID */
               breakpoint?: string;
             }
           ]
@@ -858,7 +823,7 @@ export interface components {
           standing?: number;
         })[];
       /**
-       * @description The keys to this object are [UUID version 4](https://en.wikipedia.org/wiki/Universally_unique_identifier)
+       *  The keys to this object are [UUID version 4](https://en.wikipedia.org/wiki/Universally_unique_identifier)
        * representing the game ID.
        *
        * These are the games played in that series.
@@ -870,7 +835,6 @@ export interface components {
         [key: string]: components["schemas"]["highlanderGame"];
       };
       standings?: components["schemas"]["standings"];
-      /** @enum {boolean} */
       tiebreaker: true | false;
       remadeGames: components["schemas"]["highlanderGame"][];
       roles: components["schemas"]["roles"];
@@ -881,18 +845,17 @@ export interface components {
       id: components["schemas"]["gameId"];
       name: string;
       generatedName: string;
-      /** @enum {string} */
       state?: "remade";
       gameMode?: components["schemas"]["gameMode"];
       input: (components["schemas"]["simpleRoster"] &
         OneOf<
           [
             {
-              /** @description The match ID */
+              /**  The match ID */
               match?: string;
             },
             {
-              /** @description The breakpoint ID */
+              /**  The breakpoint ID */
               breakpoint?: string;
             }
           ]
@@ -902,22 +865,21 @@ export interface components {
       standings?: components["schemas"]["standings"];
       scores: components["schemas"]["scores"];
       /**
-       * @description The numeric version of the game ID
+       *  The numeric version of the game ID
        *
        * This is what is used to access the ACS endpoint.
        */
       gameId?: string;
-      /** @description The ID of the tournament realm on which the game was played on */
+      /**  The ID of the tournament realm on which the game was played on */
       gameRealm?: string;
-      /** @description A combination of the gameRealm and the gameId */
+      /**  A combination of the gameRealm and the gameId */
       platformId?: string;
       revision: number;
       roles: components["schemas"]["roles"];
     };
     scoring: {
       /**
-       * @description **Note:** The `LegacyScoringStrategy` value has only been found in the 2015 worlds championship.
-       * @enum {string}
+       *  **Note:** The `LegacyScoringStrategy` value has only been found in the 2015 worlds championship.
        */
       identifier: "standard" | "LegacyScoringStrategy";
       options: {
@@ -925,7 +887,7 @@ export interface components {
       };
     };
     /**
-     * @description The keys to this object are [UUID version 4](https://en.wikipedia.org/wiki/Universally_unique_identifier)
+     *  The keys to this object are [UUID version 4](https://en.wikipedia.org/wiki/Universally_unique_identifier)
      * representing the roster ID.
      */
     scores: {
@@ -937,45 +899,45 @@ export interface components {
       losses: number;
       ties: number;
       score: number;
-      /** @description The roster's [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier) */
+      /**  The roster's [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier) */
       roster: string;
-      /** @description The tournament's [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier) */
+      /**  The tournament's [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier) */
       tournament: string;
-      /** @description The bracket's [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier) */
+      /**  The bracket's [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier) */
       bracket: string;
-      /** @description A combination of the bracket and roster UUIDs. The two are separated by a colon\ */
+      /**  A combination of the bracket and roster UUIDs. The two are separated by a colon */
       id: string;
     };
     highlanderTeam: {
-      /** @description The team ID. */
+      /**  The team ID. */
       id: number;
-      /** @description URL friendly version of the team name. */
+      /**  URL friendly version of the team name. */
       slug: string;
-      /** @description The team name. */
+      /**  The team name. */
       name: string;
-      /** @description The team's [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier). */
+      /**  The team's [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier). */
       guid: string;
       teamPhotoUrl: string | null;
-      /** @description URL to an image of the team's logo. */
+      /**  URL to an image of the team's logo. */
       logoUrl: string;
-      /** @description The acronym form of the team name */
+      /**  The acronym form of the team name */
       acronym: string;
-      /** @description Describes the league this team participates in during the regular seasons. */
+      /**  Describes the league this team participates in during the regular seasons. */
       homeLeague: string;
-      /** @description Alternative URL to the team's logo. */
+      /**  Alternative URL to the team's logo. */
       altLogoUrl: string | null;
       /**
        * Format: date-time
-       * @description The date and time when this entry was created.
+       *  The date and time when this entry was created.
        */
       createdAt: string;
       /**
        * Format: date-time
-       * @description The date and time when this entry was last updated.
+       *  The date and time when this entry was last updated.
        */
       updatedAt: string;
       /**
-       * @description Contains a description of the team translated to various languages.
+       *  Contains a description of the team translated to various languages.
        *
        * The keys are presented in the format ([ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1)
        * and [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2))
@@ -989,28 +951,28 @@ export interface components {
         [key: string]: string;
       };
       foreignIds: components["schemas"]["foreignIds"];
-      /** @description An array containing the player IDs for those belonging in that team. */
+      /**  An array containing the player IDs for those belonging in that team. */
       players: number[];
-      /** @description An array of the player IDs of those in the main roster */
+      /**  An array of the player IDs of those in the main roster */
       starters: number[];
-      /** @description An array of the player IDs of the subs. */
+      /**  An array of the player IDs of the subs. */
       subs: number[];
     };
     foreignIds: {
       drupalId?: string;
     };
     highlanderPlayer: {
-      /** @description The player ID */
+      /**  The player ID */
       id: number;
-      /** @description URL friendly version of the player's in game name */
+      /**  URL friendly version of the player's in game name */
       slug: string;
-      /** @description The player's in game name */
+      /**  The player's in game name */
       name: string;
       firstName: string;
       LastName?: string | null;
-      /** @description The role they usually play */
+      /**  The role they usually play */
       roleSlug: string;
-      /** @description URL to the player's photo */
+      /**  URL to the player's photo */
       photoUrl: string | null;
       hometown: string | null;
       region: string;
@@ -1018,16 +980,16 @@ export interface components {
       birthdate: string | null;
       /**
        * Format: date-time
-       * @description The date and time when this entry was created.
+       *  The date and time when this entry was created.
        */
       createdAt: string;
       /**
        * Format: date-time
-       * @description The date and time when this entry was last updated.
+       *  The date and time when this entry was last updated.
        */
       updatedAt: string;
       /**
-       * @description Contains a description of the player translated to various languages.
+       *  Contains a description of the player translated to various languages.
        *
        * The keys are presented in the format ([ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1)
        * and [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2))
@@ -1044,7 +1006,7 @@ export interface components {
         [key: string]: string;
       };
       /**
-       * @description Contains links to the player's social media accounts.
+       *  Contains links to the player's social media accounts.
        *
        * The key is the name of the social media platform and the value is the URL
        */
@@ -1053,49 +1015,49 @@ export interface components {
       };
       champions: {
         id: number;
-        /** @description The player ID */
+        /**  The player ID */
         playerId: number;
-        /** @description The champion ID */
+        /**  The champion ID */
         championId: string;
-        /** @description The champion's name */
+        /**  The champion's name */
         championKey: string;
-        /** @description The champion's name */
+        /**  The champion's name */
         championName: string;
         /**
          * Format: date-time
-         * @description The date and time when this entry was created.
+         *  The date and time when this entry was created.
          */
         createdAt: string;
         /**
          * Format: date-time
-         * @description The date and time when this entry was last updated.
+         *  The date and time when this entry was last updated.
          */
         updatedAt: string;
       }[];
     };
-    /** @description An array containing the teams that have participated in this league. */
+    /**  An array containing the teams that have participated in this league. */
     highlanderTeams: components["schemas"]["highlanderTeam"][];
     highlanderPlayers: components["schemas"]["highlanderPlayer"][];
     baseScheduleItem: {
-      /** @description The schedule item ID. */
+      /**  The schedule item ID. */
       id: string;
       /**
        * Format: date-time
-       * @description The time the match/event is/was scheduled to start.
+       *  The time the match/event is/was scheduled to start.
        */
       scheduledTime: string;
       tags: components["schemas"]["tags"];
-      /** @description The tournament ID */
+      /**  The tournament ID */
       tournament: string;
-      /** @description The League ID */
+      /**  The League ID */
       league: string;
     };
     matchScheduleItem: components["schemas"]["baseScheduleItem"] & {
-      /** @description Contains the tournament and match Ids for the specific match. */
+      /**  Contains the tournament and match Ids for the specific match. */
       content: string;
-      /** @description The match ID */
+      /**  The match ID */
       match: string;
-      /** @description The bracket ID */
+      /**  The bracket ID */
       bracket: string;
     };
     eventScheduleItem: components["schemas"]["baseScheduleItem"] & {
@@ -1105,7 +1067,7 @@ export interface components {
       | components["schemas"]["matchScheduleItem"]
       | components["schemas"]["eventScheduleItem"];
     /**
-     * @description The labels are used to describe the week and day the match/event is taking place in.
+     *  The labels are used to describe the week and day the match/event is taking place in.
      * Also, it could indicate the stage of the tournament.
      *
      * The blockPrefix comes before the block Label. Same with the subBlockPrefix and the subBlockLabel.
@@ -1117,53 +1079,53 @@ export interface components {
       blockPrefix?: string;
       subBlockPrefix: string;
       yearLabel?: string;
-      /** @description Contains the tournament and bracket Ids the match/event belongs to. */
+      /**  Contains the tournament and bracket Ids the match/event belongs to. */
       stageLabel?: string;
-      /** @description Contains the tournament ID. */
+      /**  Contains the tournament ID. */
       tournamentLabel: string;
     };
   };
   responses: never;
   parameters: {
     hl: components["schemas"]["locale"];
-    /** @description The id(s) of the league(s) you want details of */
+    /**  The id(s) of the league(s) you want details of */
     leagueIds?: string[];
-    /** @description The id of the league you want details of */
+    /**  The id of the league you want details of */
     leagueId?: string;
-    /** @description The id of the league you want details of */
+    /**  The id of the league you want details of */
     highlanderLeagueId: string;
     /**
-     * @description Base 64 encoded string used to determine the
+     *  Base 64 encoded string used to determine the
      * next "page" of data to pull
      */
     pageToken?: string;
-    /** @description The id(s) of the tournament(s) you want details ofs */
+    /**  The id(s) of the tournament(s) you want details ofs */
     tournamentIds?: string[];
-    /** @description The id of the match that you want */
+    /**  The id of the match that you want */
     id: string;
     /**
-     * @description The team slug(s).
+     *  The team slug(s).
      *
      * You can input more than one slug.
      */
     teamSlugs?: string[];
     /**
-     * @description The game Id(s).
+     *  The game Id(s).
      *
      * You can input more than one game Id(s).
      */
     gameIds?: string[];
-    /** @description The game id of the match */
+    /**  The game id of the match */
     pathGameId: string;
-    /** @description The date-time (RFC3339) */
+    /**  The date-time (RFC3339) */
     startingTime?: string;
-    /** @description The id of the league you want details of */
+    /**  The id of the league you want details of */
     league: string;
-    /** @description The team slug. */
+    /**  The team slug. */
     teamSlug: string;
-    /** @description The tournament ID. */
+    /**  The tournament ID. */
     highlanderTournamentId: string;
-    /** @description The player slug. */
+    /**  The player slug. */
     playerSlug: string;
   };
   requestBodies: never;
@@ -1183,14 +1145,14 @@ export interface operations {
       };
     };
     responses: {
-      /** @description Successful request */
+      /**  Successful request */
       200: {
         content: {
           "application/json": {
             data: {
               leagues: (components["schemas"]["extendedLeague"] & {
                 /**
-                 * @description Indicates which type of tournament the league is. Whether
+                 *  Indicates which type of tournament the league is. Whether
                  * international or a regional tournament. The region name is
                  * given.
                  */
@@ -1211,7 +1173,7 @@ export interface operations {
       };
     };
     responses: {
-      /** @description Successful request */
+      /**  Successful request */
       200: {
         content: {
           "application/json": {
@@ -1219,7 +1181,7 @@ export interface operations {
               schedule: {
                 /**
                  * Format: date-time
-                 * @description The time the data presented was last updated
+                 *  The time the data presented was last updated
                  */
                 updated: string;
                 pages: {
@@ -1251,14 +1213,14 @@ export interface operations {
       };
     };
     responses: {
-      /** @description Successful request */
+      /**  Successful request */
       200: {
         content: {
           "application/json": {
             data: {
               schedule: {
                 /**
-                 * @description Array of event objects representing matches that are
+                 *  Array of event objects representing matches that are
                  * currently ongoing.
                  *
                  * This will be null if no match is taking place at that
@@ -1294,18 +1256,18 @@ export interface operations {
       };
     };
     responses: {
-      /** @description Successful request */
+      /**  Successful request */
       200: {
         content: {
           "application/json": {
             data: {
               /**
-               * @description An array of league object(s) where each object contains an array of
+               *  An array of league object(s) where each object contains an array of
                * tournaments.
                */
               leagues: {
                 /**
-                 * @description An array of tournament object(s) where each object describes a
+                 *  An array of tournament object(s) where each object describes a
                  * specific tournament.
                  */
                 tournaments: components["schemas"]["tournament"][];
@@ -1324,12 +1286,12 @@ export interface operations {
       };
     };
     responses: {
-      /** @description Successful request */
+      /**  Successful request */
       200: {
         content: {
           "application/json": {
             data: {
-              /** @description Each object in the array contains details of each tournament requested. */
+              /**  Each object in the array contains details of each tournament requested. */
               standings: {
                 stages: components["schemas"]["stage"][];
               }[];
@@ -1347,7 +1309,7 @@ export interface operations {
       };
     };
     responses: {
-      /** @description Successful request */
+      /**  Successful request */
       200: {
         content: {
           "application/json": {
@@ -1356,7 +1318,6 @@ export interface operations {
                 events: (components["schemas"]["simpleEvent"] & {
                   games: components["schemas"]["game"][];
                   match: {
-                    /** @enum {string} */
                     type: "normal";
                   };
                 })[];
@@ -1375,7 +1336,7 @@ export interface operations {
       };
     };
     responses: {
-      /** @description Succesful request */
+      /**  Succesful request */
       200: {
         content: {
           "application/json": {
@@ -1393,7 +1354,7 @@ export interface operations {
                   }[];
                 };
                 /**
-                 * @description For a live match this will contain information about various streams,
+                 *  For a live match this will contain information about various streams,
                  * the platforms they are on and the locale.
                  *
                  * Otherwise it will be null.
@@ -1414,7 +1375,7 @@ export interface operations {
       };
     };
     responses: {
-      /** @description Successful request */
+      /**  Successful request */
       200: {
         content: {
           "application/json": {
@@ -1434,7 +1395,7 @@ export interface operations {
       };
     };
     responses: {
-      /** @description Successful request */
+      /**  Successful request */
       200: {
         content: {
           "application/json": {
@@ -1456,7 +1417,7 @@ export interface operations {
       };
     };
     responses: {
-      /** @description Successful request */
+      /**  Successful request */
       200: {
         content: {
           "application/json": components["schemas"]["window"];
@@ -1468,7 +1429,7 @@ export interface operations {
     parameters: {
       query?: {
         startingTime?: components["parameters"]["startingTime"];
-        /** @description A list of the participant Ids separated by underscores and not commas */
+        /**  A list of the participant Ids separated by underscores and not commas */
         participantIds?: string;
       };
       path: {
@@ -1476,7 +1437,7 @@ export interface operations {
       };
     };
     responses: {
-      /** @description Successful request */
+      /**  Successful request */
       200: {
         content: {
           "application/json": {
@@ -1488,7 +1449,7 @@ export interface operations {
   };
   navItems: {
     responses: {
-      /** @description Successful request */
+      /**  Successful request */
       200: {
         content: {
           "application/json": {
@@ -1500,7 +1461,7 @@ export interface operations {
     };
   };
   /**
-   * @description This endpoint returns details about esports vods on YouTube.
+   *  This endpoint returns details about esports vods on YouTube.
    *
    * The data returned by this endpoint is fairly large (more than 5MB) since
    * it includes vods from 2015 up to (at the time of writing this) June 2019
@@ -1513,7 +1474,7 @@ export interface operations {
    */
   videos: {
     responses: {
-      /** @description Successful request */
+      /**  Successful request */
       200: {
         content: {
           "application/json": {
@@ -1523,7 +1484,7 @@ export interface operations {
       };
     };
   };
-  /** @description If a league does not have highlanderTournament objects, the API will return 404 */
+  /**  If a league does not have highlanderTournament objects, the API will return 404 */
   highlanderTournaments: {
     parameters: {
       query: {
@@ -1531,18 +1492,17 @@ export interface operations {
       };
     };
     responses: {
-      /** @description Successful request */
+      /**  Successful request */
       200: {
         content: {
           "application/json": components["schemas"]["highlanderTournaments"];
         };
       };
-      /** @description Not Found */
+      /**  Not Found */
       404: {
         content: {
           "application/json": {
             error: {
-              /** @enum {integer} */
               statusCode: 404;
               message: string;
             };
@@ -1555,7 +1515,7 @@ export interface operations {
     parameters: {
       query: {
         /**
-         * @description 'This endpoint requires either the id or the slug to be passed. If both are present then only the first
+         *  'This endpoint requires either the id or the slug to be passed. If both are present then only the first
          * one will be considered.
          *
          * _Due to a limitation in the OpenApi specification it is not possible to show the mutual exclusive nature
@@ -1602,11 +1562,11 @@ export interface operations {
       };
     };
     responses: {
-      /** @description Successful request */
+      /**  Successful request */
       200: {
         content: {
           "application/json": {
-            /** @description This array contains information about the league retrieved. */
+            /**  This array contains information about the league retrieved. */
             leagues: components["schemas"]["highlanderLeague"][];
             highlanderTournaments?: components["schemas"]["highlanderTournaments"];
             highlanderRecords?: components["schemas"]["highlanderRecords"];
@@ -1615,11 +1575,10 @@ export interface operations {
           };
         };
       };
-      /** @description Not Found */
+      /**  Not Found */
       404: {
         content: {
           "application/json": {
-            /** @enum {string} */
             error?: "Invalid Input Error";
           };
         };
@@ -1633,7 +1592,7 @@ export interface operations {
       };
     };
     responses: {
-      /** @description Successful request */
+      /**  Successful request */
       200: {
         content: {
           "application/json": {
@@ -1648,7 +1607,7 @@ export interface operations {
     };
   };
   /**
-   * @description If the `teamStatsSummaries`, `teamRosterStats` and `teamStatsHistories` keys are not present,
+   *  If the `teamStatsSummaries`, `teamRosterStats` and `teamStatsHistories` keys are not present,
    * then the team did not take part in that particular tournament.
    */
   teams: {
@@ -1659,64 +1618,64 @@ export interface operations {
       };
     };
     responses: {
-      /** @description Successful request */
+      /**  Successful request */
       200: {
         content: {
           "application/json": {
-            /** @description Contains the players currently in the team. */
+            /**  Contains the players currently in the team. */
             players: (components["schemas"]["highlanderPlayer"] & {
               teamRosterStat?: string;
             })[];
             highlanderTournaments: components["schemas"]["highlanderTournaments"];
-            /** @description Contains details about a few of the team's upcoming matches */
+            /**  Contains details about a few of the team's upcoming matches */
             scheduleItems: components["schemas"]["scheduleItem"][];
-            /** @description Contains a summary of the team stats during that particular tournament. */
+            /**  Contains a summary of the team stats during that particular tournament. */
             teamStatsSummaries?: {
-              /** @description Contains the team ID */
+              /**  Contains the team ID */
               teamId: string;
               /**
                * Format: double
-               * @description The team's KDA Ratio
+               *  The team's KDA Ratio
                */
               kdaRatio: number;
               /**
                * Format: int32
-               * @description The position the team ranks at compared to other teams' KDA ratio
+               *  The position the team ranks at compared to other teams' KDA ratio
                */
               kdaRatioRank: number;
               /**
                * Format: int32
-               * @description The average length of the team's wins in seconds.
+               *  The average length of the team's wins in seconds.
                */
               averageWinLength: number;
               /**
                * Format: int32
-               * @description The position the team ranks at compared to other team's average win lengths.
+               *  The position the team ranks at compared to other team's average win lengths.
                */
               averageWinLengthRank: number;
               /**
                * Format: double
-               * @description The ratio of first dragons killed by this team compared to the total first dragons killed
+               *  The ratio of first dragons killed by this team compared to the total first dragons killed
                * in this team's matches.
                */
               firstDragonKillRatio: number;
               /**
                * Format: int32
-               * @description The position the teams ranks at compared to other team's first dragon kill ratio
+               *  The position the teams ranks at compared to other team's first dragon kill ratio
                */
               firstDragonKillRatioRank: number;
               /**
                * Format: double
-               * @description The ratio of first tower secured by this team compared to the total first towers secured
+               *  The ratio of first tower secured by this team compared to the total first towers secured
                * in this team's matches.
                */
               firstTowerRatio: number;
               /**
                * Format: int32
-               * @description The position the teams ranks at compared to other team's first tower ratio.
+               *  The position the teams ranks at compared to other team's first tower ratio.
                */
               firstTowerRatioRank: number;
-              /** @description It is assumed that the values represent the damage dealt in thousands. */
+              /**  It is assumed that the values represent the damage dealt in thousands. */
               averageDamageByPosition: {
                 /** Format: int32 */
                 DUO_CARRY?: number;
@@ -1730,7 +1689,7 @@ export interface operations {
                 DUO?: number;
               };
             }[];
-            /** @description Contains stats of the players of the particular team who played in that tournament. */
+            /**  Contains stats of the players of the particular team who played in that tournament. */
             teamRosterStats?: {
               playerId: string;
               /** Format: int32 */
@@ -1746,37 +1705,36 @@ export interface operations {
               summonerName: string;
               championIds: number[];
             }[];
-            /** @description A contains stats of the team's previous 4 matches in that particular tournament. */
+            /**  A contains stats of the team's previous 4 matches in that particular tournament. */
             teamStatsHistories?: {
-              /** @description Contains the game ID and the team ID. */
+              /**  Contains the game ID and the team ID. */
               id: string;
               /**
                * Format: int64
-               * @description Unix timestamp in milliseconds of when the match started.
+               *  Unix timestamp in milliseconds of when the match started.
                */
               timestamp: number;
               /** Format: int32 */
               assists: number;
               /** Format: int32 */
               kills: number;
-              /** @enum {boolean} */
               win: true | false;
               championIds?: number[];
-              /** @description The match ID */
+              /**  The match ID */
               match: string;
               /**
                * Format: int32
-               * @description The team ID
+               *  The team ID
                */
               team: number;
               /**
                * Format: int32
-               * @description The opponent's team ID
+               *  The opponent's team ID
                */
               opponent: number;
               /**
                * Format: int32
-               * @description The game ID
+               *  The game ID
                */
               game: number;
             }[];
@@ -1787,7 +1745,7 @@ export interface operations {
     };
   };
   /**
-   * @description If the `playerStatsSummaries` and `playerStatsHistories` keys are not present,
+   *  If the `playerStatsSummaries` and `playerStatsHistories` keys are not present,
    * then the player did not take part in that particular tournament.
    */
   players: {
@@ -1798,49 +1756,49 @@ export interface operations {
       };
     };
     responses: {
-      /** @description Successful request */
+      /**  Successful request */
       200: {
         content: {
           "application/json": {
             /**
-             * @description Contains information about the player in question.
+             *  Contains information about the player in question.
              *
              * If `playerStatsSummary` and `playerStatsHistory` are missing then the player did not take part
              * in the tournament specificed by the tournament ID in the url.
              */
             players: (components["schemas"]["highlanderPlayer"] & {
               /**
-               * @description The IDs of the team(s) this player is/has been on the starting
+               *  The IDs of the team(s) this player is/has been on the starting
                * lineup
                */
               starterOnTeams: number[];
-              /** @description The IDs of the team(s) this player is/has been on as a sub player */
+              /**  The IDs of the team(s) this player is/has been on as a sub player */
               subOnTeams: number[];
-              /** @description A combination of the teamIDs in `starterOnTeams` and `subOnTeams` */
+              /**  A combination of the teamIDs in `starterOnTeams` and `subOnTeams` */
               teams: number[];
               photoInformation: {
-                /** @description The width of the image in pixels. */
+                /**  The width of the image in pixels. */
                 width: number;
-                /** @description The height of the image in pixels. */
+                /**  The height of the image in pixels. */
                 height: number;
-                /** @description The image's file format. */
+                /**  The image's file format. */
                 type: string;
-                /** @description URL to the player's photo. */
+                /**  URL to the player's photo. */
                 url: string;
                 transferred: number;
-                /** @description Size of the image in bytes */
+                /**  Size of the image in bytes */
                 size: number;
                 time: Record<string, never>;
               };
               /**
-               * @description Contains the ids to schedule items representing the player's/team's next matches.
+               *  Contains the ids to schedule items representing the player's/team's next matches.
                *
                * This is regardless of the tournament ID passed in the url.
                */
               scheduleItems: string[];
               playerStatsSummary?: string;
               /**
-               * @description Contains the `playerStatsHistory` IDs, which are just the game ID of the match and the player
+               *  Contains the `playerStatsHistory` IDs, which are just the game ID of the match and the player
                * ID separated by a colon.
                *
                * Contains the last 4 played matches in the specified tournament. The first ID is of the most
@@ -1848,12 +1806,12 @@ export interface operations {
                */
               playerStatsHistory?: string[];
             })[];
-            /** @description Contains the various tournaments the player has participated in. */
+            /**  Contains the various tournaments the player has participated in. */
             highlanderTournaments: components["schemas"]["highlanderTournament"][];
-            /** @description Contains details about the next 4 matches the player's team is schedule to participate in. */
+            /**  Contains details about the next 4 matches the player's team is schedule to participate in. */
             scheduleItems: components["schemas"]["matchScheduleItem"][];
             teams: components["schemas"]["highlanderTeam"][];
-            /** @description The stats displayed here are for the player during the tournament specified in the url */
+            /**  The stats displayed here are for the player during the tournament specified in the url */
             playerStatsSummaries?: {
               playerId: string;
               /** Format: double */
@@ -1881,7 +1839,7 @@ export interface operations {
               }[];
             }[];
             /**
-             * @description Displays stats from the recently played matches in that particular tournaments.
+             *  Displays stats from the recently played matches in that particular tournaments.
              * The array starts with the most recently played match.
              */
             playerStatsHistories?: {
@@ -1891,7 +1849,7 @@ export interface operations {
               championId: number;
               /**
                * Format: int64
-               * @description Unix timestamp in milliseconds of when the match started.
+               *  Unix timestamp in milliseconds of when the match started.
                */
               timestamp: number;
               /** Format: integer */
@@ -1906,26 +1864,25 @@ export interface operations {
               kdaRatio: number;
               /** Format: double */
               killParticipation: number;
-              /** @enum {boolean} */
               win: true | false;
               /**
-               * Format: ^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$
-               * @description The match ID
+               * Format: ^[0-9a-f]\{8\}-[0-9a-f]\{4\}-[1-5][0-9a-f]\{3\}-[89ab][0-9a-f]\{3\}-[0-9a-f]\{12\}$
+               *  The match ID
                */
               match: string;
               /**
                * Format: integer
-               * @description The team ID the player playes for.
+               *  The team ID the player playes for.
                */
               team: number;
               /**
                * Format: integer
-               * @description The opponent's team ID.
+               *  The opponent's team ID.
                */
               opponent: number;
               /**
-               * Format: ^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$
-               * @description The game ID
+               * Format: ^[0-9a-f]\{8\}-[0-9a-f]\{4\}-[1-5][0-9a-f]\{3\}-[89ab][0-9a-f]\{3\}-[0-9a-f]\{12\}$
+               *  The game ID
                */
               game: string;
             }[];
