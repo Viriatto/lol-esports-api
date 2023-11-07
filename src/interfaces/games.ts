@@ -34,19 +34,21 @@ export default class Games extends Interface {
    * The response's data contains a `frames` array property which includes "snapshots" of game states for a time span of 10 seconds.
    *
    * @param startingAt - The starting date of the segment to fetch from the game. If it is later than the end date of the game, retrieves the last 10 frames.
+   * If `undefined`, returns the first 10 frames of the game.
    * @returns Data on a segment of the game.
    *
    * @see {@link https://vickz84259.github.io/lolesports-api-docs/#operation/getGames | vickz84259's endpoint documentation}.
    *
    * @public @sealed
    */
-  public async getWindow(gameId: string, startingAt: string | Date) {
+  public async getWindow(gameId: string, startingAt?: string | Date) {
     return this._get(this._baseURLs.feed, "/window/{gameId}", {
       query: {
-        startingTime:
-          typeof startingAt === "string"
+        startingTime: startingAt
+          ? typeof startingAt === "string"
             ? startingAt
-            : startingAt.toISOString(),
+            : startingAt.toISOString()
+          : undefined,
       },
       path: {
         gameId,

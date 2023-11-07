@@ -1,6 +1,6 @@
-[LoL Esports API Wrapper - v0.2.3](README.md) / Exports
+[LoL Esports API Wrapper - v0.2.4](README.md) / Exports
 
-# LoL Esports API Wrapper - v0.2.3
+# LoL Esports API Wrapper - v0.2.4
 
 ## Table of contents
 
