@@ -1,4 +1,4 @@
-import axios, { AxiosResponse } from "axios";
+import axios, { AxiosError, AxiosResponse } from "axios";
 import { paths } from "./api-types.js";
 import { parseParameterizedEndpointPath } from "./utils.js";
 
@@ -184,8 +184,9 @@ export default abstract class Interface {
         if (response.status === 200) {
           return response.data;
         }
-      } catch (_) {
-        /* empty */
+      } catch (reason) {
+        if (reason instanceof AxiosError && reason.code !== "ENOTFOUND")
+          throw reason;
       }
     }
 
