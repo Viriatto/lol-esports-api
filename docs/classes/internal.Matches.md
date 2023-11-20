@@ -58,7 +58,7 @@ The eSports API's base URLs.
 
 #### Defined in
 
-[src/interface.ts:122](https://github.com/Viriatto/lol-esports-api/blob/a6b07b2/src/interface.ts#L122)
+[src/interface.ts:122](https://github.com/Viriatto/lol-esports-api/blob/d78a7bd/src/interface.ts#L122)
 
 ## Methods
 
@@ -108,7 +108,7 @@ When it can't get a successfuly response from any of the endpoints built from [I
 
 #### Defined in
 
-[src/interface.ts:150](https://github.com/Viriatto/lol-esports-api/blob/a6b07b2/src/interface.ts#L150)
+[src/interface.ts:150](https://github.com/Viriatto/lol-esports-api/blob/d78a7bd/src/interface.ts#L150)
 
 ---
 
@@ -137,4 +137,4 @@ Data on the event details of a particular match.
 
 #### Defined in
 
-[src/interfaces/matches.ts:20](https://github.com/Viriatto/lol-esports-api/blob/a6b07b2/src/interfaces/matches.ts#L20)
+[src/interfaces/matches.ts:20](https://github.com/Viriatto/lol-esports-api/blob/d78a7bd/src/interfaces/matches.ts#L20)
