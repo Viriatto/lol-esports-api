@@ -59,7 +59,7 @@ The eSports API's base URLs.
 
 #### Defined in
 
-[src/interface.ts:122](https://github.com/Viriatto/lol-esports-api/blob/a6b07b2/src/interface.ts#L122)
+[src/interface.ts:122](https://github.com/Viriatto/lol-esports-api/blob/d78a7bd/src/interface.ts#L122)
 
 ## Methods
 
@@ -109,7 +109,7 @@ When it can't get a successfuly response from any of the endpoints built from [I
 
 #### Defined in
 
-[src/interface.ts:150](https://github.com/Viriatto/lol-esports-api/blob/a6b07b2/src/interface.ts#L150)
+[src/interface.ts:150](https://github.com/Viriatto/lol-esports-api/blob/d78a7bd/src/interface.ts#L150)
 
 ---
 
@@ -142,7 +142,7 @@ If `tournamentIdOrIds` is `undefined`, pulls data for all tournaments.
 
 #### Defined in
 
-[src/interfaces/tournaments.ts:24](https://github.com/Viriatto/lol-esports-api/blob/a6b07b2/src/interfaces/tournaments.ts#L24)
+[src/interfaces/tournaments.ts:24](https://github.com/Viriatto/lol-esports-api/blob/d78a7bd/src/interfaces/tournaments.ts#L24)
 
 ---
 
@@ -171,4 +171,4 @@ Data on the completed events of a particular tournament.
 
 #### Defined in
 
-[src/interfaces/tournaments.ts:47](https://github.com/Viriatto/lol-esports-api/blob/a6b07b2/src/interfaces/tournaments.ts#L47)
+[src/interfaces/tournaments.ts:47](https://github.com/Viriatto/lol-esports-api/blob/d78a7bd/src/interfaces/tournaments.ts#L47)
