@@ -1,4 +1,4 @@
-[LoL Esports API Wrapper - v0.2.5](../README.md) / [Exports](../modules.md) / [internal](../modules/internal.md) / Interface
+[LoL Esports API Wrapper - v0.3.0](../README.md) / [Exports](../modules.md) / [internal](../modules/internal.md) / Interface
 
 # Class: Interface
 
@@ -63,7 +63,7 @@ The eSports API's base URLs.
 
 #### Defined in
 
-[src/interface.ts:122](https://github.com/Viriatto/lol-esports-api/blob/3587307/src/interface.ts#L122)
+[src/interface.ts:122](https://github.com/Viriatto/lol-esports-api/blob/ffa02fa/src/interface.ts#L122)
 
 ## Methods
 
@@ -109,4 +109,4 @@ When it can't get a successfuly response from any of the endpoints built from [I
 
 #### Defined in
 
-[src/interface.ts:150](https://github.com/Viriatto/lol-esports-api/blob/3587307/src/interface.ts#L150)
+[src/interface.ts:150](https://github.com/Viriatto/lol-esports-api/blob/ffa02fa/src/interface.ts#L150)

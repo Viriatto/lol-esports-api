@@ -1,4 +1,4 @@
-[LoL Esports API Wrapper - v0.2.5](../README.md) / [Exports](../modules.md) / internal
+[LoL Esports API Wrapper - v0.3.0](../README.md) / [Exports](../modules.md) / internal
 
 # Module: internal
 
@@ -50,7 +50,7 @@ Searches for an existing type within the eSports API types, if it does not exist
 
 #### Defined in
 
-[src/interface.ts:76](https://github.com/Viriatto/lol-esports-api/blob/3587307/src/interface.ts#L76)
+[src/interface.ts:76](https://github.com/Viriatto/lol-esports-api/blob/ffa02fa/src/interface.ts#L76)
 
 ---
 
@@ -62,7 +62,7 @@ The API endpoints as per [vickz84259's specification](https://vickz84259.github.
 
 #### Defined in
 
-[src/interface.ts:58](https://github.com/Viriatto/lol-esports-api/blob/3587307/src/interface.ts#L58)
+[src/interface.ts:58](https://github.com/Viriatto/lol-esports-api/blob/ffa02fa/src/interface.ts#L58)
 
 ---
 
@@ -74,7 +74,7 @@ The API endpoints as per [vickz84259's specification](https://vickz84259.github.
 
 #### Defined in
 
-[src/interface.ts:91](https://github.com/Viriatto/lol-esports-api/blob/3587307/src/interface.ts#L91)
+[src/interface.ts:91](https://github.com/Viriatto/lol-esports-api/blob/ffa02fa/src/interface.ts#L91)
 
 ---
 
@@ -92,7 +92,7 @@ The API endpoint operations as per [vickz84259's specification](https://vickz842
 
 #### Defined in
 
-[src/interface.ts:65](https://github.com/Viriatto/lol-esports-api/blob/3587307/src/interface.ts#L65)
+[src/interface.ts:65](https://github.com/Viriatto/lol-esports-api/blob/ffa02fa/src/interface.ts#L65)
 
 ---
 
@@ -114,7 +114,7 @@ The eSports API specification used here is a fork of [vickz84259's work](https:/
 
 #### Defined in
 
-[src/interface.ts:50](https://github.com/Viriatto/lol-esports-api/blob/3587307/src/interface.ts#L50)
+[src/interface.ts:50](https://github.com/Viriatto/lol-esports-api/blob/ffa02fa/src/interface.ts#L50)
 
 ---
 
@@ -171,4 +171,4 @@ OneOf type helpers
 
 #### Defined in
 
-[src/api-types.ts:7](https://github.com/Viriatto/lol-esports-api/blob/3587307/src/api-types.ts#L7)
+[src/api-types.ts:7](https://github.com/Viriatto/lol-esports-api/blob/ffa02fa/src/api-types.ts#L7)
