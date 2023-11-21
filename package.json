@@ -13,7 +13,7 @@
     "compile": "tsc",
     "build-docs": "typedoc",
     "watch": "tsc --watch",
-    "prepack": "npm run compile",
+    "prepack": "npm run compile & npm test",
     "prepare": "husky install",
     "start": "node ./dist/index.js"
   },
