@@ -31,7 +31,11 @@ Interfaces with all of teams related endpoints.
 
 ### constructor
 
-• **new Teams**()
+• **new Teams**(): [`Teams`](internal.Teams.md)
+
+#### Returns
+
+[`Teams`](internal.Teams.md)
 
 #### Inherited from
 
@@ -58,13 +62,13 @@ The eSports API's base URLs.
 
 #### Defined in
 
-[src/interface.ts:122](https://github.com/Viriatto/lol-esports-api/blob/f44700a/src/interface.ts#L122)
+[src/interface.ts:122](https://github.com/Viriatto/lol-esports-api/blob/3587307/src/interface.ts#L122)
 
 ## Methods
 
 ### \_get
 
-▸ `Protected` **\_get**<`T`\>(`baseURLs`, `endpoint`, `params`): `Promise`<[`APIResponse`](../modules/internal.md#apiresponse)<`T`\>\>
+▸ **\_get**\<`T`\>(`baseURLs`, `endpoint`, `params`): `Promise`\<[`APIResponse`](../modules/internal.md#apiresponse)\<`T`\>\>
 
 Issues a request to the eSports API.
 
@@ -76,15 +80,15 @@ Issues a request to the eSports API.
 
 #### Parameters
 
-| Name       | Type                                                                          | Description                                    |
-| :--------- | :---------------------------------------------------------------------------- | :--------------------------------------------- |
-| `baseURLs` | readonly `string`[]                                                           | The base URL(s) to use within the request.     |
-| `endpoint` | `T`                                                                           | The API endpoint to which send the request.    |
-| `params`   | [`APIEndpointParameters`](../modules/internal.md#apiendpointparameters)<`T`\> | The query parameters to send with the request. |
+| Name       | Type                                                                           | Description                                    |
+| :--------- | :----------------------------------------------------------------------------- | :--------------------------------------------- |
+| `baseURLs` | readonly `string`[]                                                            | The base URL(s) to use within the request.     |
+| `endpoint` | `T`                                                                            | The API endpoint to which send the request.    |
+| `params`   | [`APIEndpointParameters`](../modules/internal.md#apiendpointparameters)\<`T`\> | The query parameters to send with the request. |
 
 #### Returns
 
-`Promise`<[`APIResponse`](../modules/internal.md#apiresponse)<`T`\>\>
+`Promise`\<[`APIResponse`](../modules/internal.md#apiresponse)\<`T`\>\>
 
 Data for the specified resource.
 
@@ -108,13 +112,13 @@ When it can't get a successfuly response from any of the endpoints built from [I
 
 #### Defined in
 
-[src/interface.ts:150](https://github.com/Viriatto/lol-esports-api/blob/f44700a/src/interface.ts#L150)
+[src/interface.ts:150](https://github.com/Viriatto/lol-esports-api/blob/3587307/src/interface.ts#L150)
 
 ---
 
 ### get
 
-▸ **get**(`teamId?`, `locale?`): `Promise`<{ `data`: { `teams`: { `code`: `string` ; `image`: `string` ; `name`: `string` } & { `alternativeImage`: `string` ; `homeLeague`: { `name`: `string` ; `region`: `string` } ; `id`: `string` ; `players`: { `firstName`: `string` ; `id`: `string` ; `image`: `string` ; `lastName`: `string` ; `role`: `string` ; `summonerName`: `string` }[] ; `slug`: `string` }[] } }\>
+▸ **get**(`teamId?`, `locale?`): `Promise`\<\{ `data`: \{ `teams`: \{ `code`: `string` ; `image`: `string` ; `name`: `string` } & \{ `alternativeImage`: `string` ; `homeLeague`: \{ `name`: `string` ; `region`: `string` } ; `id`: `string` ; `players`: \{ `firstName`: `string` ; `id`: `string` ; `image`: `string` ; `lastName`: `string` ; `role`: `string` ; `summonerName`: `string` }[] ; `slug`: `string` }[] } }\>
 
 Fetches data for all teams or a particular team.
 
@@ -127,7 +131,7 @@ Fetches data for all teams or a particular team.
 
 #### Returns
 
-`Promise`<{ `data`: { `teams`: { `code`: `string` ; `image`: `string` ; `name`: `string` } & { `alternativeImage`: `string` ; `homeLeague`: { `name`: `string` ; `region`: `string` } ; `id`: `string` ; `players`: { `firstName`: `string` ; `id`: `string` ; `image`: `string` ; `lastName`: `string` ; `role`: `string` ; `summonerName`: `string` }[] ; `slug`: `string` }[] } }\>
+`Promise`\<\{ `data`: \{ `teams`: \{ `code`: `string` ; `image`: `string` ; `name`: `string` } & \{ `alternativeImage`: `string` ; `homeLeague`: \{ `name`: `string` ; `region`: `string` } ; `id`: `string` ; `players`: \{ `firstName`: `string` ; `id`: `string` ; `image`: `string` ; `lastName`: `string` ; `role`: `string` ; `summonerName`: `string` }[] ; `slug`: `string` }[] } }\>
 
 Data on a particular team or all teams.
 
@@ -141,4 +145,4 @@ If `teamId` is undefined, fetches data for all teams.
 
 #### Defined in
 
-[src/interfaces/teams.ts:23](https://github.com/Viriatto/lol-esports-api/blob/f44700a/src/interfaces/teams.ts#L23)
+[src/interfaces/teams.ts:23](https://github.com/Viriatto/lol-esports-api/blob/3587307/src/interfaces/teams.ts#L23)

@@ -31,7 +31,11 @@ Interfaces with all event related endpoints.
 
 ### constructor
 
-• **new Events**()
+• **new Events**(): [`Events`](internal.Events.md)
+
+#### Returns
+
+[`Events`](internal.Events.md)
 
 #### Inherited from
 
@@ -58,13 +62,13 @@ The eSports API's base URLs.
 
 #### Defined in
 
-[src/interface.ts:122](https://github.com/Viriatto/lol-esports-api/blob/f44700a/src/interface.ts#L122)
+[src/interface.ts:122](https://github.com/Viriatto/lol-esports-api/blob/3587307/src/interface.ts#L122)
 
 ## Methods
 
 ### \_get
 
-▸ `Protected` **\_get**<`T`\>(`baseURLs`, `endpoint`, `params`): `Promise`<[`APIResponse`](../modules/internal.md#apiresponse)<`T`\>\>
+▸ **\_get**\<`T`\>(`baseURLs`, `endpoint`, `params`): `Promise`\<[`APIResponse`](../modules/internal.md#apiresponse)\<`T`\>\>
 
 Issues a request to the eSports API.
 
@@ -76,15 +80,15 @@ Issues a request to the eSports API.
 
 #### Parameters
 
-| Name       | Type                                                                          | Description                                    |
-| :--------- | :---------------------------------------------------------------------------- | :--------------------------------------------- |
-| `baseURLs` | readonly `string`[]                                                           | The base URL(s) to use within the request.     |
-| `endpoint` | `T`                                                                           | The API endpoint to which send the request.    |
-| `params`   | [`APIEndpointParameters`](../modules/internal.md#apiendpointparameters)<`T`\> | The query parameters to send with the request. |
+| Name       | Type                                                                           | Description                                    |
+| :--------- | :----------------------------------------------------------------------------- | :--------------------------------------------- |
+| `baseURLs` | readonly `string`[]                                                            | The base URL(s) to use within the request.     |
+| `endpoint` | `T`                                                                            | The API endpoint to which send the request.    |
+| `params`   | [`APIEndpointParameters`](../modules/internal.md#apiendpointparameters)\<`T`\> | The query parameters to send with the request. |
 
 #### Returns
 
-`Promise`<[`APIResponse`](../modules/internal.md#apiresponse)<`T`\>\>
+`Promise`\<[`APIResponse`](../modules/internal.md#apiresponse)\<`T`\>\>
 
 Data for the specified resource.
 
@@ -108,13 +112,13 @@ When it can't get a successfuly response from any of the endpoints built from [I
 
 #### Defined in
 
-[src/interface.ts:150](https://github.com/Viriatto/lol-esports-api/blob/f44700a/src/interface.ts#L150)
+[src/interface.ts:150](https://github.com/Viriatto/lol-esports-api/blob/3587307/src/interface.ts#L150)
 
 ---
 
 ### getLive
 
-▸ **getLive**(`locale?`): `Promise`<{ `data`: { `schedule`: { `events`: `null` \| { `blockName`: `null` \| `string` ; `match`: { `teams`: { `code`: `string` ; `image`: `string` ; `name`: `string` }[] } & { `id`: `string` } & { `strategy`: { `count`: `1` \| `3` \| `5` } & { `type`: `"bestOf"` } ; `teams`: { `result`: { `gameWins`: `number` } }[] } ; `startTime`: `string` } & { `state`: `"completed"` \| `"unstarted"` \| `"inProgress"` ; `type`: `"match"` \| `"show"` } & { `id`: `string` ; `league`: { `name`: `string` ; `slug`: `string` } & { `id`: `string` ; `image`: `string` } & { `priority`: `number` } ; `match?`: { `teams`: { `record`: `null` \| { `losses`: `number` ; `wins`: `number` } ; `result`: { `outcome`: `null` \| `"loss"` \| `"win"` } ; `slug`: `string` }[] } }[] } } }\>
+▸ **getLive**(`locale?`): `Promise`\<\{ `data`: \{ `schedule`: \{ `events`: `null` \| \{ `blockName`: `null` \| `string` ; `match`: \{ `teams`: \{ `code`: `string` ; `image`: `string` ; `name`: `string` }[] } & \{ `id`: `string` } & \{ `strategy`: \{ `count`: `1` \| `3` \| `5` } & \{ `type`: `"bestOf"` } ; `teams`: \{ `result`: \{ `gameWins`: `number` } }[] } ; `startTime`: `string` } & \{ `state`: `"completed"` \| `"unstarted"` \| `"inProgress"` ; `type`: `"match"` \| `"show"` } & \{ `id`: `string` ; `league`: \{ `name`: `string` ; `slug`: `string` } & \{ `id`: `string` ; `image`: `string` } & \{ `priority`: `number` } ; `match?`: \{ `teams`: \{ `record`: `null` \| \{ `losses`: `number` ; `wins`: `number` } ; `result`: \{ `outcome`: `null` \| `"loss"` \| `"win"` } ; `slug`: `string` }[] } }[] } } }\>
 
 Fetch data on currently live events.
 
@@ -126,7 +130,7 @@ Fetch data on currently live events.
 
 #### Returns
 
-`Promise`<{ `data`: { `schedule`: { `events`: `null` \| { `blockName`: `null` \| `string` ; `match`: { `teams`: { `code`: `string` ; `image`: `string` ; `name`: `string` }[] } & { `id`: `string` } & { `strategy`: { `count`: `1` \| `3` \| `5` } & { `type`: `"bestOf"` } ; `teams`: { `result`: { `gameWins`: `number` } }[] } ; `startTime`: `string` } & { `state`: `"completed"` \| `"unstarted"` \| `"inProgress"` ; `type`: `"match"` \| `"show"` } & { `id`: `string` ; `league`: { `name`: `string` ; `slug`: `string` } & { `id`: `string` ; `image`: `string` } & { `priority`: `number` } ; `match?`: { `teams`: { `record`: `null` \| { `losses`: `number` ; `wins`: `number` } ; `result`: { `outcome`: `null` \| `"loss"` \| `"win"` } ; `slug`: `string` }[] } }[] } } }\>
+`Promise`\<\{ `data`: \{ `schedule`: \{ `events`: `null` \| \{ `blockName`: `null` \| `string` ; `match`: \{ `teams`: \{ `code`: `string` ; `image`: `string` ; `name`: `string` }[] } & \{ `id`: `string` } & \{ `strategy`: \{ `count`: `1` \| `3` \| `5` } & \{ `type`: `"bestOf"` } ; `teams`: \{ `result`: \{ `gameWins`: `number` } }[] } ; `startTime`: `string` } & \{ `state`: `"completed"` \| `"unstarted"` \| `"inProgress"` ; `type`: `"match"` \| `"show"` } & \{ `id`: `string` ; `league`: \{ `name`: `string` ; `slug`: `string` } & \{ `id`: `string` ; `image`: `string` } & \{ `priority`: `number` } ; `match?`: \{ `teams`: \{ `record`: `null` \| \{ `losses`: `number` ; `wins`: `number` } ; `result`: \{ `outcome`: `null` \| `"loss"` \| `"win"` } ; `slug`: `string` }[] } }[] } } }\>
 
 An object containing data on currently live events.
 
@@ -149,4 +153,4 @@ console.log(liveEvents);
 
 #### Defined in
 
-[src/interfaces/events.ts:29](https://github.com/Viriatto/lol-esports-api/blob/f44700a/src/interfaces/events.ts#L29)
+[src/interfaces/events.ts:29](https://github.com/Viriatto/lol-esports-api/blob/3587307/src/interfaces/events.ts#L29)
