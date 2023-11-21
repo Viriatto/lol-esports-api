@@ -53,7 +53,12 @@
 
 #### Defined in
 
+<<<<<<< HEAD
 [src/api-types.ts:1089](https://github.com/Viriatto/lol-esports-api/blob/f44700a/src/api-types.ts#L1089)
+=======
+[src/api-types.ts:1089](https://github.com/Viriatto/lol-esports-api/blob/d78a7bd/src/api-types.ts#L1089)
+
+> > > > > > > master
 
 ---
 
@@ -63,7 +68,12 @@
 
 #### Defined in
 
+<<<<<<< HEAD
 [src/api-types.ts:1133](https://github.com/Viriatto/lol-esports-api/blob/f44700a/src/api-types.ts#L1133)
+=======
+[src/api-types.ts:1133](https://github.com/Viriatto/lol-esports-api/blob/d78a7bd/src/api-types.ts#L1133)
+
+> > > > > > > master
 
 ---
 
@@ -73,7 +83,12 @@
 
 #### Defined in
 
+<<<<<<< HEAD
 [src/api-types.ts:1131](https://github.com/Viriatto/lol-esports-api/blob/f44700a/src/api-types.ts#L1131)
+=======
+[src/api-types.ts:1131](https://github.com/Viriatto/lol-esports-api/blob/d78a7bd/src/api-types.ts#L1131)
+
+> > > > > > > master
 
 ---
 
@@ -83,7 +98,12 @@
 
 #### Defined in
 
+<<<<<<< HEAD
 [src/api-types.ts:1088](https://github.com/Viriatto/lol-esports-api/blob/f44700a/src/api-types.ts#L1088)
+=======
+[src/api-types.ts:1088](https://github.com/Viriatto/lol-esports-api/blob/d78a7bd/src/api-types.ts#L1088)
+
+> > > > > > > master
 
 ---
 
