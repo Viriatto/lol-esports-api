@@ -32,7 +32,11 @@ Interfaces with all of tournaments related endpoints.
 
 ### constructor
 
-• **new Tournaments**()
+• **new Tournaments**(): [`Tournaments`](internal.Tournaments.md)
+
+#### Returns
+
+[`Tournaments`](internal.Tournaments.md)
 
 #### Inherited from
 
@@ -59,13 +63,13 @@ The eSports API's base URLs.
 
 #### Defined in
 
-[src/interface.ts:122](https://github.com/Viriatto/lol-esports-api/blob/a6b07b2/src/interface.ts#L122)
+[src/interface.ts:122](https://github.com/Viriatto/lol-esports-api/blob/3587307/src/interface.ts#L122)
 
 ## Methods
 
 ### \_get
 
-▸ `Protected` **\_get**<`T`\>(`baseURLs`, `endpoint`, `params`): `Promise`<[`APIResponse`](../modules/internal.md#apiresponse)<`T`\>\>
+▸ **\_get**\<`T`\>(`baseURLs`, `endpoint`, `params`): `Promise`\<[`APIResponse`](../modules/internal.md#apiresponse)\<`T`\>\>
 
 Issues a request to the eSports API.
 
@@ -77,15 +81,15 @@ Issues a request to the eSports API.
 
 #### Parameters
 
-| Name       | Type                                                                          | Description                                    |
-| :--------- | :---------------------------------------------------------------------------- | :--------------------------------------------- |
-| `baseURLs` | readonly `string`[]                                                           | The base URL(s) to use within the request.     |
-| `endpoint` | `T`                                                                           | The API endpoint to which send the request.    |
-| `params`   | [`APIEndpointParameters`](../modules/internal.md#apiendpointparameters)<`T`\> | The query parameters to send with the request. |
+| Name       | Type                                                                           | Description                                    |
+| :--------- | :----------------------------------------------------------------------------- | :--------------------------------------------- |
+| `baseURLs` | readonly `string`[]                                                            | The base URL(s) to use within the request.     |
+| `endpoint` | `T`                                                                            | The API endpoint to which send the request.    |
+| `params`   | [`APIEndpointParameters`](../modules/internal.md#apiendpointparameters)\<`T`\> | The query parameters to send with the request. |
 
 #### Returns
 
-`Promise`<[`APIResponse`](../modules/internal.md#apiresponse)<`T`\>\>
+`Promise`\<[`APIResponse`](../modules/internal.md#apiresponse)\<`T`\>\>
 
 Data for the specified resource.
 
@@ -109,13 +113,13 @@ When it can't get a successfuly response from any of the endpoints built from [I
 
 #### Defined in
 
-[src/interface.ts:150](https://github.com/Viriatto/lol-esports-api/blob/a6b07b2/src/interface.ts#L150)
+[src/interface.ts:150](https://github.com/Viriatto/lol-esports-api/blob/3587307/src/interface.ts#L150)
 
 ---
 
 ### getCompletedEvents
 
-▸ **getCompletedEvents**(`tournamentId?`, `locale?`): `Promise`<{ `data`: { `schedule`: { `events`: { `blockName`: `null` \| `string` ; `match`: { `teams`: { `code`: `string` ; `image`: `string` ; `name`: `string` }[] } & { `id`: `string` } & { `strategy`: { `count`: `1` \| `3` \| `5` } & { `type`: `"bestOf"` } ; `teams`: { `result`: { `gameWins`: `number` } }[] } ; `startTime`: `string` } & { `games`: { `vods`: { `parameter`: `string` }[] }[] ; `match`: { `type`: `"normal"` } }[] } } }\>
+▸ **getCompletedEvents**(`tournamentId?`, `locale?`): `Promise`\<\{ `data`: \{ `schedule`: \{ `events`: \{ `blockName`: `null` \| `string` ; `match`: \{ `teams`: \{ `code`: `string` ; `image`: `string` ; `name`: `string` }[] } & \{ `id`: `string` } & \{ `strategy`: \{ `count`: `1` \| `3` \| `5` } & \{ `type`: `"bestOf"` } ; `teams`: \{ `result`: \{ `gameWins`: `number` } }[] } ; `startTime`: `string` } & \{ `games`: \{ `vods`: \{ `parameter`: `string` }[] }[] ; `match`: \{ `type`: `"normal"` } }[] } } }\>
 
 Fetches data for completed events of all tournaments, a particular tournament, or a set of tournaments.
 
@@ -128,7 +132,7 @@ Fetches data for completed events of all tournaments, a particular tournament, o
 
 #### Returns
 
-`Promise`<{ `data`: { `schedule`: { `events`: { `blockName`: `null` \| `string` ; `match`: { `teams`: { `code`: `string` ; `image`: `string` ; `name`: `string` }[] } & { `id`: `string` } & { `strategy`: { `count`: `1` \| `3` \| `5` } & { `type`: `"bestOf"` } ; `teams`: { `result`: { `gameWins`: `number` } }[] } ; `startTime`: `string` } & { `games`: { `vods`: { `parameter`: `string` }[] }[] ; `match`: { `type`: `"normal"` } }[] } } }\>
+`Promise`\<\{ `data`: \{ `schedule`: \{ `events`: \{ `blockName`: `null` \| `string` ; `match`: \{ `teams`: \{ `code`: `string` ; `image`: `string` ; `name`: `string` }[] } & \{ `id`: `string` } & \{ `strategy`: \{ `count`: `1` \| `3` \| `5` } & \{ `type`: `"bestOf"` } ; `teams`: \{ `result`: \{ `gameWins`: `number` } }[] } ; `startTime`: `string` } & \{ `games`: \{ `vods`: \{ `parameter`: `string` }[] }[] ; `match`: \{ `type`: `"normal"` } }[] } } }\>
 
 Data on the completed events of the tournament.
 
@@ -142,13 +146,13 @@ If `tournamentIdOrIds` is `undefined`, pulls data for all tournaments.
 
 #### Defined in
 
-[src/interfaces/tournaments.ts:24](https://github.com/Viriatto/lol-esports-api/blob/a6b07b2/src/interfaces/tournaments.ts#L24)
+[src/interfaces/tournaments.ts:24](https://github.com/Viriatto/lol-esports-api/blob/3587307/src/interfaces/tournaments.ts#L24)
 
 ---
 
 ### getStandings
 
-▸ **getStandings**(`tournamentId`, `locale?`): `Promise`<{ `data`: { `standings`: { `stages`: { `name`: `string` ; `sections`: { `matches`: { `teams`: { `code`: `string` ; `image`: `string` ; `name`: `string` }[] } & { `id`: `string` } & { `flags`: `null` \| `string` ; `previousMatchIds`: `null` \| `string`[] ; `state`: `"completed"` \| `"unstarted"` \| `"inProgress"` ; `teams`: { `id`: `string` ; `result`: { `gameWins`: `number` } & { `outcome?`: `null` \| `"loss"` \| `"win"` } ; `slug`: `string` }[] }[] ; `name`: `string` ; `rankings`: { `ordinal`: `number` ; `teams`: { `code`: `string` ; `image`: `string` ; `name`: `string` } & { `id?`: `string` ; `record?`: `null` \| { `losses`: `number` ; `wins`: `number` } ; `slug?`: `string` }[] }[] }[] ; `slug`: `string` ; `type`: `"groups"` \| `"bracket"` }[] }[] } }\>
+▸ **getStandings**(`tournamentId`, `locale?`): `Promise`\<\{ `data`: \{ `standings`: \{ `stages`: \{ `name`: `string` ; `sections`: \{ `matches`: \{ `teams`: \{ `code`: `string` ; `image`: `string` ; `name`: `string` }[] } & \{ `id`: `string` } & \{ `flags`: `null` \| `string` ; `previousMatchIds`: `null` \| `string`[] ; `state`: `"completed"` \| `"unstarted"` \| `"inProgress"` ; `teams`: \{ `id`: `string` ; `result`: \{ `gameWins`: `number` } & \{ `outcome?`: `null` \| `"loss"` \| `"win"` } ; `slug`: `string` }[] }[] ; `name`: `string` ; `rankings`: \{ `ordinal`: `number` ; `teams`: \{ `code`: `string` ; `image`: `string` ; `name`: `string` } & \{ `id?`: `string` ; `record?`: `null` \| \{ `losses`: `number` ; `wins`: `number` } ; `slug?`: `string` }[] }[] }[] ; `slug`: `string` ; `type`: `"groups"` \| `"bracket"` }[] }[] } }\>
 
 Fetches data for the standings of a particular tournament or tournaments.
 
@@ -161,7 +165,7 @@ Fetches data for the standings of a particular tournament or tournaments.
 
 #### Returns
 
-`Promise`<{ `data`: { `standings`: { `stages`: { `name`: `string` ; `sections`: { `matches`: { `teams`: { `code`: `string` ; `image`: `string` ; `name`: `string` }[] } & { `id`: `string` } & { `flags`: `null` \| `string` ; `previousMatchIds`: `null` \| `string`[] ; `state`: `"completed"` \| `"unstarted"` \| `"inProgress"` ; `teams`: { `id`: `string` ; `result`: { `gameWins`: `number` } & { `outcome?`: `null` \| `"loss"` \| `"win"` } ; `slug`: `string` }[] }[] ; `name`: `string` ; `rankings`: { `ordinal`: `number` ; `teams`: { `code`: `string` ; `image`: `string` ; `name`: `string` } & { `id?`: `string` ; `record?`: `null` \| { `losses`: `number` ; `wins`: `number` } ; `slug?`: `string` }[] }[] }[] ; `slug`: `string` ; `type`: `"groups"` \| `"bracket"` }[] }[] } }\>
+`Promise`\<\{ `data`: \{ `standings`: \{ `stages`: \{ `name`: `string` ; `sections`: \{ `matches`: \{ `teams`: \{ `code`: `string` ; `image`: `string` ; `name`: `string` }[] } & \{ `id`: `string` } & \{ `flags`: `null` \| `string` ; `previousMatchIds`: `null` \| `string`[] ; `state`: `"completed"` \| `"unstarted"` \| `"inProgress"` ; `teams`: \{ `id`: `string` ; `result`: \{ `gameWins`: `number` } & \{ `outcome?`: `null` \| `"loss"` \| `"win"` } ; `slug`: `string` }[] }[] ; `name`: `string` ; `rankings`: \{ `ordinal`: `number` ; `teams`: \{ `code`: `string` ; `image`: `string` ; `name`: `string` } & \{ `id?`: `string` ; `record?`: `null` \| \{ `losses`: `number` ; `wins`: `number` } ; `slug?`: `string` }[] }[] }[] ; `slug`: `string` ; `type`: `"groups"` \| `"bracket"` }[] }[] } }\>
 
 Data on the completed events of a particular tournament.
 
@@ -171,4 +175,4 @@ Data on the completed events of a particular tournament.
 
 #### Defined in
 
-[src/interfaces/tournaments.ts:47](https://github.com/Viriatto/lol-esports-api/blob/a6b07b2/src/interfaces/tournaments.ts#L47)
+[src/interfaces/tournaments.ts:47](https://github.com/Viriatto/lol-esports-api/blob/3587307/src/interfaces/tournaments.ts#L47)

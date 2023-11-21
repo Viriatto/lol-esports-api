@@ -34,7 +34,7 @@
 
 ### APIEndpointParameters
 
-Ƭ **APIEndpointParameters**<`T`\>: [`APIOperations`](internal.md#apioperations)<`T`\> extends { `parameters`: { `path?`: [`Record`](internal.md#record)<`string`, `unknown`\> ; `query?`: [`Record`](internal.md#record)<`string`, `unknown`\> } } ? [`APIOperations`](internal.md#apioperations)<`T`\>[``"parameters"``] : `never`
+Ƭ **APIEndpointParameters**\<`T`\>: [`APIOperations`](internal.md#apioperations)\<`T`\> extends \{ `parameters`: \{ `path?`: [`Record`](internal.md#record)\<`string`, `unknown`\> ; `query?`: [`Record`](internal.md#record)\<`string`, `unknown`\> } } ? [`APIOperations`](internal.md#apioperations)\<`T`\>[``"parameters"``] : `never`
 
 Mapped query parameters for API endpoint `T`.
 
@@ -50,7 +50,7 @@ Searches for an existing type within the eSports API types, if it does not exist
 
 #### Defined in
 
-[src/interface.ts:76](https://github.com/Viriatto/lol-esports-api/blob/a6b07b2/src/interface.ts#L76)
+[src/interface.ts:76](https://github.com/Viriatto/lol-esports-api/blob/3587307/src/interface.ts#L76)
 
 ---
 
@@ -62,7 +62,7 @@ The API endpoints as per [vickz84259's specification](https://vickz84259.github.
 
 #### Defined in
 
-[src/interface.ts:58](https://github.com/Viriatto/lol-esports-api/blob/a6b07b2/src/interface.ts#L58)
+[src/interface.ts:58](https://github.com/Viriatto/lol-esports-api/blob/3587307/src/interface.ts#L58)
 
 ---
 
@@ -74,13 +74,13 @@ The API endpoints as per [vickz84259's specification](https://vickz84259.github.
 
 #### Defined in
 
-[src/interface.ts:91](https://github.com/Viriatto/lol-esports-api/blob/a6b07b2/src/interface.ts#L91)
+[src/interface.ts:91](https://github.com/Viriatto/lol-esports-api/blob/3587307/src/interface.ts#L91)
 
 ---
 
 ### APIOperations
 
-Ƭ **APIOperations**<`T`\>: [`APIEndpoints`](internal.md#apiendpoints)[`T`][``"get"``]
+Ƭ **APIOperations**\<`T`\>: [`APIEndpoints`](internal.md#apiendpoints)[`T`][``"get"``]
 
 The API endpoint operations as per [vickz84259's specification](https://vickz84259.github.io/lolesports-api-docs/).
 
@@ -92,13 +92,13 @@ The API endpoint operations as per [vickz84259's specification](https://vickz842
 
 #### Defined in
 
-[src/interface.ts:65](https://github.com/Viriatto/lol-esports-api/blob/a6b07b2/src/interface.ts#L65)
+[src/interface.ts:65](https://github.com/Viriatto/lol-esports-api/blob/3587307/src/interface.ts#L65)
 
 ---
 
 ### APIResponse
 
-Ƭ **APIResponse**<`T`\>: [`APIOperations`](internal.md#apioperations)<`T`\>[`"responses"`][``200``][`"content"`][``"application/json"``]
+Ƭ **APIResponse**\<`T`\>: [`APIOperations`](internal.md#apioperations)\<`T`\>[`"responses"`][``200``][`"content"`][``"application/json"``]
 
 An API response's type, based on the endpoint `T`.
 
@@ -114,13 +114,13 @@ The eSports API specification used here is a fork of [vickz84259's work](https:/
 
 #### Defined in
 
-[src/interface.ts:50](https://github.com/Viriatto/lol-esports-api/blob/a6b07b2/src/interface.ts#L50)
+[src/interface.ts:50](https://github.com/Viriatto/lol-esports-api/blob/3587307/src/interface.ts#L50)
 
 ---
 
 ### Exclude
 
-Ƭ **Exclude**<`T`, `U`\>: `T` extends `U` ? `never` : `T`
+Ƭ **Exclude**\<`T`, `U`\>: `T` extends `U` ? `never` : `T`
 
 Exclude from T those types that are assignable to U
 
@@ -139,7 +139,7 @@ node_modules/typescript/lib/lib.es5.d.ts:1606
 
 ### Record
 
-Ƭ **Record**<`K`, `T`\>: { [P in K]: T }
+Ƭ **Record**\<`K`, `T`\>: \{ [P in K]: T }
 
 Construct a type with a set of properties K of type T
 
@@ -158,7 +158,7 @@ node_modules/typescript/lib/lib.es5.d.ts:1599
 
 ### Without
 
-Ƭ **Without**<`T`, `U`\>: { [P in Exclude<keyof T, keyof U\>]?: never }
+Ƭ **Without**\<`T`, `U`\>: \{ [P in Exclude\<keyof T, keyof U\>]?: never }
 
 OneOf type helpers
 
@@ -171,4 +171,4 @@ OneOf type helpers
 
 #### Defined in
 
-[src/api-types.ts:7](https://github.com/Viriatto/lol-esports-api/blob/a6b07b2/src/api-types.ts#L7)
+[src/api-types.ts:7](https://github.com/Viriatto/lol-esports-api/blob/3587307/src/api-types.ts#L7)
