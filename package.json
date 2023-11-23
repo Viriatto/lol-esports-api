@@ -8,12 +8,11 @@
   "scripts": {
     "test": "jest",
     "prebuild": "rimraf dist types",
-    "build": "npm run compile",
-    "postbuild": "npm test & npm run build-docs",
-    "compile": "tsc",
+    "build": "tsc",
+    "postbuild": "npm test",
     "build-docs": "typedoc",
     "watch": "tsc --watch",
-    "prepack": "npm run compile & npm test",
+    "prepack": "npm run build",
     "prepare": "husky install",
     "start": "node ./dist/index.js"
   },
