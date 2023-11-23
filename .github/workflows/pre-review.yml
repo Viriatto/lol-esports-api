@@ -7,31 +7,19 @@ on:
     types: ["ready_for_review"]
 
 jobs:
-  setup:
+  review-and-push:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
         with:
           persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
-          fetch-depth: 0 # might be unnecessary
+          fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
       - uses: actions/setup-node@v3
         with:
           node-version: 20
       - run: npm ci
-  test:
-    needs: setup
-    runs-on: ubuntu-latest
-    steps:
       - run: npm test
-  build-docs:
-    needs: setup
-    runs-on: ubuntu-latest
-    steps:
       - run: npm run build-docs
-  push:
-    needs: [test, build-docs]
-    runs-on: ubuntu-latest
-    steps:
       - uses: actions-js/push@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
