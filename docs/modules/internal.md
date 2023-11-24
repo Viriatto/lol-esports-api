@@ -1,4 +1,4 @@
-[LoL Esports API Wrapper - v0.3.0](../README.md) / [Exports](../modules.md) / internal
+[LoL Esports API Wrapper](../README.md) / [Exports](../modules.md) / internal
 
 # Module: internal
 
@@ -34,7 +34,7 @@
 
 ### APIEndpointParameters
 
-Ƭ **APIEndpointParameters**\<`T`\>: [`APIOperations`](internal.md#apioperations)\<`T`\> extends \{ `parameters`: \{ `path?`: [`Record`](internal.md#record)\<`string`, `unknown`\> ; `query?`: [`Record`](internal.md#record)\<`string`, `unknown`\> } } ? [`APIOperations`](internal.md#apioperations)\<`T`\>[``"parameters"``] : `never`
+Ƭ **APIEndpointParameters**\<`T`\>: [`APIOperations`](internal.md#apioperations)\<`T`\> extends \{ `parameters`: \{ `path?`: [`Record`](internal.md#record)\<`string`, `unknown`\> ; `query?`: [`Record`](internal.md#record)\<`string`, `unknown`\>  }  } ? [`APIOperations`](internal.md#apioperations)\<`T`\>[``"parameters"``] : `never`
 
 Mapped query parameters for API endpoint `T`.
 
@@ -44,15 +44,15 @@ Searches for an existing type within the eSports API types, if it does not exist
 
 #### Type parameters
 
-| Name | Type                                                     |
-| :--- | :------------------------------------------------------- |
-| `T`  | extends keyof [`APIEndpoints`](internal.md#apiendpoints) |
+| Name | Type |
+| :------ | :------ |
+| `T` | extends keyof [`APIEndpoints`](internal.md#apiendpoints) |
 
 #### Defined in
 
-[src/interface.ts:76](https://github.com/Viriatto/lol-esports-api/blob/ffa02fa/src/interface.ts#L76)
+[src/interface.ts:76](https://github.com/Viriatto/lol-esports-api/blob/f62e77f/src/interface.ts#L76)
 
----
+___
 
 ### APIEndpoints
 
@@ -62,21 +62,21 @@ The API endpoints as per [vickz84259's specification](https://vickz84259.github.
 
 #### Defined in
 
-[src/interface.ts:58](https://github.com/Viriatto/lol-esports-api/blob/ffa02fa/src/interface.ts#L58)
+[src/interface.ts:58](https://github.com/Viriatto/lol-esports-api/blob/f62e77f/src/interface.ts#L58)
 
----
+___
 
 ### APILocale
 
-Ƭ **APILocale**: `"en-US"` \| `"en-GB"` \| `"en-AU"` \| `"cs-CZ"` \| `"de-DE"` \| `"el-GR"` \| `"es-ES"` \| `"es-MX"` \| `"fr-FR"` \| `"hu-HU"` \| `"it-IT"` \| `"pl-PL"` \| `"pt-BR"` \| `"ro-RO"` \| `"ru-RU"` \| `"tr-TR"` \| `"ja-JP"` \| `"ko-KR"`
+Ƭ **APILocale**: ``"en-US"`` \| ``"en-GB"`` \| ``"en-AU"`` \| ``"cs-CZ"`` \| ``"de-DE"`` \| ``"el-GR"`` \| ``"es-ES"`` \| ``"es-MX"`` \| ``"fr-FR"`` \| ``"hu-HU"`` \| ``"it-IT"`` \| ``"pl-PL"`` \| ``"pt-BR"`` \| ``"ro-RO"`` \| ``"ru-RU"`` \| ``"tr-TR"`` \| ``"ja-JP"`` \| ``"ko-KR"``
 
 [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1)/[ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) locale code.
 
 #### Defined in
 
-[src/interface.ts:91](https://github.com/Viriatto/lol-esports-api/blob/ffa02fa/src/interface.ts#L91)
+[src/interface.ts:91](https://github.com/Viriatto/lol-esports-api/blob/f62e77f/src/interface.ts#L91)
 
----
+___
 
 ### APIOperations
 
@@ -86,19 +86,19 @@ The API endpoint operations as per [vickz84259's specification](https://vickz842
 
 #### Type parameters
 
-| Name | Type                                                     |
-| :--- | :------------------------------------------------------- |
-| `T`  | extends keyof [`APIEndpoints`](internal.md#apiendpoints) |
+| Name | Type |
+| :------ | :------ |
+| `T` | extends keyof [`APIEndpoints`](internal.md#apiendpoints) |
 
 #### Defined in
 
-[src/interface.ts:65](https://github.com/Viriatto/lol-esports-api/blob/ffa02fa/src/interface.ts#L65)
+[src/interface.ts:65](https://github.com/Viriatto/lol-esports-api/blob/f62e77f/src/interface.ts#L65)
 
----
+___
 
 ### APIResponse
 
-Ƭ **APIResponse**\<`T`\>: [`APIOperations`](internal.md#apioperations)\<`T`\>[`"responses"`][``200``][`"content"`][``"application/json"``]
+Ƭ **APIResponse**\<`T`\>: [`APIOperations`](internal.md#apioperations)\<`T`\>[``"responses"``][``200``][``"content"``][``"application/json"``]
 
 An API response's type, based on the endpoint `T`.
 
@@ -108,15 +108,15 @@ The eSports API specification used here is a fork of [vickz84259's work](https:/
 
 #### Type parameters
 
-| Name | Type                                                     |
-| :--- | :------------------------------------------------------- |
-| `T`  | extends keyof [`APIEndpoints`](internal.md#apiendpoints) |
+| Name | Type |
+| :------ | :------ |
+| `T` | extends keyof [`APIEndpoints`](internal.md#apiendpoints) |
 
 #### Defined in
 
-[src/interface.ts:50](https://github.com/Viriatto/lol-esports-api/blob/ffa02fa/src/interface.ts#L50)
+[src/interface.ts:50](https://github.com/Viriatto/lol-esports-api/blob/f62e77f/src/interface.ts#L50)
 
----
+___
 
 ### Exclude
 
@@ -127,15 +127,15 @@ Exclude from T those types that are assignable to U
 #### Type parameters
 
 | Name |
-| :--- |
-| `T`  |
-| `U`  |
+| :------ |
+| `T` |
+| `U` |
 
 #### Defined in
 
 node_modules/typescript/lib/lib.es5.d.ts:1606
 
----
+___
 
 ### Record
 
@@ -145,16 +145,16 @@ Construct a type with a set of properties K of type T
 
 #### Type parameters
 
-| Name | Type                |
-| :--- | :------------------ |
-| `K`  | extends keyof `any` |
-| `T`  | `T`                 |
+| Name | Type |
+| :------ | :------ |
+| `K` | extends keyof `any` |
+| `T` | `T` |
 
 #### Defined in
 
 node_modules/typescript/lib/lib.es5.d.ts:1599
 
----
+___
 
 ### Without
 
@@ -165,10 +165,10 @@ OneOf type helpers
 #### Type parameters
 
 | Name |
-| :--- |
-| `T`  |
-| `U`  |
+| :------ |
+| `T` |
+| `U` |
 
 #### Defined in
 
-[src/api-types.ts:7](https://github.com/Viriatto/lol-esports-api/blob/ffa02fa/src/api-types.ts#L7)
+[src/api-types.ts:7](https://github.com/Viriatto/lol-esports-api/blob/f62e77f/src/api-types.ts#L7)

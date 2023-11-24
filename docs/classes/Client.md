@@ -1,4 +1,4 @@
-[LoL Esports API Wrapper - v0.3.0](../README.md) / [Exports](../modules.md) / Client
+[LoL Esports API Wrapper](../README.md) / [Exports](../modules.md) / Client
 
 # Class: Client
 
@@ -7,9 +7,8 @@ Main entity of the module.
 **`Example`**
 
 Getting all leagues' schedules.
-
 ```ts
-import eSportsAPI from "@viriato/lol-esports-api";
+import eSportsAPI from '@viriato/lol-esports-api';
 
 const schedule = await eSportsAPI.leagues.getSchedule();
 ```
@@ -58,9 +57,9 @@ API for live event data fetching.
 
 #### Defined in
 
-[src/client.ts:33](https://github.com/Viriatto/lol-esports-api/blob/ffa02fa/src/client.ts#L33)
+[src/client.ts:33](https://github.com/Viriatto/lol-esports-api/blob/f62e77f/src/client.ts#L33)
 
----
+___
 
 ### \_games
 
@@ -70,9 +69,9 @@ API for game related data fetching, such as fetching a game segment's data.
 
 #### Defined in
 
-[src/client.ts:54](https://github.com/Viriatto/lol-esports-api/blob/ffa02fa/src/client.ts#L54)
+[src/client.ts:54](https://github.com/Viriatto/lol-esports-api/blob/f62e77f/src/client.ts#L54)
 
----
+___
 
 ### \_leagues
 
@@ -82,9 +81,9 @@ API for league related data fetching, such as their schedules and tournaments.
 
 #### Defined in
 
-[src/client.ts:26](https://github.com/Viriatto/lol-esports-api/blob/ffa02fa/src/client.ts#L26)
+[src/client.ts:26](https://github.com/Viriatto/lol-esports-api/blob/f62e77f/src/client.ts#L26)
 
----
+___
 
 ### \_matches
 
@@ -94,9 +93,9 @@ API for match related data fetching, such as getting a match event.
 
 #### Defined in
 
-[src/client.ts:47](https://github.com/Viriatto/lol-esports-api/blob/ffa02fa/src/client.ts#L47)
+[src/client.ts:47](https://github.com/Viriatto/lol-esports-api/blob/f62e77f/src/client.ts#L47)
 
----
+___
 
 ### \_teams
 
@@ -106,9 +105,9 @@ API for team related data fetching.
 
 #### Defined in
 
-[src/client.ts:61](https://github.com/Viriatto/lol-esports-api/blob/ffa02fa/src/client.ts#L61)
+[src/client.ts:61](https://github.com/Viriatto/lol-esports-api/blob/f62e77f/src/client.ts#L61)
 
----
+___
 
 ### \_tournaments
 
@@ -118,7 +117,7 @@ API for tournament related data fetching, such as standings and completed events
 
 #### Defined in
 
-[src/client.ts:40](https://github.com/Viriatto/lol-esports-api/blob/ffa02fa/src/client.ts#L40)
+[src/client.ts:40](https://github.com/Viriatto/lol-esports-api/blob/f62e77f/src/client.ts#L40)
 
 ## Accessors
 
@@ -135,19 +134,19 @@ API for live event data fetching.
 **`Example`**
 
 Logs currently live events.
-
 ```ts
-import eSportsAPI from "@viriato/lol-esports-api";
+import eSportsAPI from '@viriato/lol-esports-api';
 
 const liveEvents = await eSportsAPI.events.getLive();
 console.log(liveEvents);
+
 ```
 
 #### Defined in
 
-[src/client.ts:94](https://github.com/Viriatto/lol-esports-api/blob/ffa02fa/src/client.ts#L94)
+[src/client.ts:94](https://github.com/Viriatto/lol-esports-api/blob/f62e77f/src/client.ts#L94)
 
----
+___
 
 ### games
 
@@ -162,19 +161,19 @@ API for game related data fetching, such as fetching a game segment's data.
 **`Example`**
 
 Logs a game's response data.
-
 ```ts
-import eSportsAPI from "@viriato/lol-esports-api";
+import eSportsAPI from '@viriato/lol-esports-api';
 
 const game = await eSportsAPI.games.get("110853167109116577");
 console.log(game);
+
 ```
 
 #### Defined in
 
-[src/client.ts:148](https://github.com/Viriatto/lol-esports-api/blob/ffa02fa/src/client.ts#L148)
+[src/client.ts:148](https://github.com/Viriatto/lol-esports-api/blob/f62e77f/src/client.ts#L148)
 
----
+___
 
 ### leagues
 
@@ -189,20 +188,18 @@ API for league related data fetching, such as their schedules and tournaments.
 **`Example`**
 
 Logs data of all Worlds tournaments.
-
 ```ts
-import eSportsAPI from "@viriato/lol-esports-api";
+import eSportsAPI from '@viriato/lol-esports-api';
 
-const tournaments =
-  await eSportsAPI.leagues.getTournaments("98767975604431411");
+const tournaments = await eSportsAPI.leagues.getTournaments("98767975604431411");
 console.log(tournaments);
 ```
 
 #### Defined in
 
-[src/client.ts:76](https://github.com/Viriatto/lol-esports-api/blob/ffa02fa/src/client.ts#L76)
+[src/client.ts:76](https://github.com/Viriatto/lol-esports-api/blob/f62e77f/src/client.ts#L76)
 
----
+___
 
 ### matches
 
@@ -217,20 +214,19 @@ API for match related data fetching, such as getting a match event.
 **`Example`**
 
 Logs the event details of Worlds 2022 MAD vs ISG match.
-
 ```ts
-import eSportsAPI from "@viriato/lol-esports-api";
+import eSportsAPI from '@viriato/lol-esports-api';
 
-const matchEventDetails =
-  await eSportsAPI.matches.getEventDetails("108998961199240268");
+const matchEventDetails = await eSportsAPI.matches.getEventDetails("108998961199240268");
 console.log(matchEventDetails);
+
 ```
 
 #### Defined in
 
-[src/client.ts:130](https://github.com/Viriatto/lol-esports-api/blob/ffa02fa/src/client.ts#L130)
+[src/client.ts:130](https://github.com/Viriatto/lol-esports-api/blob/f62e77f/src/client.ts#L130)
 
----
+___
 
 ### teams
 
@@ -245,19 +241,19 @@ API for team related data fetching.
 **`Example`**
 
 Logs a team's response data.
-
 ```ts
-import eSportsAPI from "@viriato/lol-esports-api";
+import eSportsAPI from '@viriato/lol-esports-api';
 
 const game = await eSportsAPI.teams.get("fnatic");
 console.log(game);
+
 ```
 
 #### Defined in
 
-[src/client.ts:166](https://github.com/Viriatto/lol-esports-api/blob/ffa02fa/src/client.ts#L166)
+[src/client.ts:166](https://github.com/Viriatto/lol-esports-api/blob/f62e77f/src/client.ts#L166)
 
----
+___
 
 ### tournaments
 
@@ -272,15 +268,14 @@ API for tournament related data fetching, such as standings and completed events
 **`Example`**
 
 Logs data of all Worlds tournaments.
-
 ```ts
-import eSportsAPI from "@viriato/lol-esports-api";
+import eSportsAPI from '@viriato/lol-esports-api';
 
-const tournaments =
-  await eSportsAPI.leagues.getTournaments("98767975604431411");
+const tournaments = await eSportsAPI.leagues.getTournaments("98767975604431411");
 console.log(tournaments);
+
 ```
 
 #### Defined in
 
-[src/client.ts:112](https://github.com/Viriatto/lol-esports-api/blob/ffa02fa/src/client.ts#L112)
+[src/client.ts:112](https://github.com/Viriatto/lol-esports-api/blob/f62e77f/src/client.ts#L112)

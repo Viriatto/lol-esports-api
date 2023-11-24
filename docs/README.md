@@ -60,7 +60,7 @@ const client = new APIClient();
 
 const gameWindow = await client.games.getWindow(
   "110853167109116577",
-  "2023-10-19T09:35:40.000Z", // can either be a string or a Date
+  "2023-10-19T09:35:40.000Z" // can either be a string or a Date
 );
 ```
 
@@ -75,7 +75,7 @@ const client = new APIClient();
 
 const detailedGameWindow = await client.games.getDetails(
   "110853167109116577",
-  "2023-10-19T09:35:40.000Z", // can either be a string or a Date
+  "2023-10-19T09:35:40.000Z" // can either be a string or a Date
 );
 ```
 
@@ -98,8 +98,9 @@ const leagues = await client.leagues.get();
 import APIClient from "lol-esports-api";
 
 const client = new APIClient();
-const leagueTournaments =
-  await client.leagues.getTournaments("98767975604431411");
+const leagueTournaments = await client.leagues.getTournaments(
+  "98767975604431411"
+);
 ```
 
 ##### Fetching a league's schedule:
@@ -156,8 +157,9 @@ const fnaticTeam = await client.teams.get("fnatic");
 import APIClient from "lol-esports-api";
 
 const client = new APIClient();
-const tournaments =
-  await client.tournaments.getCompletedEvents("108998961191900167");
+const tournaments = await client.tournaments.getCompletedEvents(
+  "108998961191900167"
+);
 ```
 
 ##### Fetch a tournament's standings:
