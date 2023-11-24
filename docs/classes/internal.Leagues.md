@@ -1,4 +1,4 @@
-[LoL Esports API Wrapper - v0.3.0](../README.md) / [Exports](../modules.md) / [internal](../modules/internal.md) / Leagues
+[LoL Esports API Wrapper](../README.md) / [Exports](../modules.md) / [internal](../modules/internal.md) / Leagues
 
 # Class: Leagues
 
@@ -53,40 +53,40 @@ The eSports API's base URLs.
 
 #### Type declaration
 
-| Name   | Type                                                                                                            |
-| :----- | :-------------------------------------------------------------------------------------------------------------- |
-| `feed` | readonly [``"https://feed.lolesports.com/livestats/v1"``]                                                       |
+| Name | Type |
+| :------ | :------ |
+| `feed` | readonly [``"https://feed.lolesports.com/livestats/v1"``] |
 | `main` | readonly [``"https://esports-api.lolesports.com/persisted/gw"``, ``"https://prod-relapi.ewp.gg/persisted/gw"``] |
 
 #### Inherited from
 
-[Interface](internal.Interface.md).[\_baseURLs](internal.Interface.md#_baseurls)
+[Interface](internal.Interface.md).[_baseURLs](internal.Interface.md#_baseurls)
 
 #### Defined in
 
-[src/interface.ts:122](https://github.com/Viriatto/lol-esports-api/blob/ffa02fa/src/interface.ts#L122)
+[src/interface.ts:122](https://github.com/Viriatto/lol-esports-api/blob/f62e77f/src/interface.ts#L122)
 
 ## Methods
 
 ### \_get
 
-▸ **\_get**\<`T`\>(`baseURLs`, `endpoint`, `params`): `Promise`\<[`APIResponse`](../modules/internal.md#apiresponse)\<`T`\>\>
+▸ **_get**\<`T`\>(`baseURLs`, `endpoint`, `params`): `Promise`\<[`APIResponse`](../modules/internal.md#apiresponse)\<`T`\>\>
 
 Issues a request to the eSports API.
 
 #### Type parameters
 
-| Name | Type                                                     | Description                 |
-| :--- | :------------------------------------------------------- | :-------------------------- |
-| `T`  | extends keyof [`paths`](../interfaces/internal.paths.md) | An API endpoint identifier. |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `T` | extends keyof [`paths`](../interfaces/internal.paths.md) | An API endpoint identifier. |
 
 #### Parameters
 
-| Name       | Type                                                                           | Description                                    |
-| :--------- | :----------------------------------------------------------------------------- | :--------------------------------------------- |
-| `baseURLs` | readonly `string`[]                                                            | The base URL(s) to use within the request.     |
-| `endpoint` | `T`                                                                            | The API endpoint to which send the request.    |
-| `params`   | [`APIEndpointParameters`](../modules/internal.md#apiendpointparameters)\<`T`\> | The query parameters to send with the request. |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `baseURLs` | readonly `string`[] | The base URL(s) to use within the request. |
+| `endpoint` | `T` | The API endpoint to which send the request. |
+| `params` | [`APIEndpointParameters`](../modules/internal.md#apiendpointparameters)\<`T`\> | The query parameters to send with the request. |
 
 #### Returns
 
@@ -96,43 +96,43 @@ Data for the specified resource.
 
 **`Remarks`**
 
-Recursively tries to request each of the base URLs in [Interface.\_baseURLs](internal.Leagues.md#_baseurls) if the previous one has failed to yield a successful response.
+Recursively tries to request each of the base URLs in [Interface._baseURLs](internal.Leagues.md#_baseurls) if the previous one has failed to yield a successful response.
 
 **`Throws`**
 
 Error
-When [Interface.\_baseURLs](internal.Leagues.md#_baseurls) is undefined.
+When [Interface._baseURLs](internal.Leagues.md#_baseurls) is undefined.
 
 **`Throws`**
 
 Error
-When it can't get a successfuly response from any of the endpoints built from [Interface.\_baseURLs](internal.Leagues.md#_baseurls).
+When it can't get a successfuly response from any of the endpoints built from [Interface._baseURLs](internal.Leagues.md#_baseurls).
 
 #### Inherited from
 
-[Interface](internal.Interface.md).[\_get](internal.Interface.md#_get)
+[Interface](internal.Interface.md).[_get](internal.Interface.md#_get)
 
 #### Defined in
 
-[src/interface.ts:150](https://github.com/Viriatto/lol-esports-api/blob/ffa02fa/src/interface.ts#L150)
+[src/interface.ts:150](https://github.com/Viriatto/lol-esports-api/blob/f62e77f/src/interface.ts#L150)
 
----
+___
 
 ### get
 
-▸ **get**(`locale?`): `Promise`\<\{ `data`: \{ `leagues`: \{ `name`: `string` ; `slug`: `string` } & \{ `id`: `string` ; `image`: `string` } & \{ `priority`: `number` } & \{ `region`: `string` }[] } }\>
+▸ **get**(`locale?`): `Promise`\<\{ `data`: \{ `leagues`: \{ `name`: `string` ; `slug`: `string`  } & \{ `id`: `string` ; `image`: `string`  } & \{ `priority`: `number`  } & \{ `region`: `string`  }[]  }  }\>
 
 Fetches data on all leagues.
 
 #### Parameters
 
-| Name     | Type                                            | Default value | Description                 |
-| :------- | :---------------------------------------------- | :------------ | :-------------------------- |
-| `locale` | [`APILocale`](../modules/internal.md#apilocale) | `"en-US"`     | The locale of the response. |
+| Name | Type | Default value | Description |
+| :------ | :------ | :------ | :------ |
+| `locale` | [`APILocale`](../modules/internal.md#apilocale) | `"en-US"` | The locale of the response. |
 
 #### Returns
 
-`Promise`\<\{ `data`: \{ `leagues`: \{ `name`: `string` ; `slug`: `string` } & \{ `id`: `string` ; `image`: `string` } & \{ `priority`: `number` } & \{ `region`: `string` }[] } }\>
+`Promise`\<\{ `data`: \{ `leagues`: \{ `name`: `string` ; `slug`: `string`  } & \{ `id`: `string` ; `image`: `string`  } & \{ `priority`: `number`  } & \{ `region`: `string`  }[]  }  }\>
 
 Data about all leagues.
 
@@ -142,27 +142,27 @@ Data about all leagues.
 
 #### Defined in
 
-[src/interfaces/leagues.ts:20](https://github.com/Viriatto/lol-esports-api/blob/ffa02fa/src/interfaces/leagues.ts#L20)
+[src/interfaces/leagues.ts:20](https://github.com/Viriatto/lol-esports-api/blob/f62e77f/src/interfaces/leagues.ts#L20)
 
----
+___
 
 ### getSchedule
 
-▸ **getSchedule**(`leagueId?`, `pageToken?`, `locale?`): `Promise`\<\{ `data`: \{ `schedule`: \{ `events`: \{ `blockName`: `null` \| `string` ; `match`: \{ `teams`: \{ `code`: `string` ; `image`: `string` ; `name`: `string` }[] } & \{ `id`: `string` } & \{ `strategy`: \{ `count`: `1` \| `3` \| `5` } & \{ `type`: `"bestOf"` } ; `teams`: \{ `result`: \{ `gameWins`: `number` } }[] } ; `startTime`: `string` } & \{ `state`: `"completed"` \| `"unstarted"` \| `"inProgress"` ; `type`: `"match"` \| `"show"` } & \{ `league`: \{ `name`: `string` ; `slug`: `string` } ; `match`: \{ `teams`: \{ `record`: `null` \| \{ `losses`: `number` ; `wins`: `number` } ; `result`: \{ `outcome`: `null` \| `"loss"` \| `"win"` } }[] } }[] ; `pages`: \{ `newer`: `null` \| `string` ; `older`: `null` \| `string` } ; `updated`: `string` } } }\>
+▸ **getSchedule**(`leagueId?`, `pageToken?`, `locale?`): `Promise`\<\{ `data`: \{ `schedule`: \{ `events`: \{ `blockName`: ``null`` \| `string` ; `match`: \{ `teams`: \{ `code`: `string` ; `image`: `string` ; `name`: `string`  }[]  } & \{ `id`: `string`  } & \{ `strategy`: \{ `count`: ``1`` \| ``3`` \| ``5``  } & \{ `type`: ``"bestOf"``  } ; `teams`: \{ `result`: \{ `gameWins`: `number`  }  }[]  } ; `startTime`: `string`  } & \{ `state`: ``"completed"`` \| ``"unstarted"`` \| ``"inProgress"`` ; `type`: ``"match"`` \| ``"show"``  } & \{ `league`: \{ `name`: `string` ; `slug`: `string`  } ; `match`: \{ `teams`: \{ `record`: ``null`` \| \{ `losses`: `number` ; `wins`: `number`  } ; `result`: \{ `outcome`: ``null`` \| ``"loss"`` \| ``"win"``  }  }[]  }  }[] ; `pages`: \{ `newer`: ``null`` \| `string` ; `older`: ``null`` \| `string`  } ; `updated`: `string`  }  }  }\>
 
 Fetches the schedule for a particular league.
 
 #### Parameters
 
-| Name         | Type                                            | Default value | Description                                                               |
-| :----------- | :---------------------------------------------- | :------------ | :------------------------------------------------------------------------ |
-| `leagueId?`  | `string`                                        | `undefined`   | The id of the league from which to fetch the schedule.                    |
-| `pageToken?` | `string`                                        | `undefined`   | Base 64 encoded string used to determine the next "page" of data to pull. |
-| `locale`     | [`APILocale`](../modules/internal.md#apilocale) | `"en-US"`     | The locale of the response.                                               |
+| Name | Type | Default value | Description |
+| :------ | :------ | :------ | :------ |
+| `leagueId?` | `string` | `undefined` | The id of the league from which to fetch the schedule. |
+| `pageToken?` | `string` | `undefined` | Base 64 encoded string used to determine the next "page" of data to pull. |
+| `locale` | [`APILocale`](../modules/internal.md#apilocale) | `"en-US"` | The locale of the response. |
 
 #### Returns
 
-`Promise`\<\{ `data`: \{ `schedule`: \{ `events`: \{ `blockName`: `null` \| `string` ; `match`: \{ `teams`: \{ `code`: `string` ; `image`: `string` ; `name`: `string` }[] } & \{ `id`: `string` } & \{ `strategy`: \{ `count`: `1` \| `3` \| `5` } & \{ `type`: `"bestOf"` } ; `teams`: \{ `result`: \{ `gameWins`: `number` } }[] } ; `startTime`: `string` } & \{ `state`: `"completed"` \| `"unstarted"` \| `"inProgress"` ; `type`: `"match"` \| `"show"` } & \{ `league`: \{ `name`: `string` ; `slug`: `string` } ; `match`: \{ `teams`: \{ `record`: `null` \| \{ `losses`: `number` ; `wins`: `number` } ; `result`: \{ `outcome`: `null` \| `"loss"` \| `"win"` } }[] } }[] ; `pages`: \{ `newer`: `null` \| `string` ; `older`: `null` \| `string` } ; `updated`: `string` } } }\>
+`Promise`\<\{ `data`: \{ `schedule`: \{ `events`: \{ `blockName`: ``null`` \| `string` ; `match`: \{ `teams`: \{ `code`: `string` ; `image`: `string` ; `name`: `string`  }[]  } & \{ `id`: `string`  } & \{ `strategy`: \{ `count`: ``1`` \| ``3`` \| ``5``  } & \{ `type`: ``"bestOf"``  } ; `teams`: \{ `result`: \{ `gameWins`: `number`  }  }[]  } ; `startTime`: `string`  } & \{ `state`: ``"completed"`` \| ``"unstarted"`` \| ``"inProgress"`` ; `type`: ``"match"`` \| ``"show"``  } & \{ `league`: \{ `name`: `string` ; `slug`: `string`  } ; `match`: \{ `teams`: \{ `record`: ``null`` \| \{ `losses`: `number` ; `wins`: `number`  } ; `result`: \{ `outcome`: ``null`` \| ``"loss"`` \| ``"win"``  }  }[]  }  }[] ; `pages`: \{ `newer`: ``null`` \| `string` ; `older`: ``null`` \| `string`  } ; `updated`: `string`  }  }  }\>
 
 Data on all tournaments from a specific league.
 
@@ -172,26 +172,26 @@ Data on all tournaments from a specific league.
 
 #### Defined in
 
-[src/interfaces/leagues.ts:60](https://github.com/Viriatto/lol-esports-api/blob/ffa02fa/src/interfaces/leagues.ts#L60)
+[src/interfaces/leagues.ts:60](https://github.com/Viriatto/lol-esports-api/blob/f62e77f/src/interfaces/leagues.ts#L60)
 
----
+___
 
 ### getTournaments
 
-▸ **getTournaments**(`leagueId?`, `locale?`): `Promise`\<\{ `data`: \{ `leagues`: \{ `tournaments`: \{ `endDate`: `string` ; `id`: `string` ; `slug`: `string` ; `startDate`: `string` }[] }[] } }\>
+▸ **getTournaments**(`leagueId?`, `locale?`): `Promise`\<\{ `data`: \{ `leagues`: \{ `tournaments`: \{ `endDate`: `string` ; `id`: `string` ; `slug`: `string` ; `startDate`: `string`  }[]  }[]  }  }\>
 
 Fetches data on all tournaments from a specific league.
 
 #### Parameters
 
-| Name        | Type                                            | Default value | Description                                                       |
-| :---------- | :---------------------------------------------- | :------------ | :---------------------------------------------------------------- |
-| `leagueId?` | `string`                                        | `undefined`   | The id of the league from which to fetch tournaments information. |
-| `locale`    | [`APILocale`](../modules/internal.md#apilocale) | `"en-US"`     | The locale of the response.                                       |
+| Name | Type | Default value | Description |
+| :------ | :------ | :------ | :------ |
+| `leagueId?` | `string` | `undefined` | The id of the league from which to fetch tournaments information. |
+| `locale` | [`APILocale`](../modules/internal.md#apilocale) | `"en-US"` | The locale of the response. |
 
 #### Returns
 
-`Promise`\<\{ `data`: \{ `leagues`: \{ `tournaments`: \{ `endDate`: `string` ; `id`: `string` ; `slug`: `string` ; `startDate`: `string` }[] }[] } }\>
+`Promise`\<\{ `data`: \{ `leagues`: \{ `tournaments`: \{ `endDate`: `string` ; `id`: `string` ; `slug`: `string` ; `startDate`: `string`  }[]  }[]  }  }\>
 
 Data on all tournaments from a specific league.
 
@@ -201,4 +201,4 @@ Data on all tournaments from a specific league.
 
 #### Defined in
 
-[src/interfaces/leagues.ts:39](https://github.com/Viriatto/lol-esports-api/blob/ffa02fa/src/interfaces/leagues.ts#L39)
+[src/interfaces/leagues.ts:39](https://github.com/Viriatto/lol-esports-api/blob/f62e77f/src/interfaces/leagues.ts#L39)
