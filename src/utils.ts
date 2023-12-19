@@ -55,14 +55,14 @@ export function parseValueOrValuesAsArray<T>(valueOrValues: T | T[]): T[] {
  */
 export function parseParameterizedEndpointPath(
   endpoint: string,
-  pathParams: Record<string, unknown>
+  pathParams: Record<string, unknown>,
 ) {
   for (const pathParameterKey in pathParams) {
     `${pathParams[pathParameterKey]}`;
     endpoint = endpoint.replaceAll(
       `{${pathParameterKey}}`,
       // Must be stringified because we don't know the type of the value of the path parameter to replace with (could be a number).
-      `${pathParams[pathParameterKey]}`
+      `${pathParams[pathParameterKey]}`,
     );
   }
 
@@ -70,7 +70,7 @@ export function parseParameterizedEndpointPath(
 
   if (unparsedParameters)
     throw new Error(
-      `Missing path parameter values for ${unparsedParameters.join(" ,")}`
+      `Missing path parameter values for ${unparsedParameters.join(" ,")}`,
     );
 
   return endpoint;

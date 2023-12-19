@@ -5,9 +5,8 @@ describe("tournaments' data fetching", () => {
 
   describe("fetching completed events' data", () => {
     it("should return a valid response when fetching a single league's completed events' data", async () => {
-      const response = await tournamentsAPI.getCompletedEvents(
-        "110852926142971547"
-      );
+      const response =
+        await tournamentsAPI.getCompletedEvents("110852926142971547");
 
       expect(response.data).toBeDefined();
     });

@@ -25,7 +25,7 @@ describe("parsing an endpoint with path parameters", () => {
       parseParameterizedEndpointPath("/{gameId}/{participantId}", {
         gameId: 1,
         something: 2,
-      })
+      }),
     ).toThrow();
   });
 
@@ -34,7 +34,7 @@ describe("parsing an endpoint with path parameters", () => {
       parseParameterizedEndpointPath("/{gameId}/{participantId}", {
         gameId: "a",
         participantId: 1,
-      })
+      }),
     ).toBe("/a/1");
   });
 });

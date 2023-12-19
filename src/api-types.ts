@@ -11,8 +11,8 @@ type XOR<T, U> = T | U extends object
 type OneOf<T extends unknown[]> = T extends [infer Only]
   ? Only
   : T extends [infer A, infer B, ...infer Rest]
-  ? OneOf<[XOR<A, B>, ...Rest]>
-  : never;
+    ? OneOf<[XOR<A, B>, ...Rest]>
+    : never;
 
 export interface paths {
   "/getLeagues": {
@@ -817,7 +817,7 @@ export interface components {
             {
               /**  The breakpoint ID */
               breakpoint?: string;
-            }
+            },
           ]
         > & {
           standing?: number;
@@ -857,7 +857,7 @@ export interface components {
             {
               /**  The breakpoint ID */
               breakpoint?: string;
-            }
+            },
           ]
         > & {
           standing?: number;
@@ -1556,7 +1556,7 @@ export interface operations {
             },
             {
               slug: string;
-            }
+            },
           ]
         >;
       };

@@ -84,7 +84,7 @@ export default class Games extends Interface {
   public async getDetails(
     gameId: string,
     startingAt: string | Date,
-    participantIdsOrIds?: number | [number, ...number[]]
+    participantIdsOrIds?: number | [number, ...number[]],
   ) {
     return this._get(this._baseURLs.feed, "/details/{gameId}", {
       query: {

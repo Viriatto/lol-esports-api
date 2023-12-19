@@ -150,7 +150,7 @@ export default abstract class Interface {
   protected async _get<T extends keyof APIEndpoints>(
     baseURLs: readonly string[],
     endpoint: T,
-    params: APIEndpointParameters<T>
+    params: APIEndpointParameters<T>,
   ) {
     if (!this._baseURLs) {
       throw new Error("No API base URLs specified.");
@@ -161,7 +161,7 @@ export default abstract class Interface {
     if (params?.path)
       resolvedEndpointPath = parseParameterizedEndpointPath(
         endpoint,
-        params.path
+        params.path,
       );
 
     for await (const baseURL of baseURLs) {
@@ -191,7 +191,7 @@ export default abstract class Interface {
     }
 
     throw new Error(
-      "Could not get a successful response from any of the base URLs."
+      "Could not get a successful response from any of the base URLs.",
     );
   }
 }

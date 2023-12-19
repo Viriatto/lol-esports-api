@@ -23,7 +23,7 @@ export default class Tournaments extends Interface {
    */
   public async getCompletedEvents(
     tournamentId?: string,
-    locale: APILocale = "en-US"
+    locale: APILocale = "en-US",
   ) {
     return this._get(this._baseURLs.main, "/getCompletedEvents", {
       query: {

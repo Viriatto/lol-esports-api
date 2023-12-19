@@ -60,7 +60,7 @@ export default class Leagues extends Interface {
   public async getSchedule(
     leagueId?: string,
     pageToken?: string,
-    locale: APILocale = "en-US"
+    locale: APILocale = "en-US",
   ) {
     return this._get(this._baseURLs.main, "/getSchedule", {
       query: {

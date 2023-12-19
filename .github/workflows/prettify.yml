@@ -1,0 +1,18 @@
+name: Prettify
+
+on: [push]
+
+jobs:
+  prettify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Prettify code
+        uses: creyD/prettier_action@v4.3
+        with:
+          prettier_options: --write **/*.{js,ts,json}
+          commit_message: "Prettified files"
+          only_changed: True
