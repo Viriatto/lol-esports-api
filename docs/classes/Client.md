@@ -6,7 +6,6 @@ Main entity of the module.
 
 **`Example`**
 
-Getting all leagues' schedules.
 ```ts
 import eSportsAPI from '@viriato/lol-esports-api';
 
@@ -57,7 +56,7 @@ API for live event data fetching.
 
 #### Defined in
 
-[src/client.ts:33](https://github.com/Viriatto/lol-esports-api/blob/f62e77f/src/client.ts#L33)
+[src/client.ts:33](https://github.com/Viriatto/lol-esports-api/blob/611afb5/src/client.ts#L33)
 
 ___
 
@@ -69,7 +68,7 @@ API for game related data fetching, such as fetching a game segment's data.
 
 #### Defined in
 
-[src/client.ts:54](https://github.com/Viriatto/lol-esports-api/blob/f62e77f/src/client.ts#L54)
+[src/client.ts:54](https://github.com/Viriatto/lol-esports-api/blob/611afb5/src/client.ts#L54)
 
 ___
 
@@ -81,7 +80,7 @@ API for league related data fetching, such as their schedules and tournaments.
 
 #### Defined in
 
-[src/client.ts:26](https://github.com/Viriatto/lol-esports-api/blob/f62e77f/src/client.ts#L26)
+[src/client.ts:26](https://github.com/Viriatto/lol-esports-api/blob/611afb5/src/client.ts#L26)
 
 ___
 
@@ -93,7 +92,7 @@ API for match related data fetching, such as getting a match event.
 
 #### Defined in
 
-[src/client.ts:47](https://github.com/Viriatto/lol-esports-api/blob/f62e77f/src/client.ts#L47)
+[src/client.ts:47](https://github.com/Viriatto/lol-esports-api/blob/611afb5/src/client.ts#L47)
 
 ___
 
@@ -105,7 +104,7 @@ API for team related data fetching.
 
 #### Defined in
 
-[src/client.ts:61](https://github.com/Viriatto/lol-esports-api/blob/f62e77f/src/client.ts#L61)
+[src/client.ts:61](https://github.com/Viriatto/lol-esports-api/blob/611afb5/src/client.ts#L61)
 
 ___
 
@@ -117,7 +116,7 @@ API for tournament related data fetching, such as standings and completed events
 
 #### Defined in
 
-[src/client.ts:40](https://github.com/Viriatto/lol-esports-api/blob/f62e77f/src/client.ts#L40)
+[src/client.ts:40](https://github.com/Viriatto/lol-esports-api/blob/611afb5/src/client.ts#L40)
 
 ## Accessors
 
@@ -133,7 +132,6 @@ API for live event data fetching.
 
 **`Example`**
 
-Logs currently live events.
 ```ts
 import eSportsAPI from '@viriato/lol-esports-api';
 
@@ -144,7 +142,7 @@ console.log(liveEvents);
 
 #### Defined in
 
-[src/client.ts:94](https://github.com/Viriatto/lol-esports-api/blob/f62e77f/src/client.ts#L94)
+[src/client.ts:94](https://github.com/Viriatto/lol-esports-api/blob/611afb5/src/client.ts#L94)
 
 ___
 
@@ -160,7 +158,6 @@ API for game related data fetching, such as fetching a game segment's data.
 
 **`Example`**
 
-Logs a game's response data.
 ```ts
 import eSportsAPI from '@viriato/lol-esports-api';
 
@@ -171,7 +168,7 @@ console.log(game);
 
 #### Defined in
 
-[src/client.ts:148](https://github.com/Viriatto/lol-esports-api/blob/f62e77f/src/client.ts#L148)
+[src/client.ts:148](https://github.com/Viriatto/lol-esports-api/blob/611afb5/src/client.ts#L148)
 
 ___
 
@@ -187,7 +184,6 @@ API for league related data fetching, such as their schedules and tournaments.
 
 **`Example`**
 
-Logs data of all Worlds tournaments.
 ```ts
 import eSportsAPI from '@viriato/lol-esports-api';
 
@@ -197,7 +193,7 @@ console.log(tournaments);
 
 #### Defined in
 
-[src/client.ts:76](https://github.com/Viriatto/lol-esports-api/blob/f62e77f/src/client.ts#L76)
+[src/client.ts:76](https://github.com/Viriatto/lol-esports-api/blob/611afb5/src/client.ts#L76)
 
 ___
 
@@ -213,7 +209,6 @@ API for match related data fetching, such as getting a match event.
 
 **`Example`**
 
-Logs the event details of Worlds 2022 MAD vs ISG match.
 ```ts
 import eSportsAPI from '@viriato/lol-esports-api';
 
@@ -224,7 +219,7 @@ console.log(matchEventDetails);
 
 #### Defined in
 
-[src/client.ts:130](https://github.com/Viriatto/lol-esports-api/blob/f62e77f/src/client.ts#L130)
+[src/client.ts:130](https://github.com/Viriatto/lol-esports-api/blob/611afb5/src/client.ts#L130)
 
 ___
 
@@ -240,7 +235,6 @@ API for team related data fetching.
 
 **`Example`**
 
-Logs a team's response data.
 ```ts
 import eSportsAPI from '@viriato/lol-esports-api';
 
@@ -251,7 +245,7 @@ console.log(game);
 
 #### Defined in
 
-[src/client.ts:166](https://github.com/Viriatto/lol-esports-api/blob/f62e77f/src/client.ts#L166)
+[src/client.ts:166](https://github.com/Viriatto/lol-esports-api/blob/611afb5/src/client.ts#L166)
 
 ___
 
@@ -267,7 +261,6 @@ API for tournament related data fetching, such as standings and completed events
 
 **`Example`**
 
-Logs data of all Worlds tournaments.
 ```ts
 import eSportsAPI from '@viriato/lol-esports-api';
 
@@ -278,4 +271,4 @@ console.log(tournaments);
 
 #### Defined in
 
-[src/client.ts:112](https://github.com/Viriatto/lol-esports-api/blob/f62e77f/src/client.ts#L112)
+[src/client.ts:112](https://github.com/Viriatto/lol-esports-api/blob/611afb5/src/client.ts#L112)

@@ -23,7 +23,7 @@
 
 #### Defined in
 
-[src/api-types.ts:1132](https://github.com/Viriatto/lol-esports-api/blob/f62e77f/src/api-types.ts#L1132)
+[src/api-types.ts:1132](https://github.com/Viriatto/lol-esports-api/blob/611afb5/src/api-types.ts#L1132)
 
 ___
 
@@ -53,7 +53,7 @@ ___
 
 #### Defined in
 
-[src/api-types.ts:1089](https://github.com/Viriatto/lol-esports-api/blob/f62e77f/src/api-types.ts#L1089)
+[src/api-types.ts:1089](https://github.com/Viriatto/lol-esports-api/blob/611afb5/src/api-types.ts#L1089)
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 #### Defined in
 
-[src/api-types.ts:1133](https://github.com/Viriatto/lol-esports-api/blob/f62e77f/src/api-types.ts#L1133)
+[src/api-types.ts:1133](https://github.com/Viriatto/lol-esports-api/blob/611afb5/src/api-types.ts#L1133)
 
 ___
 
@@ -73,7 +73,7 @@ ___
 
 #### Defined in
 
-[src/api-types.ts:1131](https://github.com/Viriatto/lol-esports-api/blob/f62e77f/src/api-types.ts#L1131)
+[src/api-types.ts:1131](https://github.com/Viriatto/lol-esports-api/blob/611afb5/src/api-types.ts#L1131)
 
 ___
 
@@ -83,7 +83,7 @@ ___
 
 #### Defined in
 
-[src/api-types.ts:1088](https://github.com/Viriatto/lol-esports-api/blob/f62e77f/src/api-types.ts#L1088)
+[src/api-types.ts:1088](https://github.com/Viriatto/lol-esports-api/blob/611afb5/src/api-types.ts#L1088)
 
 ___
 
@@ -164,7 +164,7 @@ ___
 | `gameMode.identifier` | ``"lol:duel"`` \| ``"lol:classic"`` | - |
 | `gameMode.mapName` | ``"summoner_rift"`` \| ``"howling_abyss"`` | - |
 | `gameMode.requiredPlayers` | ``1`` \| ``5`` | - |
-| `highlanderGame` | \{ `gameId?`: `string` ; `gameMode?`: \{ `identifier`: ``"lol:duel"`` \| ``"lol:classic"`` ; `mapName`: ``"summoner_rift"`` \| ``"howling_abyss"`` ; `requiredPlayers`: ``1`` \| ``5``  } ; `gameRealm?`: `string` ; `generatedName`: `string` ; `id`: `string` ; `input`: \{ `breakpoint?`: `string` ; `match?`: `string` ; `roster?`: `string` ; `standing?`: `number`  }[] ; `name`: `string` ; `platformId?`: `string` ; `revision`: `number` ; `roles`: \{ `creator`: \{ `admin`: ``true`` ; `origin`: ``"BEARER_TOKEN"`` ; `profileIconId`: ``0`` ; `region`: ``"global"`` ; `summonerLevel`: ``0`` ; `summonerName`: ``"test-user"``  }[] ; `owner`: \{ `admin`: ``true`` ; `origin`: ``"BEARER_TOKEN"`` ; `profileIconId`: ``0`` ; `region`: ``"global"`` ; `summonerLevel`: ``0`` ; `summonerName`: ``"test-user"``  }[]  } ; `scores`: \{ `[key: string]`: `number`;  } ; `standings?`: \{ `closed`: `boolean` ; `history?`: \{ result: \{ roster?: string \| undefined; }[][]; timestamp: number; source?: "bestOf" \| "manual" \| undefined; note?: string \| undefined; history?: ...[] \| undefined; closed: boolean; }[] ; `note?`: `string` ; `result`: \{ `roster?`: `string`  }[][] ; `source?`: ``"bestOf"`` \| ``"manual"`` ; `timestamp`: `number`  } ; `state?`: ``"remade"``  } | - |
+| `highlanderGame` | \{ `gameId?`: `string` ; `gameMode?`: \{ `identifier`: ``"lol:duel"`` \| ``"lol:classic"`` ; `mapName`: ``"summoner_rift"`` \| ``"howling_abyss"`` ; `requiredPlayers`: ``1`` \| ``5``  } ; `gameRealm?`: `string` ; `generatedName`: `string` ; `id`: `string` ; `input`: \{ `roster?`: `string`  } & [`Without`](../modules/internal.md#without)\<\{ `match?`: `string`  }, \{ `breakpoint?`: `string`  }\> & \{ `breakpoint?`: `string`  } \| [`Without`](../modules/internal.md#without)\<\{ `breakpoint?`: `string`  }, \{ `match?`: `string`  }\> & \{ `match?`: `string`  } & \{ `standing?`: `number`  }[] ; `name`: `string` ; `platformId?`: `string` ; `revision`: `number` ; `roles`: \{ `creator`: \{ `admin`: ``true`` ; `origin`: ``"BEARER_TOKEN"`` ; `profileIconId`: ``0`` ; `region`: ``"global"`` ; `summonerLevel`: ``0`` ; `summonerName`: ``"test-user"``  }[] ; `owner`: \{ `admin`: ``true`` ; `origin`: ``"BEARER_TOKEN"`` ; `profileIconId`: ``0`` ; `region`: ``"global"`` ; `summonerLevel`: ``0`` ; `summonerName`: ``"test-user"``  }[]  } ; `scores`: \{ `[key: string]`: `number`;  } ; `standings?`: \{ `closed`: `boolean` ; `history?`: \{ result: \{ roster?: string \| undefined; }[][]; timestamp: number; source?: "bestOf" \| "manual" \| undefined; note?: string \| undefined; history?: ...[] \| undefined; closed: boolean; }[] ; `note?`: `string` ; `result`: \{ `roster?`: `string`  }[][] ; `source?`: ``"bestOf"`` \| ``"manual"`` ; `timestamp`: `number`  } ; `state?`: ``"remade"``  } | - |
 | `highlanderGame.gameId?` | `string` | The numeric version of the game ID This is what is used to access the ACS endpoint. |
 | `highlanderGame.gameMode?` | \{ `identifier`: ``"lol:duel"`` \| ``"lol:classic"`` ; `mapName`: ``"summoner_rift"`` \| ``"howling_abyss"`` ; `requiredPlayers`: ``1`` \| ``5``  } | - |
 | `highlanderGame.gameMode.identifier` | ``"lol:duel"`` \| ``"lol:classic"`` | - |
@@ -173,7 +173,7 @@ ___
 | `highlanderGame.gameRealm?` | `string` | The ID of the tournament realm on which the game was played on |
 | `highlanderGame.generatedName` | `string` | - |
 | `highlanderGame.id` | `string` | - |
-| `highlanderGame.input` | \{ `breakpoint?`: `string` ; `match?`: `string` ; `roster?`: `string` ; `standing?`: `number`  }[] | - |
+| `highlanderGame.input` | \{ `roster?`: `string`  } & [`Without`](../modules/internal.md#without)\<\{ `match?`: `string`  }, \{ `breakpoint?`: `string`  }\> & \{ `breakpoint?`: `string`  } \| [`Without`](../modules/internal.md#without)\<\{ `breakpoint?`: `string`  }, \{ `match?`: `string`  }\> & \{ `match?`: `string`  } & \{ `standing?`: `number`  }[] | - |
 | `highlanderGame.name` | `string` | - |
 | `highlanderGame.platformId?` | `string` | A combination of the gameRealm and the gameId |
 | `highlanderGame.revision` | `number` | - |
@@ -190,7 +190,7 @@ ___
 | `highlanderGame.standings.timestamp` | `number` | Format: int64 Unix timestamp in milliseconds of when the match started. |
 | `highlanderGame.state?` | ``"remade"`` | - |
 | `highlanderLeague` | \{ `name`: `string` ; `slug`: `string`  } & \{ `abouts`: \{ `[key: string]`: `string`;  } ; `createdAt`: `string` ; `drupalId`: ``null`` \| `number` ; `guid`: `string` ; `id`: `number` ; `logoUrl`: `string` ; `names`: \{ `[key: string]`: `string`;  } ; `region`: `string` ; `tournaments?`: `string`[] ; `updatedAt`: `string`  } | - |
-| `highlanderMatch` | \{ `gameMode?`: \{ `identifier`: ``"lol:duel"`` \| ``"lol:classic"`` ; `mapName`: ``"summoner_rift"`` \| ``"howling_abyss"`` ; `requiredPlayers`: ``1`` \| ``5``  } ; `games`: \{ `[key: string]`: [`components`](internal.components.md)[``"schemas"``][``"highlanderGame"``];  } ; `groupPosition`: `number` ; `id`: `string` ; `input`: \{ `breakpoint?`: `string` ; `match?`: `string` ; `roster?`: `string` ; `standing?`: `number`  }[] ; `matchType?`: \{ `identifier`: ``"bestOf"`` \| ``"single_elim"`` ; `options?`: \{ `best_of`: `string`  }  } ; `name`: `string` ; `position`: `number` ; `remadeGames`: \{ `gameId?`: `string` ; `gameMode?`: \{ `identifier`: ``"lol:duel"`` \| ``"lol:classic"`` ; `mapName`: ``"summoner_rift"`` \| ``"howling_abyss"`` ; `requiredPlayers`: ``1`` \| ``5``  } ; `gameRealm?`: `string` ; `generatedName`: `string` ; `id`: `string` ; `input`: \{ `breakpoint?`: `string` ; `match?`: `string` ; `roster?`: `string` ; `standing?`: `number`  }[] ; `name`: `string` ; `platformId?`: `string` ; `revision`: `number` ; `roles`: \{ `creator`: \{ `admin`: ``true`` ; `origin`: ``"BEARER_TOKEN"`` ; `profileIconId`: ``0`` ; `region`: ``"global"`` ; `summonerLevel`: ``0`` ; `summonerName`: ``"test-user"``  }[] ; `owner`: \{ `admin`: ``true`` ; `origin`: ``"BEARER_TOKEN"`` ; `profileIconId`: ``0`` ; `region`: ``"global"`` ; `summonerLevel`: ``0`` ; `summonerName`: ``"test-user"``  }[]  } ; `scores`: \{ `[key: string]`: `number`;  } ; `standings?`: \{ `closed`: `boolean` ; `history?`: \{ result: \{ roster?: string \| undefined; }[][]; timestamp: number; source?: "bestOf" \| "manual" \| undefined; note?: string \| undefined; history?: ...[] \| undefined; closed: boolean; }[] ; `note?`: `string` ; `result`: \{ `roster?`: `string`  }[][] ; `source?`: ``"bestOf"`` \| ``"manual"`` ; `timestamp`: `number`  } ; `state?`: ``"remade"``  }[] ; `roles`: \{ `creator`: \{ `admin`: ``true`` ; `origin`: ``"BEARER_TOKEN"`` ; `profileIconId`: ``0`` ; `region`: ``"global"`` ; `summonerLevel`: ``0`` ; `summonerName`: ``"test-user"``  }[] ; `owner`: \{ `admin`: ``true`` ; `origin`: ``"BEARER_TOKEN"`` ; `profileIconId`: ``0`` ; `region`: ``"global"`` ; `summonerLevel`: ``0`` ; `summonerName`: ``"test-user"``  }[]  } ; `scores`: \{ `[key: string]`: `number`;  } ; `scoring?`: \{ `identifier`: ``"standard"`` \| ``"LegacyScoringStrategy"`` ; `options`: \{ `points`: `number`[]  }  } ; `standings?`: \{ `closed`: `boolean` ; `history?`: \{ result: \{ roster?: string \| undefined; }[][]; timestamp: number; source?: "bestOf" \| "manual" \| undefined; note?: string \| undefined; history?: ...[] \| undefined; closed: boolean; }[] ; `note?`: `string` ; `result`: \{ `roster?`: `string`  }[][] ; `source?`: ``"bestOf"`` \| ``"manual"`` ; `timestamp`: `number`  } ; `state`: ``"resolved"`` \| ``"unresolved"`` \| ``"unlinked"`` ; `tiebreaker`: `boolean`  } | - |
+| `highlanderMatch` | \{ `gameMode?`: \{ `identifier`: ``"lol:duel"`` \| ``"lol:classic"`` ; `mapName`: ``"summoner_rift"`` \| ``"howling_abyss"`` ; `requiredPlayers`: ``1`` \| ``5``  } ; `games`: \{ `[key: string]`: [`components`](internal.components.md)[``"schemas"``][``"highlanderGame"``];  } ; `groupPosition`: `number` ; `id`: `string` ; `input`: \{ `roster?`: `string`  } & [`Without`](../modules/internal.md#without)\<\{ `match?`: `string`  }, \{ `breakpoint?`: `string`  }\> & \{ `breakpoint?`: `string`  } \| [`Without`](../modules/internal.md#without)\<\{ `breakpoint?`: `string`  }, \{ `match?`: `string`  }\> & \{ `match?`: `string`  } & \{ `standing?`: `number`  }[] ; `matchType?`: \{ `identifier`: ``"bestOf"`` \| ``"single_elim"`` ; `options?`: \{ `best_of`: `string`  }  } ; `name`: `string` ; `position`: `number` ; `remadeGames`: \{ `gameId?`: `string` ; `gameMode?`: \{ `identifier`: ``"lol:duel"`` \| ``"lol:classic"`` ; `mapName`: ``"summoner_rift"`` \| ``"howling_abyss"`` ; `requiredPlayers`: ``1`` \| ``5``  } ; `gameRealm?`: `string` ; `generatedName`: `string` ; `id`: `string` ; `input`: \{ `roster?`: `string`  } & [`Without`](../modules/internal.md#without)\<\{ `match?`: `string`  }, \{ `breakpoint?`: `string`  }\> & \{ `breakpoint?`: `string`  } \| [`Without`](../modules/internal.md#without)\<\{ `breakpoint?`: `string`  }, \{ `match?`: `string`  }\> & \{ `match?`: `string`  } & \{ `standing?`: `number`  }[] ; `name`: `string` ; `platformId?`: `string` ; `revision`: `number` ; `roles`: \{ `creator`: \{ `admin`: ``true`` ; `origin`: ``"BEARER_TOKEN"`` ; `profileIconId`: ``0`` ; `region`: ``"global"`` ; `summonerLevel`: ``0`` ; `summonerName`: ``"test-user"``  }[] ; `owner`: \{ `admin`: ``true`` ; `origin`: ``"BEARER_TOKEN"`` ; `profileIconId`: ``0`` ; `region`: ``"global"`` ; `summonerLevel`: ``0`` ; `summonerName`: ``"test-user"``  }[]  } ; `scores`: \{ `[key: string]`: `number`;  } ; `standings?`: \{ `closed`: `boolean` ; `history?`: \{ result: \{ roster?: string \| undefined; }[][]; timestamp: number; source?: "bestOf" \| "manual" \| undefined; note?: string \| undefined; history?: ...[] \| undefined; closed: boolean; }[] ; `note?`: `string` ; `result`: \{ `roster?`: `string`  }[][] ; `source?`: ``"bestOf"`` \| ``"manual"`` ; `timestamp`: `number`  } ; `state?`: ``"remade"``  }[] ; `roles`: \{ `creator`: \{ `admin`: ``true`` ; `origin`: ``"BEARER_TOKEN"`` ; `profileIconId`: ``0`` ; `region`: ``"global"`` ; `summonerLevel`: ``0`` ; `summonerName`: ``"test-user"``  }[] ; `owner`: \{ `admin`: ``true`` ; `origin`: ``"BEARER_TOKEN"`` ; `profileIconId`: ``0`` ; `region`: ``"global"`` ; `summonerLevel`: ``0`` ; `summonerName`: ``"test-user"``  }[]  } ; `scores`: \{ `[key: string]`: `number`;  } ; `scoring?`: \{ `identifier`: ``"standard"`` \| ``"LegacyScoringStrategy"`` ; `options`: \{ `points`: `number`[]  }  } ; `standings?`: \{ `closed`: `boolean` ; `history?`: \{ result: \{ roster?: string \| undefined; }[][]; timestamp: number; source?: "bestOf" \| "manual" \| undefined; note?: string \| undefined; history?: ...[] \| undefined; closed: boolean; }[] ; `note?`: `string` ; `result`: \{ `roster?`: `string`  }[][] ; `source?`: ``"bestOf"`` \| ``"manual"`` ; `timestamp`: `number`  } ; `state`: ``"resolved"`` \| ``"unresolved"`` \| ``"unlinked"`` ; `tiebreaker`: `boolean`  } | - |
 | `highlanderMatch.gameMode?` | \{ `identifier`: ``"lol:duel"`` \| ``"lol:classic"`` ; `mapName`: ``"summoner_rift"`` \| ``"howling_abyss"`` ; `requiredPlayers`: ``1`` \| ``5``  } | - |
 | `highlanderMatch.gameMode.identifier` | ``"lol:duel"`` \| ``"lol:classic"`` | - |
 | `highlanderMatch.gameMode.mapName` | ``"summoner_rift"`` \| ``"howling_abyss"`` | - |
@@ -198,14 +198,14 @@ ___
 | `highlanderMatch.games` | \{ `[key: string]`: [`components`](internal.components.md)[``"schemas"``][``"highlanderGame"``];  } | The keys to this object are [UUID version 4](https://en.wikipedia.org/wiki/Universally_unique_identifier) representing the game ID. These are the games played in that series. The number of properties(key and value pair) in this object will be equal to the type of series that was played. For a best of 1 there will be only 1 game, 3 for best of 3s and 5 for best of 5s. |
 | `highlanderMatch.groupPosition` | `number` | - |
 | `highlanderMatch.id` | `string` | The match ID |
-| `highlanderMatch.input` | \{ `breakpoint?`: `string` ; `match?`: `string` ; `roster?`: `string` ; `standing?`: `number`  }[] | - |
+| `highlanderMatch.input` | \{ `roster?`: `string`  } & [`Without`](../modules/internal.md#without)\<\{ `match?`: `string`  }, \{ `breakpoint?`: `string`  }\> & \{ `breakpoint?`: `string`  } \| [`Without`](../modules/internal.md#without)\<\{ `breakpoint?`: `string`  }, \{ `match?`: `string`  }\> & \{ `match?`: `string`  } & \{ `standing?`: `number`  }[] | - |
 | `highlanderMatch.matchType?` | \{ `identifier`: ``"bestOf"`` \| ``"single_elim"`` ; `options?`: \{ `best_of`: `string`  }  } | - |
 | `highlanderMatch.matchType.identifier` | ``"bestOf"`` \| ``"single_elim"`` | - |
 | `highlanderMatch.matchType.options?` | \{ `best_of`: `string`  } | - |
 | `highlanderMatch.matchType.options.best_of` | `string` | - |
 | `highlanderMatch.name` | `string` | - |
 | `highlanderMatch.position` | `number` | - |
-| `highlanderMatch.remadeGames` | \{ `gameId?`: `string` ; `gameMode?`: \{ `identifier`: ``"lol:duel"`` \| ``"lol:classic"`` ; `mapName`: ``"summoner_rift"`` \| ``"howling_abyss"`` ; `requiredPlayers`: ``1`` \| ``5``  } ; `gameRealm?`: `string` ; `generatedName`: `string` ; `id`: `string` ; `input`: \{ `breakpoint?`: `string` ; `match?`: `string` ; `roster?`: `string` ; `standing?`: `number`  }[] ; `name`: `string` ; `platformId?`: `string` ; `revision`: `number` ; `roles`: \{ `creator`: \{ `admin`: ``true`` ; `origin`: ``"BEARER_TOKEN"`` ; `profileIconId`: ``0`` ; `region`: ``"global"`` ; `summonerLevel`: ``0`` ; `summonerName`: ``"test-user"``  }[] ; `owner`: \{ `admin`: ``true`` ; `origin`: ``"BEARER_TOKEN"`` ; `profileIconId`: ``0`` ; `region`: ``"global"`` ; `summonerLevel`: ``0`` ; `summonerName`: ``"test-user"``  }[]  } ; `scores`: \{ `[key: string]`: `number`;  } ; `standings?`: \{ `closed`: `boolean` ; `history?`: \{ result: \{ roster?: string \| undefined; }[][]; timestamp: number; source?: "bestOf" \| "manual" \| undefined; note?: string \| undefined; history?: ...[] \| undefined; closed: boolean; }[] ; `note?`: `string` ; `result`: \{ `roster?`: `string`  }[][] ; `source?`: ``"bestOf"`` \| ``"manual"`` ; `timestamp`: `number`  } ; `state?`: ``"remade"``  }[] | - |
+| `highlanderMatch.remadeGames` | \{ `gameId?`: `string` ; `gameMode?`: \{ `identifier`: ``"lol:duel"`` \| ``"lol:classic"`` ; `mapName`: ``"summoner_rift"`` \| ``"howling_abyss"`` ; `requiredPlayers`: ``1`` \| ``5``  } ; `gameRealm?`: `string` ; `generatedName`: `string` ; `id`: `string` ; `input`: \{ `roster?`: `string`  } & [`Without`](../modules/internal.md#without)\<\{ `match?`: `string`  }, \{ `breakpoint?`: `string`  }\> & \{ `breakpoint?`: `string`  } \| [`Without`](../modules/internal.md#without)\<\{ `breakpoint?`: `string`  }, \{ `match?`: `string`  }\> & \{ `match?`: `string`  } & \{ `standing?`: `number`  }[] ; `name`: `string` ; `platformId?`: `string` ; `revision`: `number` ; `roles`: \{ `creator`: \{ `admin`: ``true`` ; `origin`: ``"BEARER_TOKEN"`` ; `profileIconId`: ``0`` ; `region`: ``"global"`` ; `summonerLevel`: ``0`` ; `summonerName`: ``"test-user"``  }[] ; `owner`: \{ `admin`: ``true`` ; `origin`: ``"BEARER_TOKEN"`` ; `profileIconId`: ``0`` ; `region`: ``"global"`` ; `summonerLevel`: ``0`` ; `summonerName`: ``"test-user"``  }[]  } ; `scores`: \{ `[key: string]`: `number`;  } ; `standings?`: \{ `closed`: `boolean` ; `history?`: \{ result: \{ roster?: string \| undefined; }[][]; timestamp: number; source?: "bestOf" \| "manual" \| undefined; note?: string \| undefined; history?: ...[] \| undefined; closed: boolean; }[] ; `note?`: `string` ; `result`: \{ `roster?`: `string`  }[][] ; `source?`: ``"bestOf"`` \| ``"manual"`` ; `timestamp`: `number`  } ; `state?`: ``"remade"``  }[] | - |
 | `highlanderMatch.roles` | \{ `creator`: \{ `admin`: ``true`` ; `origin`: ``"BEARER_TOKEN"`` ; `profileIconId`: ``0`` ; `region`: ``"global"`` ; `summonerLevel`: ``0`` ; `summonerName`: ``"test-user"``  }[] ; `owner`: \{ `admin`: ``true`` ; `origin`: ``"BEARER_TOKEN"`` ; `profileIconId`: ``0`` ; `region`: ``"global"`` ; `summonerLevel`: ``0`` ; `summonerName`: ``"test-user"``  }[]  } | - |
 | `highlanderMatch.roles.creator` | \{ `admin`: ``true`` ; `origin`: ``"BEARER_TOKEN"`` ; `profileIconId`: ``0`` ; `region`: ``"global"`` ; `summonerLevel`: ``0`` ; `summonerName`: ``"test-user"``  }[] | - |
 | `highlanderMatch.roles.owner` | \{ `admin`: ``true`` ; `origin`: ``"BEARER_TOKEN"`` ; `profileIconId`: ``0`` ; `region`: ``"global"`` ; `summonerLevel`: ``0`` ; `summonerName`: ``"test-user"``  }[] | - |
@@ -467,4 +467,4 @@ ___
 
 #### Defined in
 
-[src/api-types.ts:98](https://github.com/Viriatto/lol-esports-api/blob/f62e77f/src/api-types.ts#L98)
+[src/api-types.ts:98](https://github.com/Viriatto/lol-esports-api/blob/611afb5/src/api-types.ts#L98)

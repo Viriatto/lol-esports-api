@@ -62,13 +62,13 @@ The eSports API's base URLs.
 
 #### Defined in
 
-[src/interface.ts:122](https://github.com/Viriatto/lol-esports-api/blob/f62e77f/src/interface.ts#L122)
+[src/interface.ts:122](https://github.com/Viriatto/lol-esports-api/blob/611afb5/src/interface.ts#L122)
 
 ## Methods
 
 ### \_get
 
-▸ **_get**\<`T`\>(`baseURLs`, `endpoint`, `params`): `Promise`\<[`APIResponse`](../modules/internal.md#apiresponse)\<`T`\>\>
+▸ **_get**\<`T`\>(`baseURLs`, `endpoint`, `params`): [`Promise`]( https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise )\<[`APIResponse`](../modules/internal.md#apiresponse)\<`T`\>\>
 
 Issues a request to the eSports API.
 
@@ -88,23 +88,23 @@ Issues a request to the eSports API.
 
 #### Returns
 
-`Promise`\<[`APIResponse`](../modules/internal.md#apiresponse)\<`T`\>\>
+[`Promise`]( https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise )\<[`APIResponse`](../modules/internal.md#apiresponse)\<`T`\>\>
 
 Data for the specified resource.
 
 **`Remarks`**
 
-Recursively tries to request each of the base URLs in [Interface._baseURLs](internal.Leagues.md#_baseurls) if the previous one has failed to yield a successful response.
+Recursively tries to request each of the base URLs in [Interface._baseURLs](internal.Interface.md#_baseurls) if the previous one has failed to yield a successful response.
 
 **`Throws`**
 
 Error
-When [Interface._baseURLs](internal.Leagues.md#_baseurls) is undefined.
+When [Interface._baseURLs](internal.Interface.md#_baseurls) is undefined.
 
 **`Throws`**
 
 Error
-When it can't get a successfuly response from any of the endpoints built from [Interface._baseURLs](internal.Leagues.md#_baseurls).
+When it can't get a successfuly response from any of the endpoints built from [Interface._baseURLs](internal.Interface.md#_baseurls).
 
 #### Inherited from
 
@@ -112,13 +112,13 @@ When it can't get a successfuly response from any of the endpoints built from [I
 
 #### Defined in
 
-[src/interface.ts:150](https://github.com/Viriatto/lol-esports-api/blob/f62e77f/src/interface.ts#L150)
+[src/interface.ts:150](https://github.com/Viriatto/lol-esports-api/blob/611afb5/src/interface.ts#L150)
 
 ___
 
 ### getLive
 
-▸ **getLive**(`locale?`): `Promise`\<\{ `data`: \{ `schedule`: \{ `events`: ``null`` \| \{ `blockName`: ``null`` \| `string` ; `match`: \{ `teams`: \{ `code`: `string` ; `image`: `string` ; `name`: `string`  }[]  } & \{ `id`: `string`  } & \{ `strategy`: \{ `count`: ``1`` \| ``3`` \| ``5``  } & \{ `type`: ``"bestOf"``  } ; `teams`: \{ `result`: \{ `gameWins`: `number`  }  }[]  } ; `startTime`: `string`  } & \{ `state`: ``"completed"`` \| ``"unstarted"`` \| ``"inProgress"`` ; `type`: ``"match"`` \| ``"show"``  } & \{ `id`: `string` ; `league`: \{ `name`: `string` ; `slug`: `string`  } & \{ `id`: `string` ; `image`: `string`  } & \{ `priority`: `number`  } ; `match?`: \{ `teams`: \{ `record`: ``null`` \| \{ `losses`: `number` ; `wins`: `number`  } ; `result`: \{ `outcome`: ``null`` \| ``"loss"`` \| ``"win"``  } ; `slug`: `string`  }[]  }  }[]  }  }  }\>
+▸ **getLive**(`locale?`): [`Promise`]( https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise )\<\{ `data`: \{ `schedule`: \{ `events`: ``null`` \| \{ `blockName`: ``null`` \| `string` ; `match`: \{ `teams`: \{ `code`: `string` ; `image`: `string` ; `name`: `string`  }[]  } & \{ `id`: `string`  } & \{ `strategy`: \{ `count`: ``1`` \| ``3`` \| ``5``  } & \{ `type`: ``"bestOf"``  } ; `teams`: \{ `result`: \{ `gameWins`: `number`  }  }[]  } ; `startTime`: `string`  } & \{ `state`: ``"completed"`` \| ``"unstarted"`` \| ``"inProgress"`` ; `type`: ``"match"`` \| ``"show"``  } & \{ `id`: `string` ; `league`: \{ `name`: `string` ; `slug`: `string`  } & \{ `id`: `string` ; `image`: `string`  } & \{ `priority`: `number`  } ; `match?`: \{ `teams`: \{ `record`: ``null`` \| \{ `losses`: `number` ; `wins`: `number`  } ; `result`: \{ `outcome`: ``null`` \| ``"loss"`` \| ``"win"``  } ; `slug`: `string`  }[]  }  }[]  }  }  }\>
 
 Fetch data on currently live events.
 
@@ -130,7 +130,7 @@ Fetch data on currently live events.
 
 #### Returns
 
-`Promise`\<\{ `data`: \{ `schedule`: \{ `events`: ``null`` \| \{ `blockName`: ``null`` \| `string` ; `match`: \{ `teams`: \{ `code`: `string` ; `image`: `string` ; `name`: `string`  }[]  } & \{ `id`: `string`  } & \{ `strategy`: \{ `count`: ``1`` \| ``3`` \| ``5``  } & \{ `type`: ``"bestOf"``  } ; `teams`: \{ `result`: \{ `gameWins`: `number`  }  }[]  } ; `startTime`: `string`  } & \{ `state`: ``"completed"`` \| ``"unstarted"`` \| ``"inProgress"`` ; `type`: ``"match"`` \| ``"show"``  } & \{ `id`: `string` ; `league`: \{ `name`: `string` ; `slug`: `string`  } & \{ `id`: `string` ; `image`: `string`  } & \{ `priority`: `number`  } ; `match?`: \{ `teams`: \{ `record`: ``null`` \| \{ `losses`: `number` ; `wins`: `number`  } ; `result`: \{ `outcome`: ``null`` \| ``"loss"`` \| ``"win"``  } ; `slug`: `string`  }[]  }  }[]  }  }  }\>
+[`Promise`]( https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise )\<\{ `data`: \{ `schedule`: \{ `events`: ``null`` \| \{ `blockName`: ``null`` \| `string` ; `match`: \{ `teams`: \{ `code`: `string` ; `image`: `string` ; `name`: `string`  }[]  } & \{ `id`: `string`  } & \{ `strategy`: \{ `count`: ``1`` \| ``3`` \| ``5``  } & \{ `type`: ``"bestOf"``  } ; `teams`: \{ `result`: \{ `gameWins`: `number`  }  }[]  } ; `startTime`: `string`  } & \{ `state`: ``"completed"`` \| ``"unstarted"`` \| ``"inProgress"`` ; `type`: ``"match"`` \| ``"show"``  } & \{ `id`: `string` ; `league`: \{ `name`: `string` ; `slug`: `string`  } & \{ `id`: `string` ; `image`: `string`  } & \{ `priority`: `number`  } ; `match?`: \{ `teams`: \{ `record`: ``null`` \| \{ `losses`: `number` ; `wins`: `number`  } ; `result`: \{ `outcome`: ``null`` \| ``"loss"`` \| ``"win"``  } ; `slug`: `string`  }[]  }  }[]  }  }  }\>
 
 An object containing data on currently live events.
 
@@ -140,7 +140,6 @@ An object containing data on currently live events.
 
 **`Example`**
 
-Log all currently live events.
 ```ts
 import APIClient from 'lol-esports-api';
 
@@ -152,4 +151,4 @@ console.log(liveEvents);
 
 #### Defined in
 
-[src/interfaces/events.ts:29](https://github.com/Viriatto/lol-esports-api/blob/f62e77f/src/interfaces/events.ts#L29)
+[src/interfaces/events.ts:29](https://github.com/Viriatto/lol-esports-api/blob/611afb5/src/interfaces/events.ts#L29)

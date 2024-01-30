@@ -3,6 +3,7 @@ LoL Esports API Wrapper / [Exports](modules.md)
 # Unofficial League Esports API Wrapper
 
 [![NPM Package Publisher](https://github.com/Viriatto/lol-esports-api/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/Viriatto/lol-esports-api/actions/workflows/npm-publish.yml)
+<img src="./docs/coverage.svg">
 
 This is a simple wrapper of League of Legends' eSports API.
 
