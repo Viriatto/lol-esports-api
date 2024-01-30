@@ -4,15 +4,17 @@
 version: 2
 updates:
   - package-ecosystem: "npm"
+    target-branch: "dev"
     directory: "/"
     schedule:
-      interval: "weekly"
+      interval: "daily"
     assignees:
       - "Viriatto"
     reviewers:
       - "Viriatto"
     commit-message:
-      include: "scope"
+      prefix: "(npm-prod): "
+      prefix-development: "(npm dev): "
     groups:
       minor-patch-development:
         dependency-type: "development"
