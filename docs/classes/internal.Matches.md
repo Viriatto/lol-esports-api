@@ -62,7 +62,7 @@ The eSports API's base URLs.
 
 #### Defined in
 
-[src/interface.ts:122](https://github.com/Viriatto/lol-esports-api/blob/611afb5/src/interface.ts#L122)
+[src/interface.ts:122](https://github.com/Viriatto/lol-esports-api/blob/1af8582e6d7d153cbc954bcf8865ea1b56690c7e/src/interface.ts#L122)
 
 ## Methods
 
@@ -112,13 +112,13 @@ When it can't get a successfuly response from any of the endpoints built from [I
 
 #### Defined in
 
-[src/interface.ts:150](https://github.com/Viriatto/lol-esports-api/blob/611afb5/src/interface.ts#L150)
+[src/interface.ts:150](https://github.com/Viriatto/lol-esports-api/blob/1af8582e6d7d153cbc954bcf8865ea1b56690c7e/src/interface.ts#L150)
 
 ___
 
 ### getEvent
 
-▸ **getEvent**(`matchId`, `locale?`): [`Promise`]( https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise )\<\{ `data`: \{ `event`: \{ `match?`: \{ `teams`: \{ `code`: `string` ; `image`: `string` ; `name`: `string`  }[]  }  } & \{ `id`: `string` ; `league`: \{ `name`: `string` ; `slug`: `string`  } & \{ `id`: `string` ; `image`: `string`  } ; `match`: \{ `games`: \{ `id`: `string` ; `number`: ``1`` \| ``3`` \| ``5`` \| ``2`` \| ``4`` ; `state`: ``"completed"`` \| ``"unstarted"`` \| ``"inProgress"`` ; `vods`: \{ `parameter`: `string`  } & \{ `locale`: ``"en-US"`` \| ``"en-GB"`` \| ``"en-AU"`` \| ``"cs-CZ"`` \| ``"de-DE"`` \| ``"el-GR"`` \| ``"es-ES"`` \| ``"es-MX"`` \| ``"fr-FR"`` \| ``"hu-HU"`` \| ``"it-IT"`` \| ``"pl-PL"`` \| ``"pt-BR"`` \| ``"ro-RO"`` \| ``"ru-RU"`` \| ``"tr-TR"`` \| ``"ja-JP"`` \| ``"ko-KR"`` ; `offset`: `number` ; `provider`: ``"youtube"`` \| ``"twitch"``  }[]  } & \{ `teams`: \{ `id`: `string` ; `side`: ``"blue"`` \| ``"red"``  }[]  }[] ; `strategy`: \{ `count`: ``1`` \| ``3`` \| ``5``  } ; `teams`: \{ `id`: `string` ; `result`: \{ `gameWins`: `number`  }  }[]  } ; `streams`: ``null`` \| \{ `parameter`: `string`  } & \{ `locale`: ``"en-US"`` \| ``"en-GB"`` \| ``"en-AU"`` \| ``"cs-CZ"`` \| ``"de-DE"`` \| ``"el-GR"`` \| ``"es-ES"`` \| ``"es-MX"`` \| ``"fr-FR"`` \| ``"hu-HU"`` \| ``"it-IT"`` \| ``"pl-PL"`` \| ``"pt-BR"`` \| ``"ro-RO"`` \| ``"ru-RU"`` \| ``"tr-TR"`` \| ``"ja-JP"`` \| ``"ko-KR"`` ; `offset`: `number` ; `provider`: ``"youtube"`` \| ``"twitch"``  }[] ; `type`: ``"match"`` \| ``"show"``  }  }  }\>
+▸ **getEvent**(`matchId`, `locale?`): [`Promise`]( https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise )\<\{ `data`: \{ `event`: \{ `match?`: \{ `teams`: \{ `code`: `string` ; `image`: `string` ; `name`: `string`  }[]  }  } & \{ `id`: `string` ; `league`: \{ `name`: `string` ; `slug`: `string`  } & \{ `id`: `string` ; `image`: `string`  } ; `match`: \{ `games`: \{ `id`: `string` ; `number`: ``1`` \| ``2`` \| ``3`` \| ``4`` \| ``5`` ; `state`: ``"completed"`` \| ``"unstarted"`` \| ``"inProgress"`` ; `vods`: ... & ...[]  } & \{ `teams`: \{ `id`: ... ; `side`: ...  }[]  }[] ; `strategy`: \{ `count`: ``1`` \| ``3`` \| ``5``  } ; `teams`: \{ `id`: `string` ; `result`: \{ `gameWins`: `number`  }  }[]  } ; `streams`: ``null`` \| \{ `parameter`: `string`  } & \{ `locale`: ``"en-US"`` \| ``"en-GB"`` \| ``"en-AU"`` \| ``"cs-CZ"`` \| ``"de-DE"`` \| ``"el-GR"`` \| ``"es-ES"`` \| ``"es-MX"`` \| ``"fr-FR"`` \| ``"hu-HU"`` \| ``"it-IT"`` \| ``"pl-PL"`` \| ``"pt-BR"`` \| ``"ro-RO"`` \| ``"ru-RU"`` \| ``"tr-TR"`` \| ``"ja-JP"`` \| ``"ko-KR"`` ; `offset`: `number` ; `provider`: ``"youtube"`` \| ``"twitch"``  }[] ; `type`: ``"match"`` \| ``"show"``  }  }  }\>
 
 Fetches event details for a particular match.
 
@@ -131,7 +131,7 @@ Fetches event details for a particular match.
 
 #### Returns
 
-[`Promise`]( https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise )\<\{ `data`: \{ `event`: \{ `match?`: \{ `teams`: \{ `code`: `string` ; `image`: `string` ; `name`: `string`  }[]  }  } & \{ `id`: `string` ; `league`: \{ `name`: `string` ; `slug`: `string`  } & \{ `id`: `string` ; `image`: `string`  } ; `match`: \{ `games`: \{ `id`: `string` ; `number`: ``1`` \| ``3`` \| ``5`` \| ``2`` \| ``4`` ; `state`: ``"completed"`` \| ``"unstarted"`` \| ``"inProgress"`` ; `vods`: \{ `parameter`: `string`  } & \{ `locale`: ``"en-US"`` \| ``"en-GB"`` \| ``"en-AU"`` \| ``"cs-CZ"`` \| ``"de-DE"`` \| ``"el-GR"`` \| ``"es-ES"`` \| ``"es-MX"`` \| ``"fr-FR"`` \| ``"hu-HU"`` \| ``"it-IT"`` \| ``"pl-PL"`` \| ``"pt-BR"`` \| ``"ro-RO"`` \| ``"ru-RU"`` \| ``"tr-TR"`` \| ``"ja-JP"`` \| ``"ko-KR"`` ; `offset`: `number` ; `provider`: ``"youtube"`` \| ``"twitch"``  }[]  } & \{ `teams`: \{ `id`: `string` ; `side`: ``"blue"`` \| ``"red"``  }[]  }[] ; `strategy`: \{ `count`: ``1`` \| ``3`` \| ``5``  } ; `teams`: \{ `id`: `string` ; `result`: \{ `gameWins`: `number`  }  }[]  } ; `streams`: ``null`` \| \{ `parameter`: `string`  } & \{ `locale`: ``"en-US"`` \| ``"en-GB"`` \| ``"en-AU"`` \| ``"cs-CZ"`` \| ``"de-DE"`` \| ``"el-GR"`` \| ``"es-ES"`` \| ``"es-MX"`` \| ``"fr-FR"`` \| ``"hu-HU"`` \| ``"it-IT"`` \| ``"pl-PL"`` \| ``"pt-BR"`` \| ``"ro-RO"`` \| ``"ru-RU"`` \| ``"tr-TR"`` \| ``"ja-JP"`` \| ``"ko-KR"`` ; `offset`: `number` ; `provider`: ``"youtube"`` \| ``"twitch"``  }[] ; `type`: ``"match"`` \| ``"show"``  }  }  }\>
+[`Promise`]( https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise )\<\{ `data`: \{ `event`: \{ `match?`: \{ `teams`: \{ `code`: `string` ; `image`: `string` ; `name`: `string`  }[]  }  } & \{ `id`: `string` ; `league`: \{ `name`: `string` ; `slug`: `string`  } & \{ `id`: `string` ; `image`: `string`  } ; `match`: \{ `games`: \{ `id`: `string` ; `number`: ``1`` \| ``2`` \| ``3`` \| ``4`` \| ``5`` ; `state`: ``"completed"`` \| ``"unstarted"`` \| ``"inProgress"`` ; `vods`: ... & ...[]  } & \{ `teams`: \{ `id`: ... ; `side`: ...  }[]  }[] ; `strategy`: \{ `count`: ``1`` \| ``3`` \| ``5``  } ; `teams`: \{ `id`: `string` ; `result`: \{ `gameWins`: `number`  }  }[]  } ; `streams`: ``null`` \| \{ `parameter`: `string`  } & \{ `locale`: ``"en-US"`` \| ``"en-GB"`` \| ``"en-AU"`` \| ``"cs-CZ"`` \| ``"de-DE"`` \| ``"el-GR"`` \| ``"es-ES"`` \| ``"es-MX"`` \| ``"fr-FR"`` \| ``"hu-HU"`` \| ``"it-IT"`` \| ``"pl-PL"`` \| ``"pt-BR"`` \| ``"ro-RO"`` \| ``"ru-RU"`` \| ``"tr-TR"`` \| ``"ja-JP"`` \| ``"ko-KR"`` ; `offset`: `number` ; `provider`: ``"youtube"`` \| ``"twitch"``  }[] ; `type`: ``"match"`` \| ``"show"``  }  }  }\>
 
 Data on the event details of a particular match.
 
@@ -141,4 +141,4 @@ Data on the event details of a particular match.
 
 #### Defined in
 
-[src/interfaces/matches.ts:20](https://github.com/Viriatto/lol-esports-api/blob/611afb5/src/interfaces/matches.ts#L20)
+[src/interfaces/matches.ts:20](https://github.com/Viriatto/lol-esports-api/blob/1af8582e6d7d153cbc954bcf8865ea1b56690c7e/src/interfaces/matches.ts#L20)
