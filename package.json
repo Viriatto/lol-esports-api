@@ -9,7 +9,7 @@
     "test": "jest",
     "prebuild": "rimraf dist types",
     "build": "tsc",
-    "postbuild": "npm test",
+    "postbuild": "npm test && npm run build-docs",
     "build-docs": "typedoc",
     "watch": "tsc --watch",
     "prepack": "npm run build",
