@@ -13,8 +13,8 @@ updates:
     reviewers:
       - "Viriatto"
     commit-message:
-      prefix: "(npm-prod): "
-      prefix-development: "(npm dev): "
+      include: 'scope'
+      prefix: 'npm'
     groups:
       minor-patch-development:
         dependency-type: "development"

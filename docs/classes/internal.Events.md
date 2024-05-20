@@ -62,7 +62,7 @@ The eSports API's base URLs.
 
 #### Defined in
 
-[src/interface.ts:122](https://github.com/Viriatto/lol-esports-api/blob/611afb5/src/interface.ts#L122)
+[src/interface.ts:122](https://github.com/Viriatto/lol-esports-api/blob/1af8582e6d7d153cbc954bcf8865ea1b56690c7e/src/interface.ts#L122)
 
 ## Methods
 
@@ -112,13 +112,13 @@ When it can't get a successfuly response from any of the endpoints built from [I
 
 #### Defined in
 
-[src/interface.ts:150](https://github.com/Viriatto/lol-esports-api/blob/611afb5/src/interface.ts#L150)
+[src/interface.ts:150](https://github.com/Viriatto/lol-esports-api/blob/1af8582e6d7d153cbc954bcf8865ea1b56690c7e/src/interface.ts#L150)
 
 ___
 
 ### getLive
 
-▸ **getLive**(`locale?`): [`Promise`]( https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise )\<\{ `data`: \{ `schedule`: \{ `events`: ``null`` \| \{ `blockName`: ``null`` \| `string` ; `match`: \{ `teams`: \{ `code`: `string` ; `image`: `string` ; `name`: `string`  }[]  } & \{ `id`: `string`  } & \{ `strategy`: \{ `count`: ``1`` \| ``3`` \| ``5``  } & \{ `type`: ``"bestOf"``  } ; `teams`: \{ `result`: \{ `gameWins`: `number`  }  }[]  } ; `startTime`: `string`  } & \{ `state`: ``"completed"`` \| ``"unstarted"`` \| ``"inProgress"`` ; `type`: ``"match"`` \| ``"show"``  } & \{ `id`: `string` ; `league`: \{ `name`: `string` ; `slug`: `string`  } & \{ `id`: `string` ; `image`: `string`  } & \{ `priority`: `number`  } ; `match?`: \{ `teams`: \{ `record`: ``null`` \| \{ `losses`: `number` ; `wins`: `number`  } ; `result`: \{ `outcome`: ``null`` \| ``"loss"`` \| ``"win"``  } ; `slug`: `string`  }[]  }  }[]  }  }  }\>
+▸ **getLive**(`locale?`): [`Promise`]( https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise )\<\{ `data`: \{ `schedule`: \{ `events`: ``null`` \| \{ `blockName`: ``null`` \| `string` ; `match`: \{ `teams`: ...[]  } & \{ `id`: `string`  } & \{ `strategy`: ... & ... ; `teams`: ...[]  } ; `startTime`: `string`  } & \{ `state`: ``"completed"`` \| ``"unstarted"`` \| ``"inProgress"`` ; `type`: ``"match"`` \| ``"show"``  } & \{ `id`: `string` ; `league`: \{ `name`: `string` ; `slug`: `string`  } & \{ `id`: `string` ; `image`: `string`  } & \{ `priority`: `number`  } ; `match?`: \{ `teams`: ...[]  }  }[]  }  }  }\>
 
 Fetch data on currently live events.
 
@@ -130,7 +130,7 @@ Fetch data on currently live events.
 
 #### Returns
 
-[`Promise`]( https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise )\<\{ `data`: \{ `schedule`: \{ `events`: ``null`` \| \{ `blockName`: ``null`` \| `string` ; `match`: \{ `teams`: \{ `code`: `string` ; `image`: `string` ; `name`: `string`  }[]  } & \{ `id`: `string`  } & \{ `strategy`: \{ `count`: ``1`` \| ``3`` \| ``5``  } & \{ `type`: ``"bestOf"``  } ; `teams`: \{ `result`: \{ `gameWins`: `number`  }  }[]  } ; `startTime`: `string`  } & \{ `state`: ``"completed"`` \| ``"unstarted"`` \| ``"inProgress"`` ; `type`: ``"match"`` \| ``"show"``  } & \{ `id`: `string` ; `league`: \{ `name`: `string` ; `slug`: `string`  } & \{ `id`: `string` ; `image`: `string`  } & \{ `priority`: `number`  } ; `match?`: \{ `teams`: \{ `record`: ``null`` \| \{ `losses`: `number` ; `wins`: `number`  } ; `result`: \{ `outcome`: ``null`` \| ``"loss"`` \| ``"win"``  } ; `slug`: `string`  }[]  }  }[]  }  }  }\>
+[`Promise`]( https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise )\<\{ `data`: \{ `schedule`: \{ `events`: ``null`` \| \{ `blockName`: ``null`` \| `string` ; `match`: \{ `teams`: ...[]  } & \{ `id`: `string`  } & \{ `strategy`: ... & ... ; `teams`: ...[]  } ; `startTime`: `string`  } & \{ `state`: ``"completed"`` \| ``"unstarted"`` \| ``"inProgress"`` ; `type`: ``"match"`` \| ``"show"``  } & \{ `id`: `string` ; `league`: \{ `name`: `string` ; `slug`: `string`  } & \{ `id`: `string` ; `image`: `string`  } & \{ `priority`: `number`  } ; `match?`: \{ `teams`: ...[]  }  }[]  }  }  }\>
 
 An object containing data on currently live events.
 
@@ -151,4 +151,4 @@ console.log(liveEvents);
 
 #### Defined in
 
-[src/interfaces/events.ts:29](https://github.com/Viriatto/lol-esports-api/blob/611afb5/src/interfaces/events.ts#L29)
+[src/interfaces/events.ts:29](https://github.com/Viriatto/lol-esports-api/blob/1af8582e6d7d153cbc954bcf8865ea1b56690c7e/src/interfaces/events.ts#L29)
