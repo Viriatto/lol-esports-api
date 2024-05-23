@@ -1,4 +1,6 @@
-LoL Esports API Wrapper / [Exports](modules.md)
+**LoL Esports API Wrapper** • [**Docs**](globals.md)
+
+***
 
 # Unofficial League Esports API Wrapper
 

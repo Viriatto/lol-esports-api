@@ -1,10 +1,14 @@
-[LoL Esports API Wrapper](../README.md) / [Exports](../modules.md) / Client
+[**LoL Esports API Wrapper**](../README.md) • **Docs**
+
+***
+
+[LoL Esports API Wrapper](../globals.md) / Client
 
 # Class: Client
 
 Main entity of the module.
 
-**`Example`**
+## Example
 
 ```ts
 import eSportsAPI from '@viriato/lol-esports-api';
@@ -12,35 +16,11 @@ import eSportsAPI from '@viriato/lol-esports-api';
 const schedule = await eSportsAPI.leagues.getSchedule();
 ```
 
-## Table of contents
-
-### Constructors
-
-- [constructor](Client.md#constructor)
-
-### Properties
-
-- [\_events](Client.md#_events)
-- [\_games](Client.md#_games)
-- [\_leagues](Client.md#_leagues)
-- [\_matches](Client.md#_matches)
-- [\_teams](Client.md#_teams)
-- [\_tournaments](Client.md#_tournaments)
-
-### Accessors
-
-- [events](Client.md#events)
-- [games](Client.md#games)
-- [leagues](Client.md#leagues)
-- [matches](Client.md#matches)
-- [teams](Client.md#teams)
-- [tournaments](Client.md#tournaments)
-
 ## Constructors
 
-### constructor
+### new Client()
 
-• **new Client**(): [`Client`](Client.md)
+> **new Client**(): [`Client`](Client.md)
 
 #### Returns
 
@@ -50,87 +30,95 @@ const schedule = await eSportsAPI.leagues.getSchedule();
 
 ### \_events
 
-• `Private` `Readonly` **\_events**: [`Events`](internal.Events.md)
+`Sealed` `Internal`
+
+> `private` `readonly` **\_events**: [`Events`](../internal/classes/Events.md)
 
 API for live event data fetching.
 
-#### Defined in
+#### Source
 
-[src/client.ts:33](https://github.com/Viriatto/lol-esports-api/blob/1af8582e6d7d153cbc954bcf8865ea1b56690c7e/src/client.ts#L33)
+[src/client.ts:33](https://github.com/Viriatto/lol-esports-api/blob/783dfab6fe0c5578f68e0ef039a6d4ddff241e06/src/client.ts#L33)
 
-___
+***
 
 ### \_games
 
-• `Private` `Readonly` **\_games**: [`Games`](internal.Games.md)
+`Sealed` `Internal`
+
+> `private` `readonly` **\_games**: [`Games`](../internal/classes/Games.md)
 
 API for game related data fetching, such as fetching a game segment's data.
 
-#### Defined in
+#### Source
 
-[src/client.ts:54](https://github.com/Viriatto/lol-esports-api/blob/1af8582e6d7d153cbc954bcf8865ea1b56690c7e/src/client.ts#L54)
+[src/client.ts:54](https://github.com/Viriatto/lol-esports-api/blob/783dfab6fe0c5578f68e0ef039a6d4ddff241e06/src/client.ts#L54)
 
-___
+***
 
 ### \_leagues
 
-• `Private` `Readonly` **\_leagues**: [`Leagues`](internal.Leagues.md)
+`Sealed` `Internal`
+
+> `private` `readonly` **\_leagues**: [`Leagues`](../internal/classes/Leagues.md)
 
 API for league related data fetching, such as their schedules and tournaments.
 
-#### Defined in
+#### Source
 
-[src/client.ts:26](https://github.com/Viriatto/lol-esports-api/blob/1af8582e6d7d153cbc954bcf8865ea1b56690c7e/src/client.ts#L26)
+[src/client.ts:26](https://github.com/Viriatto/lol-esports-api/blob/783dfab6fe0c5578f68e0ef039a6d4ddff241e06/src/client.ts#L26)
 
-___
+***
 
 ### \_matches
 
-• `Private` `Readonly` **\_matches**: [`Matches`](internal.Matches.md)
+`Sealed` `Internal`
+
+> `private` `readonly` **\_matches**: [`Matches`](../internal/classes/Matches.md)
 
 API for match related data fetching, such as getting a match event.
 
-#### Defined in
+#### Source
 
-[src/client.ts:47](https://github.com/Viriatto/lol-esports-api/blob/1af8582e6d7d153cbc954bcf8865ea1b56690c7e/src/client.ts#L47)
+[src/client.ts:47](https://github.com/Viriatto/lol-esports-api/blob/783dfab6fe0c5578f68e0ef039a6d4ddff241e06/src/client.ts#L47)
 
-___
+***
 
 ### \_teams
 
-• `Private` `Readonly` **\_teams**: [`Teams`](internal.Teams.md)
+`Sealed` `Internal`
+
+> `private` `readonly` **\_teams**: [`Teams`](../internal/classes/Teams.md)
 
 API for team related data fetching.
 
-#### Defined in
+#### Source
 
-[src/client.ts:61](https://github.com/Viriatto/lol-esports-api/blob/1af8582e6d7d153cbc954bcf8865ea1b56690c7e/src/client.ts#L61)
+[src/client.ts:61](https://github.com/Viriatto/lol-esports-api/blob/783dfab6fe0c5578f68e0ef039a6d4ddff241e06/src/client.ts#L61)
 
-___
+***
 
 ### \_tournaments
 
-• `Private` `Readonly` **\_tournaments**: [`Tournaments`](internal.Tournaments.md)
+`Sealed` `Internal`
+
+> `private` `readonly` **\_tournaments**: [`Tournaments`](../internal/classes/Tournaments.md)
 
 API for tournament related data fetching, such as standings and completed events.
 
-#### Defined in
+#### Source
 
-[src/client.ts:40](https://github.com/Viriatto/lol-esports-api/blob/1af8582e6d7d153cbc954bcf8865ea1b56690c7e/src/client.ts#L40)
+[src/client.ts:40](https://github.com/Viriatto/lol-esports-api/blob/783dfab6fe0c5578f68e0ef039a6d4ddff241e06/src/client.ts#L40)
 
 ## Accessors
 
 ### events
 
-• `get` **events**(): [`Events`](internal.Events.md)
+> `get` **events**(): [`Events`](../internal/classes/Events.md)
 
 API for live event data fetching.
 
-#### Returns
-
-[`Events`](internal.Events.md)
-
-**`Example`**
+#### Example
 
 ```ts
 import eSportsAPI from '@viriato/lol-esports-api';
@@ -140,23 +128,23 @@ console.log(liveEvents);
 
 ```
 
-#### Defined in
+#### Returns
 
-[src/client.ts:94](https://github.com/Viriatto/lol-esports-api/blob/1af8582e6d7d153cbc954bcf8865ea1b56690c7e/src/client.ts#L94)
+[`Events`](../internal/classes/Events.md)
 
-___
+#### Source
+
+[src/client.ts:94](https://github.com/Viriatto/lol-esports-api/blob/783dfab6fe0c5578f68e0ef039a6d4ddff241e06/src/client.ts#L94)
+
+***
 
 ### games
 
-• `get` **games**(): [`Games`](internal.Games.md)
+> `get` **games**(): [`Games`](../internal/classes/Games.md)
 
 API for game related data fetching, such as fetching a game segment's data.
 
-#### Returns
-
-[`Games`](internal.Games.md)
-
-**`Example`**
+#### Example
 
 ```ts
 import eSportsAPI from '@viriato/lol-esports-api';
@@ -166,23 +154,23 @@ console.log(game);
 
 ```
 
-#### Defined in
+#### Returns
 
-[src/client.ts:148](https://github.com/Viriatto/lol-esports-api/blob/1af8582e6d7d153cbc954bcf8865ea1b56690c7e/src/client.ts#L148)
+[`Games`](../internal/classes/Games.md)
 
-___
+#### Source
+
+[src/client.ts:148](https://github.com/Viriatto/lol-esports-api/blob/783dfab6fe0c5578f68e0ef039a6d4ddff241e06/src/client.ts#L148)
+
+***
 
 ### leagues
 
-• `get` **leagues**(): [`Leagues`](internal.Leagues.md)
+> `get` **leagues**(): [`Leagues`](../internal/classes/Leagues.md)
 
 API for league related data fetching, such as their schedules and tournaments.
 
-#### Returns
-
-[`Leagues`](internal.Leagues.md)
-
-**`Example`**
+#### Example
 
 ```ts
 import eSportsAPI from '@viriato/lol-esports-api';
@@ -191,23 +179,23 @@ const tournaments = await eSportsAPI.leagues.getTournaments("98767975604431411")
 console.log(tournaments);
 ```
 
-#### Defined in
+#### Returns
 
-[src/client.ts:76](https://github.com/Viriatto/lol-esports-api/blob/1af8582e6d7d153cbc954bcf8865ea1b56690c7e/src/client.ts#L76)
+[`Leagues`](../internal/classes/Leagues.md)
 
-___
+#### Source
+
+[src/client.ts:76](https://github.com/Viriatto/lol-esports-api/blob/783dfab6fe0c5578f68e0ef039a6d4ddff241e06/src/client.ts#L76)
+
+***
 
 ### matches
 
-• `get` **matches**(): [`Matches`](internal.Matches.md)
+> `get` **matches**(): [`Matches`](../internal/classes/Matches.md)
 
 API for match related data fetching, such as getting a match event.
 
-#### Returns
-
-[`Matches`](internal.Matches.md)
-
-**`Example`**
+#### Example
 
 ```ts
 import eSportsAPI from '@viriato/lol-esports-api';
@@ -217,23 +205,23 @@ console.log(matchEventDetails);
 
 ```
 
-#### Defined in
+#### Returns
 
-[src/client.ts:130](https://github.com/Viriatto/lol-esports-api/blob/1af8582e6d7d153cbc954bcf8865ea1b56690c7e/src/client.ts#L130)
+[`Matches`](../internal/classes/Matches.md)
 
-___
+#### Source
+
+[src/client.ts:130](https://github.com/Viriatto/lol-esports-api/blob/783dfab6fe0c5578f68e0ef039a6d4ddff241e06/src/client.ts#L130)
+
+***
 
 ### teams
 
-• `get` **teams**(): [`Teams`](internal.Teams.md)
+> `get` **teams**(): [`Teams`](../internal/classes/Teams.md)
 
 API for team related data fetching.
 
-#### Returns
-
-[`Teams`](internal.Teams.md)
-
-**`Example`**
+#### Example
 
 ```ts
 import eSportsAPI from '@viriato/lol-esports-api';
@@ -243,23 +231,23 @@ console.log(game);
 
 ```
 
-#### Defined in
+#### Returns
 
-[src/client.ts:166](https://github.com/Viriatto/lol-esports-api/blob/1af8582e6d7d153cbc954bcf8865ea1b56690c7e/src/client.ts#L166)
+[`Teams`](../internal/classes/Teams.md)
 
-___
+#### Source
+
+[src/client.ts:166](https://github.com/Viriatto/lol-esports-api/blob/783dfab6fe0c5578f68e0ef039a6d4ddff241e06/src/client.ts#L166)
+
+***
 
 ### tournaments
 
-• `get` **tournaments**(): [`Tournaments`](internal.Tournaments.md)
+> `get` **tournaments**(): [`Tournaments`](../internal/classes/Tournaments.md)
 
 API for tournament related data fetching, such as standings and completed events.
 
-#### Returns
-
-[`Tournaments`](internal.Tournaments.md)
-
-**`Example`**
+#### Example
 
 ```ts
 import eSportsAPI from '@viriato/lol-esports-api';
@@ -269,6 +257,10 @@ console.log(tournaments);
 
 ```
 
-#### Defined in
+#### Returns
 
-[src/client.ts:112](https://github.com/Viriatto/lol-esports-api/blob/1af8582e6d7d153cbc954bcf8865ea1b56690c7e/src/client.ts#L112)
+[`Tournaments`](../internal/classes/Tournaments.md)
+
+#### Source
+
+[src/client.ts:112](https://github.com/Viriatto/lol-esports-api/blob/783dfab6fe0c5578f68e0ef039a6d4ddff241e06/src/client.ts#L112)
