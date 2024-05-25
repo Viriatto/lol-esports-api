@@ -38,7 +38,11 @@ API for live event data fetching.
 
 #### Source
 
+<<<<<<< HEAD
 [src/client.ts:33](https://github.com/Viriatto/lol-esports-api/blob/783dfab6fe0c5578f68e0ef039a6d4ddff241e06/src/client.ts#L33)
+=======
+[src/client.ts:33](https://github.com/Viriatto/lol-esports-api/blob/23ba082b074e71776e5f609c5e6267b899ac0e37/src/client.ts#L33)
+>>>>>>> master
 
 ***
 
@@ -52,7 +56,11 @@ API for game related data fetching, such as fetching a game segment's data.
 
 #### Source
 
+<<<<<<< HEAD
 [src/client.ts:54](https://github.com/Viriatto/lol-esports-api/blob/783dfab6fe0c5578f68e0ef039a6d4ddff241e06/src/client.ts#L54)
+=======
+[src/client.ts:54](https://github.com/Viriatto/lol-esports-api/blob/23ba082b074e71776e5f609c5e6267b899ac0e37/src/client.ts#L54)
+>>>>>>> master
 
 ***
 
@@ -66,7 +74,11 @@ API for league related data fetching, such as their schedules and tournaments.
 
 #### Source
 
+<<<<<<< HEAD
 [src/client.ts:26](https://github.com/Viriatto/lol-esports-api/blob/783dfab6fe0c5578f68e0ef039a6d4ddff241e06/src/client.ts#L26)
+=======
+[src/client.ts:26](https://github.com/Viriatto/lol-esports-api/blob/23ba082b074e71776e5f609c5e6267b899ac0e37/src/client.ts#L26)
+>>>>>>> master
 
 ***
 
@@ -80,7 +92,11 @@ API for match related data fetching, such as getting a match event.
 
 #### Source
 
+<<<<<<< HEAD
 [src/client.ts:47](https://github.com/Viriatto/lol-esports-api/blob/783dfab6fe0c5578f68e0ef039a6d4ddff241e06/src/client.ts#L47)
+=======
+[src/client.ts:47](https://github.com/Viriatto/lol-esports-api/blob/23ba082b074e71776e5f609c5e6267b899ac0e37/src/client.ts#L47)
+>>>>>>> master
 
 ***
 
@@ -94,7 +110,11 @@ API for team related data fetching.
 
 #### Source
 
+<<<<<<< HEAD
 [src/client.ts:61](https://github.com/Viriatto/lol-esports-api/blob/783dfab6fe0c5578f68e0ef039a6d4ddff241e06/src/client.ts#L61)
+=======
+[src/client.ts:61](https://github.com/Viriatto/lol-esports-api/blob/23ba082b074e71776e5f609c5e6267b899ac0e37/src/client.ts#L61)
+>>>>>>> master
 
 ***
 
@@ -108,7 +128,11 @@ API for tournament related data fetching, such as standings and completed events
 
 #### Source
 
+<<<<<<< HEAD
 [src/client.ts:40](https://github.com/Viriatto/lol-esports-api/blob/783dfab6fe0c5578f68e0ef039a6d4ddff241e06/src/client.ts#L40)
+=======
+[src/client.ts:40](https://github.com/Viriatto/lol-esports-api/blob/23ba082b074e71776e5f609c5e6267b899ac0e37/src/client.ts#L40)
+>>>>>>> master
 
 ## Accessors
 
@@ -130,7 +154,11 @@ console.log(liveEvents);
 
 #### Returns
 
+<<<<<<< HEAD
 [`Events`](../internal/classes/Events.md)
+=======
+[src/client.ts:94](https://github.com/Viriatto/lol-esports-api/blob/23ba082b074e71776e5f609c5e6267b899ac0e37/src/client.ts#L94)
+>>>>>>> master
 
 #### Source
 
@@ -156,7 +184,11 @@ console.log(game);
 
 #### Returns
 
+<<<<<<< HEAD
 [`Games`](../internal/classes/Games.md)
+=======
+[src/client.ts:148](https://github.com/Viriatto/lol-esports-api/blob/23ba082b074e71776e5f609c5e6267b899ac0e37/src/client.ts#L148)
+>>>>>>> master
 
 #### Source
 
@@ -181,7 +213,11 @@ console.log(tournaments);
 
 #### Returns
 
+<<<<<<< HEAD
 [`Leagues`](../internal/classes/Leagues.md)
+=======
+[src/client.ts:76](https://github.com/Viriatto/lol-esports-api/blob/23ba082b074e71776e5f609c5e6267b899ac0e37/src/client.ts#L76)
+>>>>>>> master
 
 #### Source
 
@@ -207,7 +243,11 @@ console.log(matchEventDetails);
 
 #### Returns
 
+<<<<<<< HEAD
 [`Matches`](../internal/classes/Matches.md)
+=======
+[src/client.ts:130](https://github.com/Viriatto/lol-esports-api/blob/23ba082b074e71776e5f609c5e6267b899ac0e37/src/client.ts#L130)
+>>>>>>> master
 
 #### Source
 
@@ -233,7 +273,11 @@ console.log(game);
 
 #### Returns
 
+<<<<<<< HEAD
 [`Teams`](../internal/classes/Teams.md)
+=======
+[src/client.ts:166](https://github.com/Viriatto/lol-esports-api/blob/23ba082b074e71776e5f609c5e6267b899ac0e37/src/client.ts#L166)
+>>>>>>> master
 
 #### Source
 
@@ -259,8 +303,12 @@ console.log(tournaments);
 
 #### Returns
 
+<<<<<<< HEAD
 [`Tournaments`](../internal/classes/Tournaments.md)
 
 #### Source
 
 [src/client.ts:112](https://github.com/Viriatto/lol-esports-api/blob/783dfab6fe0c5578f68e0ef039a6d4ddff241e06/src/client.ts#L112)
+=======
+[src/client.ts:112](https://github.com/Viriatto/lol-esports-api/blob/23ba082b074e71776e5f609c5e6267b899ac0e37/src/client.ts#L112)
+>>>>>>> master
