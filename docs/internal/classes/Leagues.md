@@ -50,7 +50,7 @@ The eSports API's base URLs.
 
 #### Source
 
-[src/interface.ts:122](https://github.com/Viriatto/lol-esports-api/blob/783dfab6fe0c5578f68e0ef039a6d4ddff241e06/src/interface.ts#L122)
+[src/interface.ts:122](https://github.com/Viriatto/lol-esports-api/blob/f75af3cc48e6c5c022cb9cef4afcf61deb2fdb5b/src/interface.ts#L122)
 
 ## Methods
 
@@ -108,7 +108,7 @@ When it can't get a successfuly response from any of the endpoints built from [I
 
 #### Source
 
-[src/interface.ts:150](https://github.com/Viriatto/lol-esports-api/blob/783dfab6fe0c5578f68e0ef039a6d4ddff241e06/src/interface.ts#L150)
+[src/interface.ts:150](https://github.com/Viriatto/lol-esports-api/blob/f75af3cc48e6c5c022cb9cef4afcf61deb2fdb5b/src/interface.ts#L150)
 
 ***
 
@@ -146,7 +146,7 @@ Data about all leagues.
 
 #### Source
 
-[src/interfaces/leagues.ts:20](https://github.com/Viriatto/lol-esports-api/blob/783dfab6fe0c5578f68e0ef039a6d4ddff241e06/src/interfaces/leagues.ts#L20)
+[src/interfaces/leagues.ts:20](https://github.com/Viriatto/lol-esports-api/blob/f75af3cc48e6c5c022cb9cef4afcf61deb2fdb5b/src/interfaces/leagues.ts#L20)
 
 ***
 
@@ -215,7 +215,7 @@ Format: date-time
 
 #### Source
 
-[src/interfaces/leagues.ts:60](https://github.com/Viriatto/lol-esports-api/blob/783dfab6fe0c5578f68e0ef039a6d4ddff241e06/src/interfaces/leagues.ts#L60)
+[src/interfaces/leagues.ts:60](https://github.com/Viriatto/lol-esports-api/blob/f75af3cc48e6c5c022cb9cef4afcf61deb2fdb5b/src/interfaces/leagues.ts#L60)
 
 ***
 
@@ -260,4 +260,4 @@ tournaments.
 
 #### Source
 
-[src/interfaces/leagues.ts:39](https://github.com/Viriatto/lol-esports-api/blob/783dfab6fe0c5578f68e0ef039a6d4ddff241e06/src/interfaces/leagues.ts#L39)
+[src/interfaces/leagues.ts:39](https://github.com/Viriatto/lol-esports-api/blob/f75af3cc48e6c5c022cb9cef4afcf61deb2fdb5b/src/interfaces/leagues.ts#L39)

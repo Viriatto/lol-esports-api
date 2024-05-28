@@ -50,7 +50,7 @@ The eSports API's base URLs.
 
 #### Source
 
-[src/interface.ts:122](https://github.com/Viriatto/lol-esports-api/blob/783dfab6fe0c5578f68e0ef039a6d4ddff241e06/src/interface.ts#L122)
+[src/interface.ts:122](https://github.com/Viriatto/lol-esports-api/blob/f75af3cc48e6c5c022cb9cef4afcf61deb2fdb5b/src/interface.ts#L122)
 
 ## Methods
 
@@ -108,7 +108,7 @@ When it can't get a successfuly response from any of the endpoints built from [I
 
 #### Source
 
-[src/interface.ts:150](https://github.com/Viriatto/lol-esports-api/blob/783dfab6fe0c5578f68e0ef039a6d4ddff241e06/src/interface.ts#L150)
+[src/interface.ts:150](https://github.com/Viriatto/lol-esports-api/blob/f75af3cc48e6c5c022cb9cef4afcf61deb2fdb5b/src/interface.ts#L150)
 
 ***
 
@@ -154,4 +154,4 @@ If `teamId` is undefined, fetches data for all teams.
 
 #### Source
 
-[src/interfaces/teams.ts:23](https://github.com/Viriatto/lol-esports-api/blob/783dfab6fe0c5578f68e0ef039a6d4ddff241e06/src/interfaces/teams.ts#L23)
+[src/interfaces/teams.ts:23](https://github.com/Viriatto/lol-esports-api/blob/f75af3cc48e6c5c022cb9cef4afcf61deb2fdb5b/src/interfaces/teams.ts#L23)
