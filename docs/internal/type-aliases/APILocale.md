@@ -14,4 +14,4 @@
 
 ## Source
 
-[src/interface.ts:91](https://github.com/Viriatto/lol-esports-api/blob/783dfab6fe0c5578f68e0ef039a6d4ddff241e06/src/interface.ts#L91)
+[src/interface.ts:91](https://github.com/Viriatto/lol-esports-api/blob/f75af3cc48e6c5c022cb9cef4afcf61deb2fdb5b/src/interface.ts#L91)

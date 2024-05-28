@@ -50,7 +50,7 @@ The eSports API's base URLs.
 
 #### Source
 
-[src/interface.ts:122](https://github.com/Viriatto/lol-esports-api/blob/783dfab6fe0c5578f68e0ef039a6d4ddff241e06/src/interface.ts#L122)
+[src/interface.ts:122](https://github.com/Viriatto/lol-esports-api/blob/f75af3cc48e6c5c022cb9cef4afcf61deb2fdb5b/src/interface.ts#L122)
 
 ## Methods
 
@@ -108,7 +108,7 @@ When it can't get a successfuly response from any of the endpoints built from [I
 
 #### Source
 
-[src/interface.ts:150](https://github.com/Viriatto/lol-esports-api/blob/783dfab6fe0c5578f68e0ef039a6d4ddff241e06/src/interface.ts#L150)
+[src/interface.ts:150](https://github.com/Viriatto/lol-esports-api/blob/f75af3cc48e6c5c022cb9cef4afcf61deb2fdb5b/src/interface.ts#L150)
 
 ***
 
@@ -150,7 +150,7 @@ Data about the games.
 
 #### Source
 
-[src/interfaces/games.ts:21](https://github.com/Viriatto/lol-esports-api/blob/783dfab6fe0c5578f68e0ef039a6d4ddff241e06/src/interfaces/games.ts#L21)
+[src/interfaces/games.ts:21](https://github.com/Viriatto/lol-esports-api/blob/f75af3cc48e6c5c022cb9cef4afcf61deb2fdb5b/src/interfaces/games.ts#L21)
 
 ***
 
@@ -205,7 +205,7 @@ console.log(liveEvents);
 
 #### Source
 
-[src/interfaces/games.ts:84](https://github.com/Viriatto/lol-esports-api/blob/783dfab6fe0c5578f68e0ef039a6d4ddff241e06/src/interfaces/games.ts#L84)
+[src/interfaces/games.ts:84](https://github.com/Viriatto/lol-esports-api/blob/f75af3cc48e6c5c022cb9cef4afcf61deb2fdb5b/src/interfaces/games.ts#L84)
 
 ***
 
@@ -296,4 +296,4 @@ The response's data contains a `frames` array property which includes "snapshots
 
 #### Source
 
-[src/interfaces/games.ts:44](https://github.com/Viriatto/lol-esports-api/blob/783dfab6fe0c5578f68e0ef039a6d4ddff241e06/src/interfaces/games.ts#L44)
+[src/interfaces/games.ts:44](https://github.com/Viriatto/lol-esports-api/blob/f75af3cc48e6c5c022cb9cef4afcf61deb2fdb5b/src/interfaces/games.ts#L44)

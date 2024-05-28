@@ -66,7 +66,7 @@ Successful request
 
 #### Source
 
-[src/api-types.ts:48](https://github.com/Viriatto/lol-esports-api/blob/783dfab6fe0c5578f68e0ef039a6d4ddff241e06/src/api-types.ts#L48)
+[src/api-types.ts:48](https://github.com/Viriatto/lol-esports-api/blob/f75af3cc48e6c5c022cb9cef4afcf61deb2fdb5b/src/api-types.ts#L48)
 
 ***
 
@@ -126,7 +126,7 @@ Successful request
 
 #### Source
 
-[src/api-types.ts:33](https://github.com/Viriatto/lol-esports-api/blob/783dfab6fe0c5578f68e0ef039a6d4ddff241e06/src/api-types.ts#L33)
+[src/api-types.ts:33](https://github.com/Viriatto/lol-esports-api/blob/f75af3cc48e6c5c022cb9cef4afcf61deb2fdb5b/src/api-types.ts#L33)
 
 ***
 
@@ -263,7 +263,7 @@ Otherwise it will be null.
 
 #### Source
 
-[src/api-types.ts:36](https://github.com/Viriatto/lol-esports-api/blob/783dfab6fe0c5578f68e0ef039a6d4ddff241e06/src/api-types.ts#L36)
+[src/api-types.ts:36](https://github.com/Viriatto/lol-esports-api/blob/f75af3cc48e6c5c022cb9cef4afcf61deb2fdb5b/src/api-types.ts#L36)
 
 ***
 
@@ -319,7 +319,7 @@ Successful request
 
 #### Source
 
-[src/api-types.ts:42](https://github.com/Viriatto/lol-esports-api/blob/783dfab6fe0c5578f68e0ef039a6d4ddff241e06/src/api-types.ts#L42)
+[src/api-types.ts:42](https://github.com/Viriatto/lol-esports-api/blob/f75af3cc48e6c5c022cb9cef4afcf61deb2fdb5b/src/api-types.ts#L42)
 
 ***
 
@@ -371,7 +371,7 @@ Successful request
 
 #### Source
 
-[src/api-types.ts:18](https://github.com/Viriatto/lol-esports-api/blob/783dfab6fe0c5578f68e0ef039a6d4ddff241e06/src/api-types.ts#L18)
+[src/api-types.ts:18](https://github.com/Viriatto/lol-esports-api/blob/f75af3cc48e6c5c022cb9cef4afcf61deb2fdb5b/src/api-types.ts#L18)
 
 ***
 
@@ -433,7 +433,7 @@ time
 
 #### Source
 
-[src/api-types.ts:24](https://github.com/Viriatto/lol-esports-api/blob/783dfab6fe0c5578f68e0ef039a6d4ddff241e06/src/api-types.ts#L24)
+[src/api-types.ts:24](https://github.com/Viriatto/lol-esports-api/blob/f75af3cc48e6c5c022cb9cef4afcf61deb2fdb5b/src/api-types.ts#L24)
 
 ***
 
@@ -516,7 +516,7 @@ Format: date-time
 
 #### Source
 
-[src/api-types.ts:21](https://github.com/Viriatto/lol-esports-api/blob/783dfab6fe0c5578f68e0ef039a6d4ddff241e06/src/api-types.ts#L21)
+[src/api-types.ts:21](https://github.com/Viriatto/lol-esports-api/blob/f75af3cc48e6c5c022cb9cef4afcf61deb2fdb5b/src/api-types.ts#L21)
 
 ***
 
@@ -574,7 +574,7 @@ Each object in the array contains details of each tournament requested.
 
 #### Source
 
-[src/api-types.ts:30](https://github.com/Viriatto/lol-esports-api/blob/783dfab6fe0c5578f68e0ef039a6d4ddff241e06/src/api-types.ts#L30)
+[src/api-types.ts:30](https://github.com/Viriatto/lol-esports-api/blob/f75af3cc48e6c5c022cb9cef4afcf61deb2fdb5b/src/api-types.ts#L30)
 
 ***
 
@@ -630,7 +630,7 @@ Successful request
 
 #### Source
 
-[src/api-types.ts:39](https://github.com/Viriatto/lol-esports-api/blob/783dfab6fe0c5578f68e0ef039a6d4ddff241e06/src/api-types.ts#L39)
+[src/api-types.ts:39](https://github.com/Viriatto/lol-esports-api/blob/f75af3cc48e6c5c022cb9cef4afcf61deb2fdb5b/src/api-types.ts#L39)
 
 ***
 
@@ -689,7 +689,7 @@ tournaments.
 
 #### Source
 
-[src/api-types.ts:27](https://github.com/Viriatto/lol-esports-api/blob/783dfab6fe0c5578f68e0ef039a6d4ddff241e06/src/api-types.ts#L27)
+[src/api-types.ts:27](https://github.com/Viriatto/lol-esports-api/blob/f75af3cc48e6c5c022cb9cef4afcf61deb2fdb5b/src/api-types.ts#L27)
 
 ***
 
@@ -761,7 +761,7 @@ Not Found
 
 #### Source
 
-[src/api-types.ts:69](https://github.com/Viriatto/lol-esports-api/blob/783dfab6fe0c5578f68e0ef039a6d4ddff241e06/src/api-types.ts#L69)
+[src/api-types.ts:69](https://github.com/Viriatto/lol-esports-api/blob/f75af3cc48e6c5c022cb9cef4afcf61deb2fdb5b/src/api-types.ts#L69)
 
 ***
 
@@ -879,7 +879,7 @@ Not Found
 
 #### Source
 
-[src/api-types.ts:73](https://github.com/Viriatto/lol-esports-api/blob/783dfab6fe0c5578f68e0ef039a6d4ddff241e06/src/api-types.ts#L73)
+[src/api-types.ts:73](https://github.com/Viriatto/lol-esports-api/blob/f75af3cc48e6c5c022cb9cef4afcf61deb2fdb5b/src/api-types.ts#L73)
 
 ***
 
@@ -919,7 +919,7 @@ Successful request
 
 #### Source
 
-[src/api-types.ts:51](https://github.com/Viriatto/lol-esports-api/blob/783dfab6fe0c5578f68e0ef039a6d4ddff241e06/src/api-types.ts#L51)
+[src/api-types.ts:51](https://github.com/Viriatto/lol-esports-api/blob/f75af3cc48e6c5c022cb9cef4afcf61deb2fdb5b/src/api-types.ts#L51)
 
 ***
 
@@ -1008,7 +1008,7 @@ Contains details about the next 4 matches the player's team is schedule to parti
 
 #### Source
 
-[src/api-types.ts:86](https://github.com/Viriatto/lol-esports-api/blob/783dfab6fe0c5578f68e0ef039a6d4ddff241e06/src/api-types.ts#L86)
+[src/api-types.ts:86](https://github.com/Viriatto/lol-esports-api/blob/f75af3cc48e6c5c022cb9cef4afcf61deb2fdb5b/src/api-types.ts#L86)
 
 ***
 
@@ -1072,7 +1072,7 @@ Successful request
 
 #### Source
 
-[src/api-types.ts:76](https://github.com/Viriatto/lol-esports-api/blob/783dfab6fe0c5578f68e0ef039a6d4ddff241e06/src/api-types.ts#L76)
+[src/api-types.ts:76](https://github.com/Viriatto/lol-esports-api/blob/f75af3cc48e6c5c022cb9cef4afcf61deb2fdb5b/src/api-types.ts#L76)
 
 ***
 
@@ -1161,7 +1161,7 @@ Contains a summary of the team stats during that particular tournament.
 
 #### Source
 
-[src/api-types.ts:79](https://github.com/Viriatto/lol-esports-api/blob/783dfab6fe0c5578f68e0ef039a6d4ddff241e06/src/api-types.ts#L79)
+[src/api-types.ts:79](https://github.com/Viriatto/lol-esports-api/blob/f75af3cc48e6c5c022cb9cef4afcf61deb2fdb5b/src/api-types.ts#L79)
 
 ***
 
@@ -1208,7 +1208,7 @@ Successful request
 
 #### Source
 
-[src/api-types.ts:54](https://github.com/Viriatto/lol-esports-api/blob/783dfab6fe0c5578f68e0ef039a6d4ddff241e06/src/api-types.ts#L54)
+[src/api-types.ts:54](https://github.com/Viriatto/lol-esports-api/blob/f75af3cc48e6c5c022cb9cef4afcf61deb2fdb5b/src/api-types.ts#L54)
 
 ***
 
@@ -1314,4 +1314,4 @@ The team Id
 
 #### Source
 
-[src/api-types.ts:45](https://github.com/Viriatto/lol-esports-api/blob/783dfab6fe0c5578f68e0ef039a6d4ddff241e06/src/api-types.ts#L45)
+[src/api-types.ts:45](https://github.com/Viriatto/lol-esports-api/blob/f75af3cc48e6c5c022cb9cef4afcf61deb2fdb5b/src/api-types.ts#L45)
