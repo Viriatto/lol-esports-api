@@ -185,8 +185,12 @@ export default abstract class Interface {
           return response.data;
         }
       } catch (reason) {
-        if (reason instanceof AxiosError && reason.code !== "ENOTFOUND")
-          throw reason;
+        if (reason instanceof AxiosError) {
+          const error = reason as AxiosError;
+          if (error.code !== "ENOTFOUND") {
+            throw error;
+          }
+        }
       }
     }
 

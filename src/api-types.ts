@@ -210,6 +210,8 @@ export interface components {
       id: components["schemas"]["teamId"];
       slug: components["schemas"]["teamSlug"];
       alternativeImage: string;
+      backgroundImage: string;
+      status: string;
       homeLeague: components["schemas"]["homeLeague"];
       players: components["schemas"]["player"][];
     };
